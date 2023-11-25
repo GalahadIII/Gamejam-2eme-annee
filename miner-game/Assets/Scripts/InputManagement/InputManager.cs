@@ -15,17 +15,10 @@ public class InputManager : MonoBehaviour
         _escape;
 
     private void OnEnable() => Setup();
-    private void Update()
-    {
-        UpdateData();
-    }
-    private void FixedUpdate()
-    {
-        UpdateTimer();
-    }
+    private void Update() => UpdateData();
+    private void FixedUpdate() => UpdateTimer();
 
-    private void Setup()
-    {
+    private void Setup() {
         _playerActions = new InputActions();
         _playerActions.Enable();
         // DontDestroyOnLoad(gameObject);
@@ -46,8 +39,7 @@ public class InputManager : MonoBehaviour
 
     }
 
-    public void UpdateData()
-    {
+    public void UpdateData() {
         Vector2 hor = _move.ReadValue<Vector2>();
         float vert = _moveUp.ReadValue<float>() * 1 + _moveDown.ReadValue<float>() * -1;
         Vector3 move = new(hor.x, vert, hor.y);
@@ -73,8 +65,7 @@ public class InputManager : MonoBehaviour
         KeyInputDataUpdate(ref _playerInputs.Escape, _escape.ReadValue<float>() != 0f);
     }
 
-    public void UpdateTimer()
-    {
+    public void UpdateTimer() {
         Vector3InputDataUpdateTimer(ref _playerInputs.Movement);
 
         Vector2InputDataUpdateTimer(ref _playerInputs.Movement2d);
@@ -96,8 +87,7 @@ public class InputManager : MonoBehaviour
 
     #region Checks and Sets
 
-    private void Vector3InputDataUpdate(ref Vector3Input data, Vector3 liveInput)
-    {
+    private void Vector3InputDataUpdate(ref Vector3Input data, Vector3 liveInput) {
         data.Last = data.Live;
         data.Live = liveInput;
 
@@ -134,8 +124,7 @@ public class InputManager : MonoBehaviour
         data.ConsecutiveTapsStep.y = data.ConsecutiveTapsStep.y > 3 ? 0 : data.ConsecutiveTapsStep.y;
         data.ConsecutiveTapsStep.z = data.ConsecutiveTapsStep.z > 3 ? 0 : data.ConsecutiveTapsStep.z;
     }
-    private void Vector2InputDataUpdate(ref Vector2Input data, Vector2 liveInput)
-    {
+    private void Vector2InputDataUpdate(ref Vector2Input data, Vector2 liveInput) {
         data.Last = data.Live;
         data.Live = liveInput;
 
@@ -163,8 +152,7 @@ public class InputManager : MonoBehaviour
         data.ConsecutiveTapsStep.x = data.ConsecutiveTapsStep.x > 3 ? 0 : data.ConsecutiveTapsStep.x;
         data.ConsecutiveTapsStep.y = data.ConsecutiveTapsStep.y > 3 ? 0 : data.ConsecutiveTapsStep.y;
     }
-    private void KeyInputDataUpdate(ref KeyInput data, bool liveInput)
-    {
+    private void KeyInputDataUpdate(ref KeyInput data, bool liveInput) {
         data.Last = data.Live;
 
         data.Live = liveInput;
@@ -189,19 +177,16 @@ public class InputManager : MonoBehaviour
         data.ConsecutiveTapsStep = data.ConsecutiveTapsStep > 3 ? 0 : data.ConsecutiveTapsStep;
     }
 
-    private void Vector2InputDataUpdateTimer(ref Vector2Input data)
-    {
+    private void Vector2InputDataUpdateTimer(ref Vector2Input data) {
         data.Timer.x += 1;
         data.Timer.y += 1;
     }
-    private void Vector3InputDataUpdateTimer(ref Vector3Input data)
-    {
+    private void Vector3InputDataUpdateTimer(ref Vector3Input data) {
         data.Timer.x += 1;
         data.Timer.y += 1;
         data.Timer.z += 1;
     }
-    private void KeyInputDataUpdateTimer(ref KeyInput data)
-    {
+    private void KeyInputDataUpdateTimer(ref KeyInput data) {
         data.OnDownTimer += 1;
         data.OnUpTimer += 1;
         data.ConsecutiveTapsTimer += 1;
@@ -211,8 +196,7 @@ public class InputManager : MonoBehaviour
 
 }
 
-public struct PlayerInputs
-{
+public struct PlayerInputs {
     public Vector3Input Movement;
     public Vector2Input Movement2d;
     public Vector2Input CursorPositionDelta;
@@ -225,8 +209,7 @@ public struct PlayerInputs
     public KeyInput Escape;
 }
 
-public struct Vector2Input
-{
+public struct Vector2Input {
     public Vector2 OnDown;
     public Vector2 OnUp;
 
@@ -238,8 +221,7 @@ public struct Vector2Input
     public Vector2 ConsecutiveTaps;
 }
 
-public struct Vector3Input
-{
+public struct Vector3Input {
     public Vector3 OnDown;
     public Vector3 OnUp;
 
@@ -251,8 +233,7 @@ public struct Vector3Input
     public Vector3 ConsecutiveTaps;
 }
 
-public struct KeyInput
-{
+public struct KeyInput {
     public int OnDownTimer;
     public bool FixedOnDown;
     public bool OnDown;
