@@ -102,8 +102,10 @@ MonoBehaviour:
   minSpawnRadius: 5
   maxSpawnRadius: 20
   spawnSpaceRadiusNeeded: 2
-  distanceMinBetweenMinerals: 10
-  layer: 20
+  distanceMinBetweenMinerals: 20
+  layer:
+    serializedVersion: 2
+    m_Bits: 1048576
   tile: {fileID: 8385324995685041870}
 --- !u!61 &5138360517467293120
 BoxCollider2D:

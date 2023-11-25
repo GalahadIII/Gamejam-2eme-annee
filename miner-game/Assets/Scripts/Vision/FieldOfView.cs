@@ -18,7 +18,7 @@ public class FieldOfView : MonoBehaviour
     private void Start()
     {
         _mesh = new Mesh();
-        // _origin = Vector3.zero;
+        _origin = Vector3.zero;
         GetComponent<MeshFilter>().mesh = _mesh;
     }
 
@@ -33,6 +33,8 @@ public class FieldOfView : MonoBehaviour
         Vector3[] vertices = new Vector3[rayCount + 1 + 1];
         Vector2[] uv = new Vector2[vertices.Length];
         int[] triangles = new int[rayCount * 3];
+
+
 
         vertices[0] = _origin;
 

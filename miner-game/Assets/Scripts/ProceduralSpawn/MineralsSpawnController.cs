@@ -45,7 +45,7 @@ public class MineralsSpawnController : MonoBehaviour
         int maxSpawnRadius = mineral.GetComponent<MineralSpawnSetting>().GetMaxSpawnRadius();
         int spawnSpaceRadiusNeeded = mineral.GetComponent<MineralSpawnSetting>().GetSpawnSpaceRadiusNeeded();
         int distanceMinBetweenMinerals = mineral.GetComponent<MineralSpawnSetting>().GetDistanceMinBetweenMinerals();
-        int layer = mineral.GetComponent<MineralSpawnSetting>().GetLayer();
+        LayerMask layer = mineral.GetComponent<MineralSpawnSetting>().GetLayer();
 
         for (int x = centerX - maxSpawnRadius; x < centerX + maxSpawnRadius; x++)
         {
