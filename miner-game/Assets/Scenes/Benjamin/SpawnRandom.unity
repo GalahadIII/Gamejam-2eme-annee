@@ -205,10 +205,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnController: {fileID: 1537570180}
-  spawnRadius: 30
-  spawnSpaceRadiusNeeded: 5
+  spawnRadius: 5
+  spawnSpaceRadiusNeeded: 2
   tile: {fileID: 6173952041359325242, guid: d4c0ace26070f3e4fb97a47a7b725070, type: 3}
   maxWallReload: 5
+  player: {fileID: 0}
 --- !u!114 &1537570180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,6 +255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnController: {fileID: 1537570180}
   mineralsList:
+  - {fileID: 8385324995685041870, guid: ff07d50061f20d342b0fc69c39367d77, type: 3}
   - {fileID: 8385324995685041870, guid: ff07d50061f20d342b0fc69c39367d77, type: 3}
   - {fileID: 8385324995685041870, guid: ff07d50061f20d342b0fc69c39367d77, type: 3}
   - {fileID: 8385324995685041870, guid: ff07d50061f20d342b0fc69c39367d77, type: 3}

@@ -99,9 +99,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da4a8645bc7b51646ad731de1a51eecf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpawnRadius: 0
-  maxSpawnRadius: 50
-  spawnSpaceRadiusNeeded: 0
+  minSpawnRadius: 5
+  maxSpawnRadius: 20
+  spawnSpaceRadiusNeeded: 2
   distanceMinBetweenMinerals: 10
   layer: 20
   tile: {fileID: 8385324995685041870}
