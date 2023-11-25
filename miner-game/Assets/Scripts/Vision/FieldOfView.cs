@@ -1,8 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class FieldOfView : MonoBehaviour
 {
@@ -12,21 +8,15 @@ public class FieldOfView : MonoBehaviour
     [SerializeField] private LayerMask layerMask;
 
     private Mesh _mesh;
-    private Vector3 _origin;
 
-    // Start is called before the first frame update
     private void Start()
     {
         _mesh = new Mesh();
-        _origin = Vector3.zero;
         GetComponent<MeshFilter>().mesh = _mesh;
     }
-
-    // Update is called once per frame
     private void Update()
     {
-        // _origin = Vector3.zero;
-
+        // Debug.LogWarning("UPDATE");
         float angle = 0f;
         float angleIncrease = fov / rayCount;
 
@@ -34,26 +24,28 @@ public class FieldOfView : MonoBehaviour
         Vector2[] uv = new Vector2[vertices.Length];
         int[] triangles = new int[rayCount * 3];
 
-
-
-        vertices[0] = _origin;
+        // start at local position
+        vertices[0] = Vector3.zero;
 
         int vertexIndex = 1;
         int triangleIndex = 0;
         for (int i = 0; i <= rayCount; i++)
         {
-            Vector3 vertex;
-            RaycastHit2D raycastHit2D = Physics2D.Raycast(_origin, GetVectorFromAngle(angle), viewDistance, layerMask);
-            if (raycastHit2D.collider == null)
+            Vector3 angleVector = GetVectorFromAngle(angle);
+
+            Vector3 vertex = angleVector * viewDistance;
+
+            RaycastHit2D raycastHit2D = Physics2D.Raycast(transform.position, angleVector, viewDistance, layerMask);
+
+            // Debug.Log($"FOW RAY {i}/{rayCount} {transform.position} / {angle} {angleVector * viewDistance} {raycastHit2D.point}");
+
+            if (raycastHit2D.collider != null)
             {
-                // No hit
-                vertex = _origin + GetVectorFromAngle(angle) * viewDistance;
+                vertex = (Vector3)raycastHit2D.point - transform.position;
             }
-            else
-            {
-                // hit wall
-                vertex = raycastHit2D.point;
-            }
+
+            // Debug.DrawRay(transform.position, vertex);
+
             vertices[vertexIndex] = vertex;
 
             if (i > 0)
@@ -83,8 +75,4 @@ public class FieldOfView : MonoBehaviour
         return new Vector3(Mathf.Cos(angleRad), Mathf.Sin(angleRad));
     }
 
-    public void setOrigin(Vector3 origin)
-    {
-        this._origin = origin;
-    }
 }
