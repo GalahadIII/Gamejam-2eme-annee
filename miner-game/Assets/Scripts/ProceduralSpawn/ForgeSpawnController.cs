@@ -7,7 +7,7 @@ public class ForgeSpawnController : MonoBehaviour
     [SerializeField] internal SpawnController spawnController;
 
     [Header("Spawn Settings")]
-    [Range(25, 100)]
+    [Range(5, 100)]
     [SerializeField] int spawnRadius;
     [Range(2, 15)]
     [SerializeField] int spawnSpaceRadiusNeeded;
@@ -33,7 +33,8 @@ public class ForgeSpawnController : MonoBehaviour
         }
 
         Instantiate(tile, new Vector2(coordinate[0], coordinate[1]), Quaternion.identity);
-        player.position = new Vector3(coordinate[0], coordinate[1]+2);
+        spawnController.walls_tab[coordinate[0], coordinate[1]] = 2;
+        //player.position = new Vector3(coordinate[0], coordinate[1]+2);
     }
 
     int[] findPlaceToSpawn(int[,] tabs)

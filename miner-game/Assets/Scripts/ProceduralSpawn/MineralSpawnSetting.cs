@@ -5,9 +5,9 @@ using UnityEngine;
 public class MineralSpawnSetting : MonoBehaviour
 {
     [Header("Mineral Spawn Settings")]
-    [Range(25, 200)]
+    [Range(2, 25)]
     [SerializeField] int minSpawnRadius;
-    [Range(25, 200)]
+    [Range(5, 50)]
     [SerializeField] int maxSpawnRadius;
     [Range(2, 15)]
     [SerializeField] int spawnSpaceRadiusNeeded;

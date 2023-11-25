@@ -34,7 +34,7 @@ public class SpawnController : MonoBehaviour
     {
         walls_tab = new int[width, height];
 
-        wallSpawnController.WallSpawn();
+        //wallSpawnController.WallSpawn();
         forgeSpawnController.ForgeSpawn();
         mineralsSpawnController.MineralsSpawn();
     }
