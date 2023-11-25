@@ -1,0 +1,808 @@
+fileFormatVersion: 2
+guid: ece9612753bb366abbbf53d0f83f5aa8
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: hoe_Frame_19
+    originalName: 
+    pivot: {x: 0.39999995, y: -1.9411765}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 79
+      width: 15
+      height: 17
+    spriteID: c1ae9438a6dc38bb8a0144f1c1f3f581
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 79}
+  - name: hoe_Frame_20
+    originalName: 
+    pivot: {x: 0.39999995, y: -1.9411765}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 27
+      y: 79
+      width: 15
+      height: 17
+    spriteID: 10f2a84d76047c177addb3e43ecad7fa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 27, y: 79}
+  - name: hoe_Frame_21
+    originalName: 
+    pivot: {x: 0.4615384, y: -2.0625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 105
+      y: 104
+      width: 13
+      height: 16
+    spriteID: a2c6a0a2475d5816688e1c1f9285993b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 105, y: 104}
+  - name: hoe_Frame_22
+    originalName: 
+    pivot: {x: 0.4615384, y: -2.2}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 54
+      y: 55
+      width: 13
+      height: 15
+    spriteID: c491b8acc1b5ae58fb0179b747756b20
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 54, y: 55}
+  - name: hoe_Frame_23
+    originalName: 
+    pivot: {x: 0.4615384, y: -2.2}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 75
+      y: 55
+      width: 13
+      height: 15
+    spriteID: 71f65609cb4f0874b9205548298e8e43
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 75, y: 55}
+  - name: hoe_Frame_0
+    originalName: 
+    pivot: {x: 0.5454545, y: -1.7368422}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 67
+      y: 104
+      width: 11
+      height: 19
+    spriteID: fc42e4f8e840b2fcaa68643e8ae49909
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 67, y: 104}
+  - name: hoe_Frame_1
+    originalName: 
+    pivot: {x: 0.75, y: -2.0625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 106
+      y: 29
+      width: 16
+      height: 16
+    spriteID: 8286f0e631e1799fd90a73e2db741847
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 106, y: 29}
+  - name: hoe_Frame_2
+    originalName: 
+    pivot: {x: 0.45833328, y: -1.9411765}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 24
+      height: 17
+    spriteID: d2f2ad16382ccf0298fbe53b07abc9dc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: hoe_Frame_3
+    originalName: 
+    pivot: {x: 0.21052638, y: -2.357143}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 29
+      width: 19
+      height: 14
+    spriteID: 9a74f8d714a71abbb8c314df9265625d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 29}
+  - name: hoe_Frame_4
+    originalName: 
+    pivot: {x: 0.22222228, y: -2.5384614}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 50
+      y: 79
+      width: 18
+      height: 13
+    spriteID: b21f392da4ae0526fa52306985eb3717
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 50, y: 79}
+  - name: hoe_Frame_5
+    originalName: 
+    pivot: {x: 0.2777778, y: -2.5384614}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 76
+      y: 79
+      width: 18
+      height: 13
+    spriteID: 4f3042c308cb3c9da84d26650a12f0ab
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 76, y: 79}
+  - name: hoe_Frame_6
+    originalName: 
+    pivot: {x: 0.36363646, y: -1.7368422}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 86
+      y: 104
+      width: 11
+      height: 19
+    spriteID: 6bea826af412bc268996b42201e4a81e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 86, y: 104}
+  - name: hoe_Frame_7
+    originalName: 
+    pivot: {x: 0.18749997, y: -2.0625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 55
+      width: 16
+      height: 16
+    spriteID: 981143209d98ec9319222b0495e1bf3f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 55}
+  - name: hoe_Frame_8
+    originalName: 
+    pivot: {x: 0.5, y: -1.9411765}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 36
+      y: 4
+      width: 24
+      height: 17
+    spriteID: 6f1e1e1525a2c2c1ca52b5dc8c3e976e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 36, y: 4}
+  - name: hoe_Frame_9
+    originalName: 
+    pivot: {x: 0.73684216, y: -2.357143}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 79
+      y: 29
+      width: 19
+      height: 14
+    spriteID: 0a049c8b1539ac5c18abaa1df1464e8f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 79, y: 29}
+  - name: hoe_Frame_10
+    originalName: 
+    pivot: {x: 0.7222222, y: -2.5384614}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 102
+      y: 79
+      width: 18
+      height: 13
+    spriteID: 3e7fada02fdbb1b92a467ef1d1f38f4c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 102, y: 79}
+  - name: hoe_Frame_11
+    originalName: 
+    pivot: {x: 0.66666675, y: -2.5384614}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 55
+      width: 18
+      height: 13
+    spriteID: e8da049197772ff519cc21b7934171e7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 55}
+  - name: hoe_Frame_12
+    originalName: 
+    pivot: {x: 0.56250006, y: -1.8333334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 29
+      width: 16
+      height: 18
+    spriteID: 8aae7226a2012aeaba7393349a559458
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 29}
+  - name: hoe_Frame_13
+    originalName: 
+    pivot: {x: 0.56250006, y: -1.9411765}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 68
+      y: 4
+      width: 16
+      height: 17
+    spriteID: 20d9668d465ebf66fb601fce5d2ead32
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 68, y: 4}
+  - name: hoe_Frame_14
+    originalName: 
+    pivot: {x: 0.56250006, y: -1.9411765}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 92
+      y: 4
+      width: 16
+      height: 17
+    spriteID: 125e8bfc779e1d67cafd3721d7b5b46e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 92, y: 4}
+  - name: hoe_Frame_15
+    originalName: 
+    pivot: {x: 0.4615384, y: -1.4210527}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 104
+      width: 13
+      height: 19
+    spriteID: 87b32dee48de1b711aed3bb99deef972
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 104}
+  - name: hoe_Frame_16
+    originalName: 
+    pivot: {x: 0.4615384, y: -1.5555556}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 25
+      y: 104
+      width: 13
+      height: 18
+    spriteID: 9a819e85df30ca0cf9d89e5cd1a58dd1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 25, y: 104}
+  - name: hoe_Frame_17
+    originalName: 
+    pivot: {x: 0.4615384, y: -1.6111113}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 46
+      y: 104
+      width: 13
+      height: 18
+    spriteID: f5524ed05fc77fda1af9df421512a2bf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 46, y: 104}
+  - name: hoe_Frame_18
+    originalName: 
+    pivot: {x: 0.37499994, y: -1.9411765}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 28
+      y: 29
+      width: 16
+      height: 17
+    spriteID: 6bd28c7de63fec1c1aa70090972fa83a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 28, y: 29}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -468815502
+    name: hoe
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: hoe_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 34
+        y: 33
+        width: 15
+        height: 17
+      spriteId: c1ae9438a6dc38bb8a0144f1c1f3f581
+    - name: hoe_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 34
+        y: 33
+        width: 15
+        height: 17
+      spriteId: 10f2a84d76047c177addb3e43ecad7fa
+    - name: hoe_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 34
+        y: 33
+        width: 13
+        height: 16
+      spriteId: a2c6a0a2475d5816688e1c1f9285993b
+    - name: hoe_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 34
+        y: 33
+        width: 13
+        height: 15
+      spriteId: c491b8acc1b5ae58fb0179b747756b20
+    - name: hoe_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 34
+        y: 33
+        width: 13
+        height: 15
+      spriteId: 71f65609cb4f0874b9205548298e8e43
+    - name: hoe_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 34
+        y: 33
+        width: 11
+        height: 19
+      spriteId: fc42e4f8e840b2fcaa68643e8ae49909
+    - name: hoe_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 28
+        y: 33
+        width: 16
+        height: 16
+      spriteId: 8286f0e631e1799fd90a73e2db741847
+    - name: hoe_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 29
+        y: 33
+        width: 24
+        height: 17
+      spriteId: d2f2ad16382ccf0298fbe53b07abc9dc
+    - name: hoe_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 36
+        y: 33
+        width: 19
+        height: 14
+      spriteId: 9a74f8d714a71abbb8c314df9265625d
+    - name: hoe_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 36
+        y: 33
+        width: 18
+        height: 13
+      spriteId: b21f392da4ae0526fa52306985eb3717
+    - name: hoe_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 35
+        y: 33
+        width: 18
+        height: 13
+      spriteId: 4f3042c308cb3c9da84d26650a12f0ab
+    - name: hoe_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 36
+        y: 33
+        width: 11
+        height: 19
+      spriteId: 6bea826af412bc268996b42201e4a81e
+    - name: hoe_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 37
+        y: 33
+        width: 16
+        height: 16
+      spriteId: 981143209d98ec9319222b0495e1bf3f
+    - name: hoe_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 28
+        y: 33
+        width: 24
+        height: 17
+      spriteId: 6f1e1e1525a2c2c1ca52b5dc8c3e976e
+    - name: hoe_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 26
+        y: 33
+        width: 19
+        height: 14
+      spriteId: 0a049c8b1539ac5c18abaa1df1464e8f
+    - name: hoe_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 27
+        y: 33
+        width: 18
+        height: 13
+      spriteId: 3e7fada02fdbb1b92a467ef1d1f38f4c
+    - name: hoe_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 28
+        y: 33
+        width: 18
+        height: 13
+      spriteId: e8da049197772ff519cc21b7934171e7
+    - name: hoe_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 31
+        y: 33
+        width: 16
+        height: 18
+      spriteId: 8aae7226a2012aeaba7393349a559458
+    - name: hoe_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 31
+        y: 33
+        width: 16
+        height: 17
+      spriteId: 20d9668d465ebf66fb601fce5d2ead32
+    - name: hoe_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 31
+        y: 33
+        width: 16
+        height: 17
+      spriteId: 125e8bfc779e1d67cafd3721d7b5b46e
+    - name: hoe_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 34
+        y: 27
+        width: 13
+        height: 19
+      spriteId: 87b32dee48de1b711aed3bb99deef972
+    - name: hoe_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 34
+        y: 28
+        width: 13
+        height: 18
+      spriteId: 9a819e85df30ca0cf9d89e5cd1a58dd1
+    - name: hoe_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 34
+        y: 29
+        width: 13
+        height: 18
+      spriteId: f5524ed05fc77fda1af9df421512a2bf
+    - name: hoe_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 34
+        y: 33
+        width: 16
+        height: 17
+      spriteId: 6bd28c7de63fec1c1aa70090972fa83a
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 80, y: 80}
