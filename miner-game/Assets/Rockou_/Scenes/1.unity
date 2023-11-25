@@ -132,10 +132,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 48527915004738469, guid: 58fbdaa4fc96fc2d7bcc7009aed5094a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 48527915004738469, guid: 58fbdaa4fc96fc2d7bcc7009aed5094a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -178,10 +174,6 @@ PrefabInstance:
     - target: {fileID: 554255625166794093, guid: 58fbdaa4fc96fc2d7bcc7009aed5094a, type: 3}
       propertyPath: m_Name
       value: BasicPlayer
-      objectReference: {fileID: 0}
-    - target: {fileID: 3237346300737523217, guid: 58fbdaa4fc96fc2d7bcc7009aed5094a, type: 3}
-      propertyPath: m_Name
-      value: Visual
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -446,7 +438,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 00000000418b5201
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
