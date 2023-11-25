@@ -26,9 +26,21 @@ public class PlayerManager2D : MonoBehaviour, IPlayerManager2D
     [SerializeField]
     private float velPower = 1.2f;
 
-    [Header("Serialize")]
+    [Header("Settings : Visual facing flip")]
     [SerializeField]
     private Transform visual;
+    [SerializeField]
+    private bool flipXUsingScale = true;
+    [SerializeField]
+    private float flipXRotationRate = 0;
+    private bool flipXRotationRateIsRelativeToDeltaTime = false;
+    private Quaternion flipXRotationDefault;
+    private Quaternion flipXRotationFinal;
+
+    [Header("Settings : Rotation visual settings")]
+    private Quaternion rotationTarget;
+    private bool rotationRateIsRelativeToDeltaTime = false;
+    private float rotationRate = 1;
 
     #endregion
 
@@ -41,20 +53,32 @@ public class PlayerManager2D : MonoBehaviour, IPlayerManager2D
     #endregion
 
     private bool hasControl;
-    private bool facingPositiveX;
+    private Vector2 facingDirection = new(1, 0);
 
     private void OnEnable()
     {
         rb = GetComponent<Rigidbody2D>();
         input = GetComponent<InputManager>();
-    }
 
+        flipXRotationDefault *= visual.rotation;
+        flipXRotationFinal *= visual.rotation;
+    }
+    private void Update()
+    {
+        Rotate();
+    }
     private void FixedUpdate()
     {
+        switch (hasControl)
+        {
+            case false:
+                return;
+            default:
+                break;
+        }
         FlipX();
         Movement2d();
     }
-
     private void Movement2d()
     {
         Vector2 input = frameInput.Movement2d.Live;
@@ -77,24 +101,64 @@ public class PlayerManager2D : MonoBehaviour, IPlayerManager2D
         rb.AddForce(movement, ForceMode2D.Force);
         // Debug.Log($"{input} / {movement} / {_rb.velocity}");
     }
-
     private void FlipX()
     {
-        Vector2 input = frameInput.Movement2d.Live;
-        if (Mathf.Abs(input.x) < 0.1f)
-            return;
-        if (facingPositiveX && Mathf.Sign(input.x) < 0)
-            return;
-        if (!facingPositiveX && Mathf.Sign(input.x) > 0)
-            return;
+        float inputMovementX = frameInput.Movement2d.Live.x;
 
-        Vector3 newScale = transform.localScale;
-        if (Mathf.Sign(input.x) == Mathf.Sign(newScale.x))
-            newScale.x *= facingPositiveX ? 1 : -1;
-        transform.localScale = newScale;
+        // if we dont have movement, exit
+        if (Mathf.Abs(inputMovementX) < 0.1f) return;
+        // if we are facing +x and movement goes +x
+        if (facingDirection.x > 0 && inputMovementX > 0) return;
+        // if we are facing -x and movement goes -x
+        if (facingDirection.x < 0 && inputMovementX < 0) return;
 
-        facingPositiveX = !facingPositiveX;
+        if (flipXUsingScale)
+        {
+            FlipX_Scale();
+        }
+        else
+        {
+            FlipX_Rotation(inputMovementX);
+        }
+
+        // update currently known facing direction
+        facingDirection.x = inputMovementX;
+
     }
+    private void FlipX_Scale()
+    {
+        Vector3 newScale = visual.localScale;
+        newScale.x *= -1;
+        visual.localScale = newScale;
+    }
+    private void FlipX_Rotation(float signInputMovementX)
+    {
+        Quaternion newRot = visual.localRotation;
+        newRot *= Quaternion.Euler(0, 180 * signInputMovementX, 0);
+        RotateOverTime(newRot, flipXRotationRate, flipXRotationRateIsRelativeToDeltaTime);
+    }
+    public void RotateOverTime(Quaternion newRotationTarget, float newRotationRate, bool newRotationRateIsRelativeToDeltaTime)
+    {
+        rotationTarget = newRotationTarget;
+        rotationRate = newRotationRate;
+        rotationRateIsRelativeToDeltaTime = newRotationRateIsRelativeToDeltaTime;
+    }
+    private void Rotate()
+    {
+        if (visual.rotation == rotationTarget) return;
+
+        float finalRotationRate = rotationRate;
+        switch (rotationRateIsRelativeToDeltaTime)
+        {
+            case true:
+                finalRotationRate *= Time.deltaTime;
+                break;
+            default:
+                break;
+        }
+        visual.rotation = Quaternion.Slerp(visual.rotation, rotationTarget, finalRotationRate);
+    }
+
 }
 
 public interface IPlayerManager2D
