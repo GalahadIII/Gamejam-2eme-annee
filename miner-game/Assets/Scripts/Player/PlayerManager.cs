@@ -77,6 +77,7 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
     }
     private void Update()
     {
+        fov.setOrigin(transform.position);
         Rotate();
 
         #region IPlayerAnimatorData2D.FacingDirection
