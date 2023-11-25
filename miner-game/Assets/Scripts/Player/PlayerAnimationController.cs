@@ -23,7 +23,7 @@ public class PlayerAnimationController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _state = getCurrentState();
+        _state = GetCurrentState();
             
         if (_state == _lastState) return;
         //Debug.Log(_state);
@@ -31,14 +31,13 @@ public class PlayerAnimationController : MonoBehaviour
         _lastState = _state;
     }
     
-    private string getCurrentState()
+    private string GetCurrentState()
     {
         string direction = _playerAnimatorData.FacingDirection.ToString();
+        // if (_playerAnimatorData.isDead) _state = "Death"; return
         string movement = Mathf.Abs(_playerAnimatorData.Move_Live.x) > 0.1 || Mathf.Abs(_playerAnimatorData.Move_Live.y) > 0.1 ? "Run" : "Idle";
-        Debug.Log(movement + direction);
+        
         return movement + direction;
-        // if (_playerAnimatorData.isDead) _state = "Death";
-
     }
 
     // public static class PlayerAnimState
