@@ -76,8 +76,7 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
     private void Update()
     {
         Rotate();
-        fov.setOrigin(transform.localPosition);
-        
+
         #region IPlayerAnimatorData2D.FacingDirection
 
         switch (facingDirection.x)
@@ -120,7 +119,8 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
             default:
                 break;
         }
-        FlipX();
+        // FlipX(); // Unused
+        facingDirection = input.PlayerInputs.Movement2d.Live;
         Movement2d();
     }
 
@@ -152,7 +152,7 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
         Vector2 inputMovement = input.PlayerInputs.Movement2d.Live;
         float inputMovementX = inputMovement.x;
 
-        Debug.Log($"face:{facingDirection.x} move.x:{inputMovementX}");
+        // Debug.Log($"face:{facingDirection.x} move.x:{inputMovementX}");
 
         // EXIT IF:
         // we dont have any movement input
