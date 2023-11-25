@@ -13,7 +13,7 @@ public class MineralSpawnSetting : MonoBehaviour
     [SerializeField] int spawnSpaceRadiusNeeded;
     [Range(1, 50)]
     [SerializeField] int distanceMinBetweenMinerals;
-    [SerializeField] int layer;
+    [SerializeField] LayerMask layer;
     [SerializeField] GameObject tile;
 
     internal int GetMinSpawnRadius()
@@ -36,7 +36,7 @@ public class MineralSpawnSetting : MonoBehaviour
         return distanceMinBetweenMinerals;
     }
 
-    internal int GetLayer()
+    internal LayerMask GetLayer()
     {
         return layer;
     }

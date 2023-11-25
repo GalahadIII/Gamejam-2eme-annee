@@ -13,9 +13,9 @@ public class CheckEmptyZone : MonoBehaviour
         return collider is null;
     }
 
-    internal bool VerifierZone(int[] position, int spawnSpaceRadiusNeeded, int layer)
+    internal bool VerifierZone(int[] position, int spawnSpaceRadiusNeeded, LayerMask layer)
     {
-        Collider2D collider = Physics2D.OverlapCircle(new Vector2(position[0], position[1]), spawnSpaceRadiusNeeded);
+        Collider2D collider = Physics2D.OverlapCircle(new Vector2(position[0], position[1]), spawnSpaceRadiusNeeded, layer);
 
         return collider is null;
     }
