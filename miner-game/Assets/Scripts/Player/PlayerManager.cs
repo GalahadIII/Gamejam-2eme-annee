@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D), typeof(Rigidbody2D), typeof(InputManager))]
@@ -68,10 +69,8 @@ public class PlayerManager2D : MonoBehaviour, IPlayerManager2D
 
         // applies acceleration to speed difference, raise to a set power so acceleration increase with higher speed
         // multiply by sign to reapply direction
-        float movementX =
-            Mathf.Pow(Mathf.Abs(speedDif.x) * accelRate, velPower) * Mathf.Sign(speedDif.x);
-        float movementY =
-            Mathf.Pow(Mathf.Abs(speedDif.y) * accelRate, velPower) * Mathf.Sign(speedDif.y);
+        float movementX = Mathf.Pow(Mathf.Abs(speedDif.x) * accelRate, velPower) * Mathf.Sign(speedDif.x);
+        float movementY = Mathf.Pow(Mathf.Abs(speedDif.y) * accelRate, velPower) * Mathf.Sign(speedDif.y);
         Vector2 movement = new(movementX, movementY);
 
         // apply the movement force
