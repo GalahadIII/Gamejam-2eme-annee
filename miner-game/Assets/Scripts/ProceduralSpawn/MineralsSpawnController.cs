@@ -20,12 +20,15 @@ public class MineralsSpawnController : MonoBehaviour
             + (spawnController.height / 2 + mineralsList[0].GetComponent<MineralSpawnSetting>().GetMinSpawnRadius()) + " : " 
             + (spawnController.height / 2 + mineralsList[0].GetComponent<MineralSpawnSetting>().GetMaxSpawnRadius()));
 
-        foreach (GameObject mineral in mineralsList)
+        GameObject containerGameObject = new GameObject("MineralContainer");
+        containerGameObject.transform.parent = transform;
+
+        foreach(GameObject mineral in mineralsList)
         {
             int[] mineralPosition = FindCoordinate(mineral);
             GameObject tile = mineral.GetComponent<MineralSpawnSetting>().GetTile();
             Debug.Log(mineralPosition is null);
-            Instantiate(tile, new Vector2(mineralPosition[0], mineralPosition[1]), Quaternion.identity);
+            Instantiate(tile, new Vector2(mineralPosition[0], mineralPosition[1]), Quaternion.identity, containerGameObject.transform);
             spawnController.walls_tab[mineralPosition[0], mineralPosition[1]] = 3;
         }
     }
