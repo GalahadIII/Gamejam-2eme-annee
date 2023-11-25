@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 2b964a60d71f2d2dd992c9d236658393
+=======
+guid: 48e5f5dcd8d1a8642b77d1c5b2146ba9
+>>>>>>> refs/remotes/origin/main
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

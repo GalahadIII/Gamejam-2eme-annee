@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: d1de1e3a80d34e6428794f747c43df60
+=======
+guid: 4657f52eb47749048a8e796ff2cf67d3
+>>>>>>> refs/remotes/origin/main
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -130,7 +134,11 @@ ScriptedImporter:
       y: 4
       width: 13
       height: 14
+<<<<<<< HEAD
     spriteID: ab8ed06975db8cf8fbdcbe6fe9acab98
+=======
+    spriteID: 6b514c34e71b6104a80cf3f7b6a30402
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -150,7 +158,11 @@ ScriptedImporter:
       y: 4
       width: 13
       height: 14
+<<<<<<< HEAD
     spriteID: b2bab00787283eabea229c213d4f87d4
+=======
+    spriteID: 418b620213d450e48a29eedf221962ba
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -170,7 +182,11 @@ ScriptedImporter:
       y: 4
       width: 13
       height: 13
+<<<<<<< HEAD
     spriteID: 4ac57006e92e156c8a072dd9d21d6871
+=======
+    spriteID: d05049c555554bb4ea39ea98c31ab41a
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -190,7 +206,11 @@ ScriptedImporter:
       y: 26
       width: 13
       height: 12
+<<<<<<< HEAD
     spriteID: 50d4e3d4e23123400b07f6a0967c14b2
+=======
+    spriteID: cfabdd75a45225a438bd673dc1fd028a
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -210,7 +230,11 @@ ScriptedImporter:
       y: 26
       width: 13
       height: 13
+<<<<<<< HEAD
     spriteID: 161f8a499bb27900ba13c017c2ac3545
+=======
+    spriteID: 88daaf0d489e0714c8a159646846a3e9
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -230,7 +254,11 @@ ScriptedImporter:
       y: 26
       width: 13
       height: 13
+<<<<<<< HEAD
     spriteID: e3a13a7809320de388ec34e26836b84e
+=======
+    spriteID: f1f05ed5c346b814eb06674fa9fdd589
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -255,7 +283,11 @@ ScriptedImporter:
         y: 33
         width: 13
         height: 14
+<<<<<<< HEAD
       spriteId: ab8ed06975db8cf8fbdcbe6fe9acab98
+=======
+      spriteId: 6b514c34e71b6104a80cf3f7b6a30402
+>>>>>>> refs/remotes/origin/main
     - name: milk_Frame_1
       frameIndex: 1
       cellRect:
@@ -263,7 +295,11 @@ ScriptedImporter:
         y: 33
         width: 13
         height: 14
+<<<<<<< HEAD
       spriteId: b2bab00787283eabea229c213d4f87d4
+=======
+      spriteId: 418b620213d450e48a29eedf221962ba
+>>>>>>> refs/remotes/origin/main
     - name: milk_Frame_2
       frameIndex: 2
       cellRect:
@@ -271,7 +307,11 @@ ScriptedImporter:
         y: 33
         width: 13
         height: 13
+<<<<<<< HEAD
       spriteId: 4ac57006e92e156c8a072dd9d21d6871
+=======
+      spriteId: d05049c555554bb4ea39ea98c31ab41a
+>>>>>>> refs/remotes/origin/main
     - name: milk_Frame_3
       frameIndex: 3
       cellRect:
@@ -279,7 +319,11 @@ ScriptedImporter:
         y: 33
         width: 13
         height: 12
+<<<<<<< HEAD
       spriteId: 50d4e3d4e23123400b07f6a0967c14b2
+=======
+      spriteId: cfabdd75a45225a438bd673dc1fd028a
+>>>>>>> refs/remotes/origin/main
     - name: milk_Frame_4
       frameIndex: 4
       cellRect:
@@ -287,7 +331,11 @@ ScriptedImporter:
         y: 33
         width: 13
         height: 13
+<<<<<<< HEAD
       spriteId: 161f8a499bb27900ba13c017c2ac3545
+=======
+      spriteId: 88daaf0d489e0714c8a159646846a3e9
+>>>>>>> refs/remotes/origin/main
     - name: milk_Frame_5
       frameIndex: 5
       cellRect:
@@ -295,7 +343,11 @@ ScriptedImporter:
         y: 33
         width: 13
         height: 13
+<<<<<<< HEAD
       spriteId: e3a13a7809320de388ec34e26836b84e
+=======
+      spriteId: f1f05ed5c346b814eb06674fa9fdd589
+>>>>>>> refs/remotes/origin/main
     linkedCells: []
     parentIndex: -1
   platformSettings: []

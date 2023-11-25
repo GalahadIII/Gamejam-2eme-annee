@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 198d926fd481b5f35bb31f3b80e1621c
+=======
+guid: a8430f96c5da8144fb1604f19d39fa9b
+>>>>>>> refs/remotes/origin/main
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -130,7 +134,11 @@ ScriptedImporter:
       y: 182
       width: 13
       height: 25
+<<<<<<< HEAD
     spriteID: 1c997dd40ba719e4b9abee15e9429ca3
+=======
+    spriteID: 0824470da3a100e41987139bdd2b648d
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -150,7 +158,11 @@ ScriptedImporter:
       y: 215
       width: 13
       height: 25
+<<<<<<< HEAD
     spriteID: 79ba12bc9bc00ae04955eba298960295
+=======
+    spriteID: adace9d0160cb7346bff5ac2e370bf6b
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -170,7 +182,11 @@ ScriptedImporter:
       y: 4
       width: 13
       height: 25
+<<<<<<< HEAD
     spriteID: 92c0b9f97ae10519cabea99477faca31
+=======
+    spriteID: 3670fef3ba2efe0468db4cebc08be76e
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -190,7 +206,11 @@ ScriptedImporter:
       y: 37
       width: 13
       height: 25
+<<<<<<< HEAD
     spriteID: f6311145c6a95a54fbcdefbd0a70f5da
+=======
+    spriteID: 92986dbda43729d4d9b8fbfb418bc09b
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -210,7 +230,11 @@ ScriptedImporter:
       y: 4
       width: 32
       height: 24
+<<<<<<< HEAD
     spriteID: f03f90178b1761811ad4025322e27106
+=======
+    spriteID: ec8e43de3320b21489ce53c6c8f3b111
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -230,7 +254,11 @@ ScriptedImporter:
       y: 36
       width: 32
       height: 24
+<<<<<<< HEAD
     spriteID: 4a838be5a791885ffab06f2cdeb494b1
+=======
+    spriteID: f411a79096207544193662d15fd405f2
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -250,7 +278,11 @@ ScriptedImporter:
       y: 132
       width: 32
       height: 23
+<<<<<<< HEAD
     spriteID: 83d2ba48e17bd5139a96483475453c21
+=======
+    spriteID: 8e042efe829033b428cfc8b7b782520c
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -270,7 +302,11 @@ ScriptedImporter:
       y: 163
       width: 32
       height: 23
+<<<<<<< HEAD
     spriteID: ad97cdfc872c5e31c8a2e437e19a72b7
+=======
+    spriteID: 853fcc910671c4d4db441114436d2a94
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -290,7 +326,11 @@ ScriptedImporter:
       y: 68
       width: 32
       height: 24
+<<<<<<< HEAD
     spriteID: 90d19175093e2da6c8cb8c8621781ee2
+=======
+    spriteID: ca6c0d90d119cd84db6ddca150de2734
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -310,7 +350,11 @@ ScriptedImporter:
       y: 100
       width: 32
       height: 24
+<<<<<<< HEAD
     spriteID: 2962f81b05d9cbc47926bb16560a0434
+=======
+    spriteID: 2a26013985a18fa47b2eb47f77ba4eb6
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -330,7 +374,11 @@ ScriptedImporter:
       y: 194
       width: 32
       height: 23
+<<<<<<< HEAD
     spriteID: 925a33b820ffdc326b88ed990205bdfd
+=======
+    spriteID: 0a6d257b6fd257342847d8ee6cd3e044
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -350,7 +398,11 @@ ScriptedImporter:
       y: 225
       width: 32
       height: 23
+<<<<<<< HEAD
     spriteID: f1cb7d9c8cf7ea583beca58e8c9d50de
+=======
+    spriteID: f577821a75b5fd54a998d9799593280f
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -370,7 +422,11 @@ ScriptedImporter:
       y: 4
       width: 13
       height: 37
+<<<<<<< HEAD
     spriteID: 337b6499cebc0ef65bfb1f15a97e9f29
+=======
+    spriteID: cebc3a471343225488857da9a308da2d
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -390,7 +446,11 @@ ScriptedImporter:
       y: 49
       width: 13
       height: 37
+<<<<<<< HEAD
     spriteID: 9d52aae3b463c7756852eab8e96c636d
+=======
+    spriteID: 3ae8c9fbd58362f4fbb6129777435818
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -410,7 +470,11 @@ ScriptedImporter:
       y: 94
       width: 13
       height: 36
+<<<<<<< HEAD
     spriteID: c65bdd9b27205af05929bd5f6c8b9b59
+=======
+    spriteID: 662df32996147d942b2ceaf0318302a3
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -430,7 +494,11 @@ ScriptedImporter:
       y: 138
       width: 13
       height: 36
+<<<<<<< HEAD
     spriteID: 8c90b91cb153a06e5be5e6fc690b9479
+=======
+    spriteID: 0f5e1692de9c6b84ca0ee7cc25aa7f84
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -455,7 +523,11 @@ ScriptedImporter:
         y: 33
         width: 13
         height: 25
+<<<<<<< HEAD
       spriteId: 1c997dd40ba719e4b9abee15e9429ca3
+=======
+      spriteId: 0824470da3a100e41987139bdd2b648d
+>>>>>>> refs/remotes/origin/main
     - name: fishing-idle_Frame_13
       frameIndex: 13
       cellRect:
@@ -463,7 +535,11 @@ ScriptedImporter:
         y: 33
         width: 13
         height: 25
+<<<<<<< HEAD
       spriteId: 79ba12bc9bc00ae04955eba298960295
+=======
+      spriteId: adace9d0160cb7346bff5ac2e370bf6b
+>>>>>>> refs/remotes/origin/main
     - name: fishing-idle_Frame_14
       frameIndex: 14
       cellRect:
@@ -471,7 +547,11 @@ ScriptedImporter:
         y: 33
         width: 13
         height: 25
+<<<<<<< HEAD
       spriteId: 92c0b9f97ae10519cabea99477faca31
+=======
+      spriteId: 3670fef3ba2efe0468db4cebc08be76e
+>>>>>>> refs/remotes/origin/main
     - name: fishing-idle_Frame_15
       frameIndex: 15
       cellRect:
@@ -479,7 +559,11 @@ ScriptedImporter:
         y: 33
         width: 13
         height: 25
+<<<<<<< HEAD
       spriteId: f6311145c6a95a54fbcdefbd0a70f5da
+=======
+      spriteId: 92986dbda43729d4d9b8fbfb418bc09b
+>>>>>>> refs/remotes/origin/main
     - name: fishing-idle_Frame_0
       frameIndex: 0
       cellRect:
@@ -487,7 +571,11 @@ ScriptedImporter:
         y: 23
         width: 32
         height: 24
+<<<<<<< HEAD
       spriteId: f03f90178b1761811ad4025322e27106
+=======
+      spriteId: ec8e43de3320b21489ce53c6c8f3b111
+>>>>>>> refs/remotes/origin/main
     - name: fishing-idle_Frame_1
       frameIndex: 1
       cellRect:
@@ -495,7 +583,11 @@ ScriptedImporter:
         y: 23
         width: 32
         height: 24
+<<<<<<< HEAD
       spriteId: 4a838be5a791885ffab06f2cdeb494b1
+=======
+      spriteId: f411a79096207544193662d15fd405f2
+>>>>>>> refs/remotes/origin/main
     - name: fishing-idle_Frame_2
       frameIndex: 2
       cellRect:
@@ -503,7 +595,11 @@ ScriptedImporter:
         y: 23
         width: 32
         height: 23
+<<<<<<< HEAD
       spriteId: 83d2ba48e17bd5139a96483475453c21
+=======
+      spriteId: 8e042efe829033b428cfc8b7b782520c
+>>>>>>> refs/remotes/origin/main
     - name: fishing-idle_Frame_3
       frameIndex: 3
       cellRect:
@@ -511,7 +607,11 @@ ScriptedImporter:
         y: 23
         width: 32
         height: 23
+<<<<<<< HEAD
       spriteId: ad97cdfc872c5e31c8a2e437e19a72b7
+=======
+      spriteId: 853fcc910671c4d4db441114436d2a94
+>>>>>>> refs/remotes/origin/main
     - name: fishing-idle_Frame_4
       frameIndex: 4
       cellRect:
@@ -519,7 +619,11 @@ ScriptedImporter:
         y: 23
         width: 32
         height: 24
+<<<<<<< HEAD
       spriteId: 90d19175093e2da6c8cb8c8621781ee2
+=======
+      spriteId: ca6c0d90d119cd84db6ddca150de2734
+>>>>>>> refs/remotes/origin/main
     - name: fishing-idle_Frame_5
       frameIndex: 5
       cellRect:
@@ -527,7 +631,11 @@ ScriptedImporter:
         y: 23
         width: 32
         height: 24
+<<<<<<< HEAD
       spriteId: 2962f81b05d9cbc47926bb16560a0434
+=======
+      spriteId: 2a26013985a18fa47b2eb47f77ba4eb6
+>>>>>>> refs/remotes/origin/main
     - name: fishing-idle_Frame_6
       frameIndex: 6
       cellRect:
@@ -535,7 +643,11 @@ ScriptedImporter:
         y: 23
         width: 32
         height: 23
+<<<<<<< HEAD
       spriteId: 925a33b820ffdc326b88ed990205bdfd
+=======
+      spriteId: 0a6d257b6fd257342847d8ee6cd3e044
+>>>>>>> refs/remotes/origin/main
     - name: fishing-idle_Frame_7
       frameIndex: 7
       cellRect:
@@ -543,7 +655,11 @@ ScriptedImporter:
         y: 23
         width: 32
         height: 23
+<<<<<<< HEAD
       spriteId: f1cb7d9c8cf7ea583beca58e8c9d50de
+=======
+      spriteId: f577821a75b5fd54a998d9799593280f
+>>>>>>> refs/remotes/origin/main
     - name: fishing-idle_Frame_8
       frameIndex: 8
       cellRect:
@@ -551,7 +667,11 @@ ScriptedImporter:
         y: 10
         width: 13
         height: 37
+<<<<<<< HEAD
       spriteId: 337b6499cebc0ef65bfb1f15a97e9f29
+=======
+      spriteId: cebc3a471343225488857da9a308da2d
+>>>>>>> refs/remotes/origin/main
     - name: fishing-idle_Frame_9
       frameIndex: 9
       cellRect:
@@ -559,7 +679,11 @@ ScriptedImporter:
         y: 10
         width: 13
         height: 37
+<<<<<<< HEAD
       spriteId: 9d52aae3b463c7756852eab8e96c636d
+=======
+      spriteId: 3ae8c9fbd58362f4fbb6129777435818
+>>>>>>> refs/remotes/origin/main
     - name: fishing-idle_Frame_10
       frameIndex: 10
       cellRect:
@@ -567,7 +691,11 @@ ScriptedImporter:
         y: 10
         width: 13
         height: 36
+<<<<<<< HEAD
       spriteId: c65bdd9b27205af05929bd5f6c8b9b59
+=======
+      spriteId: 662df32996147d942b2ceaf0318302a3
+>>>>>>> refs/remotes/origin/main
     - name: fishing-idle_Frame_11
       frameIndex: 11
       cellRect:
@@ -575,7 +703,11 @@ ScriptedImporter:
         y: 10
         width: 13
         height: 36
+<<<<<<< HEAD
       spriteId: 8c90b91cb153a06e5be5e6fc690b9479
+=======
+      spriteId: 0f5e1692de9c6b84ca0ee7cc25aa7f84
+>>>>>>> refs/remotes/origin/main
     linkedCells: []
     parentIndex: -1
   platformSettings: []

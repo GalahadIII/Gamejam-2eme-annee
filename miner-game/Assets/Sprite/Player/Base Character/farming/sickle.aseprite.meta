@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: b424364d24ef885a29cc76d1ebbb577e
+=======
+guid: 0f9ce2bfd5bb5c34690c07ee79716079
+>>>>>>> refs/remotes/origin/main
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -130,7 +134,11 @@ ScriptedImporter:
       y: 4
       width: 19
       height: 14
+<<<<<<< HEAD
     spriteID: 8cbffd4a7dee1969e846af7764f02c5f
+=======
+    spriteID: ef44bdcbefbce8f438684ab0805e6a75
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -150,7 +158,11 @@ ScriptedImporter:
       y: 92
       width: 17
       height: 15
+<<<<<<< HEAD
     spriteID: d8ba89eafdf0667b9a5da1313705746f
+=======
+    spriteID: 74c97ae34213b9d4883f5507a942e136
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -170,7 +182,11 @@ ScriptedImporter:
       y: 26
       width: 19
       height: 14
+<<<<<<< HEAD
     spriteID: 5f948ed9065b77a1a9a930fd18d8b031
+=======
+    spriteID: 9a7720b809fd17947ad52503539fac2d
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -190,7 +206,11 @@ ScriptedImporter:
       y: 4
       width: 14
       height: 13
+<<<<<<< HEAD
     spriteID: 4f9c37ccfa9b80b6e9b2e18a95cd637e
+=======
+    spriteID: 65c043f83d26769448c290e1b09822e8
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -210,7 +230,11 @@ ScriptedImporter:
       y: 48
       width: 19
       height: 14
+<<<<<<< HEAD
     spriteID: 2259855b7e783bb949b0ea2cc03db239
+=======
+    spriteID: 3ab312d627748634ca53e0165472d4b0
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -230,7 +254,11 @@ ScriptedImporter:
       y: 115
       width: 17
       height: 15
+<<<<<<< HEAD
     spriteID: ec5bba2e3ca9025e89bd4675b81da1a9
+=======
+    spriteID: 6f05b560740fe5a4099c22b387579056
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -250,7 +278,11 @@ ScriptedImporter:
       y: 70
       width: 19
       height: 14
+<<<<<<< HEAD
     spriteID: 3c200a5263277b4c3abcc75bec2c6a9f
+=======
+    spriteID: f3e1d1be792a1a94d923677bc59f6b94
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -270,7 +302,11 @@ ScriptedImporter:
       y: 25
       width: 14
       height: 13
+<<<<<<< HEAD
     spriteID: 321753cd15e8c63ac8e6810f3f2776f3
+=======
+    spriteID: f5443b7306b181a48a181fbeb527ee6c
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -290,7 +326,11 @@ ScriptedImporter:
       y: 115
       width: 18
       height: 17
+<<<<<<< HEAD
     spriteID: 550aca84711b57f8bb2ca2cb7efced8b
+=======
+    spriteID: 0bb73d2c20dc33649ac4e482048bb991
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -310,7 +350,11 @@ ScriptedImporter:
       y: 32
       width: 19
       height: 21
+<<<<<<< HEAD
     spriteID: 1ae7d5594189287b58da15d5f30feb31
+=======
+    spriteID: d1f2f695a9bfbdb468746b23cd96cd2f
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -330,7 +374,11 @@ ScriptedImporter:
       y: 4
       width: 22
       height: 20
+<<<<<<< HEAD
     spriteID: f9c286d6e1b598ecf8af46e143ecfbaf
+=======
+    spriteID: 579916734512dd146a8a36d1607921ad
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -350,7 +398,11 @@ ScriptedImporter:
       y: 140
       width: 18
       height: 16
+<<<<<<< HEAD
     spriteID: 8290f96de49ea425a83d1cb686e7b0f6
+=======
+    spriteID: 0305236464cc6904a8bdb2af018fdcb9
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -370,7 +422,11 @@ ScriptedImporter:
       y: 222
       width: 13
       height: 15
+<<<<<<< HEAD
     spriteID: 8ece3f1410d76f4469da8c1293f64051
+=======
+    spriteID: c85e527356ba98642ac1e06194ba333c
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -390,7 +446,11 @@ ScriptedImporter:
       y: 186
       width: 21
       height: 13
+<<<<<<< HEAD
     spriteID: dd55e4bc0c727ac3f9f91685d8e4a2e6
+=======
+    spriteID: c078165f7c3600e40959313dfd19a3c1
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -410,7 +470,11 @@ ScriptedImporter:
       y: 138
       width: 18
       height: 13
+<<<<<<< HEAD
     spriteID: 82e1377d12abfe2d48e52268b66304ab
+=======
+    spriteID: 50beed0a0fe900c4baca09da55e24dda
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -430,7 +494,11 @@ ScriptedImporter:
       y: 180
       width: 17
       height: 13
+<<<<<<< HEAD
     spriteID: 55dfd85f77f6c1a5e88ca5ec08c42157
+=======
+    spriteID: e01fbbe32de7f014cbc55e6450a62ece
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -450,7 +518,11 @@ ScriptedImporter:
       y: 159
       width: 18
       height: 13
+<<<<<<< HEAD
     spriteID: 2207fefef7dd1365f87713e454440a9a
+=======
+    spriteID: 62d8ff2209df6594bbbeda28fa77662d
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -470,7 +542,11 @@ ScriptedImporter:
       y: 201
       width: 17
       height: 13
+<<<<<<< HEAD
     spriteID: 33f5a5d32c7a855e9af36102205df3b8
+=======
+    spriteID: db1895c636ba46e47b1bdb0668ff0ed8
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -490,7 +566,11 @@ ScriptedImporter:
       y: 4
       width: 13
       height: 15
+<<<<<<< HEAD
     spriteID: 190a3746a6d753442bdeb45dcd5a9a0a
+=======
+    spriteID: b92cc8135ddc15a4d80ee9f4b9bbecdf
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -510,7 +590,11 @@ ScriptedImporter:
       y: 236
       width: 18
       height: 15
+<<<<<<< HEAD
     spriteID: 07ee72953161616be9b5abc301e90d1d
+=======
+    spriteID: 9649cb96dd222a140965b5b632ae1e72
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -530,7 +614,11 @@ ScriptedImporter:
       y: 91
       width: 21
       height: 16
+<<<<<<< HEAD
     spriteID: 43eb2e7b5508241b88f5ecf5f3a6bba0
+=======
+    spriteID: ea543122dfeb2f048b27743e985aec37
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -550,7 +638,11 @@ ScriptedImporter:
       y: 61
       width: 17
       height: 22
+<<<<<<< HEAD
     spriteID: 2466a08ae3b1fed049532f027e949c1f
+=======
+    spriteID: 135d27e7bdd805e45a917cc5853abf64
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -570,7 +662,11 @@ ScriptedImporter:
       y: 207
       width: 13
       height: 21
+<<<<<<< HEAD
     spriteID: ae91a0a0e75c94f769700aec419ed957
+=======
+    spriteID: d7929f96845487a46a164f5b03122c0f
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -590,7 +686,11 @@ ScriptedImporter:
       y: 164
       width: 20
       height: 14
+<<<<<<< HEAD
     spriteID: 40b620f2fa9315e14871500d9d19a4a4
+=======
+    spriteID: 1b0f79e399d11024aa8c0f418f0bd817
+>>>>>>> refs/remotes/origin/main
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -615,7 +715,11 @@ ScriptedImporter:
         y: 33
         width: 19
         height: 14
+<<<<<<< HEAD
       spriteId: 8cbffd4a7dee1969e846af7764f02c5f
+=======
+      spriteId: ef44bdcbefbce8f438684ab0805e6a75
+>>>>>>> refs/remotes/origin/main
     - name: sickle_Frame_1
       frameIndex: 1
       cellRect:
@@ -623,7 +727,11 @@ ScriptedImporter:
         y: 33
         width: 17
         height: 15
+<<<<<<< HEAD
       spriteId: d8ba89eafdf0667b9a5da1313705746f
+=======
+      spriteId: 74c97ae34213b9d4883f5507a942e136
+>>>>>>> refs/remotes/origin/main
     - name: sickle_Frame_2
       frameIndex: 2
       cellRect:
@@ -631,7 +739,11 @@ ScriptedImporter:
         y: 33
         width: 19
         height: 14
+<<<<<<< HEAD
       spriteId: 5f948ed9065b77a1a9a930fd18d8b031
+=======
+      spriteId: 9a7720b809fd17947ad52503539fac2d
+>>>>>>> refs/remotes/origin/main
     - name: sickle_Frame_5
       frameIndex: 5
       cellRect:
@@ -639,7 +751,11 @@ ScriptedImporter:
         y: 33
         width: 14
         height: 13
+<<<<<<< HEAD
       spriteId: 4f9c37ccfa9b80b6e9b2e18a95cd637e
+=======
+      spriteId: 65c043f83d26769448c290e1b09822e8
+>>>>>>> refs/remotes/origin/main
     - name: sickle_Frame_6
       frameIndex: 6
       cellRect:
@@ -647,7 +763,11 @@ ScriptedImporter:
         y: 33
         width: 19
         height: 14
+<<<<<<< HEAD
       spriteId: 2259855b7e783bb949b0ea2cc03db239
+=======
+      spriteId: 3ab312d627748634ca53e0165472d4b0
+>>>>>>> refs/remotes/origin/main
     - name: sickle_Frame_7
       frameIndex: 7
       cellRect:
@@ -655,7 +775,11 @@ ScriptedImporter:
         y: 33
         width: 17
         height: 15
+<<<<<<< HEAD
       spriteId: ec5bba2e3ca9025e89bd4675b81da1a9
+=======
+      spriteId: 6f05b560740fe5a4099c22b387579056
+>>>>>>> refs/remotes/origin/main
     - name: sickle_Frame_8
       frameIndex: 8
       cellRect:
@@ -663,7 +787,11 @@ ScriptedImporter:
         y: 33
         width: 19
         height: 14
+<<<<<<< HEAD
       spriteId: 3c200a5263277b4c3abcc75bec2c6a9f
+=======
+      spriteId: f3e1d1be792a1a94d923677bc59f6b94
+>>>>>>> refs/remotes/origin/main
     - name: sickle_Frame_11
       frameIndex: 11
       cellRect:
@@ -671,7 +799,11 @@ ScriptedImporter:
         y: 33
         width: 14
         height: 13
+<<<<<<< HEAD
       spriteId: 321753cd15e8c63ac8e6810f3f2776f3
+=======
+      spriteId: f5443b7306b181a48a181fbeb527ee6c
+>>>>>>> refs/remotes/origin/main
     - name: sickle_Frame_18
       frameIndex: 18
       cellRect:
@@ -679,7 +811,11 @@ ScriptedImporter:
         y: 30
         width: 18
         height: 17
+<<<<<<< HEAD
       spriteId: 550aca84711b57f8bb2ca2cb7efced8b
+=======
+      spriteId: 0bb73d2c20dc33649ac4e482048bb991
+>>>>>>> refs/remotes/origin/main
     - name: sickle_Frame_19
       frameIndex: 19
       cellRect:
@@ -687,7 +823,11 @@ ScriptedImporter:
         y: 26
         width: 19
         height: 21
+<<<<<<< HEAD
       spriteId: 1ae7d5594189287b58da15d5f30feb31
+=======
+      spriteId: d1f2f695a9bfbdb468746b23cd96cd2f
+>>>>>>> refs/remotes/origin/main
     - name: sickle_Frame_20
       frameIndex: 20
       cellRect:
@@ -695,7 +835,11 @@ ScriptedImporter:
         y: 26
         width: 22
         height: 20
+<<<<<<< HEAD
       spriteId: f9c286d6e1b598ecf8af46e143ecfbaf
+=======
+      spriteId: 579916734512dd146a8a36d1607921ad
+>>>>>>> refs/remotes/origin/main
     - name: sickle_Frame_21
       frameIndex: 21
       cellRect:
@@ -703,7 +847,11 @@ ScriptedImporter:
         y: 33
         width: 18
         height: 16
+<<<<<<< HEAD
       spriteId: 8290f96de49ea425a83d1cb686e7b0f6
+=======
+      spriteId: 0305236464cc6904a8bdb2af018fdcb9
+>>>>>>> refs/remotes/origin/main
     - name: sickle_Frame_22
       frameIndex: 22
       cellRect:
@@ -711,7 +859,11 @@ ScriptedImporter:
         y: 33
         width: 13
         height: 15
+<<<<<<< HEAD
       spriteId: 8ece3f1410d76f4469da8c1293f64051
+=======
+      spriteId: c85e527356ba98642ac1e06194ba333c
+>>>>>>> refs/remotes/origin/main
     - name: sickle_Frame_23
       frameIndex: 23
       cellRect:
@@ -719,7 +871,11 @@ ScriptedImporter:
         y: 33
         width: 21
         height: 13
+<<<<<<< HEAD
       spriteId: dd55e4bc0c727ac3f9f91685d8e4a2e6
+=======
+      spriteId: c078165f7c3600e40959313dfd19a3c1
+>>>>>>> refs/remotes/origin/main
     - name: sickle_Frame_3
       frameIndex: 3
       cellRect:
@@ -727,7 +883,11 @@ ScriptedImporter:
         y: 33
         width: 18
         height: 13
+<<<<<<< HEAD
       spriteId: 82e1377d12abfe2d48e52268b66304ab
+=======
+      spriteId: 50beed0a0fe900c4baca09da55e24dda
+>>>>>>> refs/remotes/origin/main
     - name: sickle_Frame_4
       frameIndex: 4
       cellRect:
@@ -735,7 +895,11 @@ ScriptedImporter:
         y: 33
         width: 17
         height: 13
+<<<<<<< HEAD
       spriteId: 55dfd85f77f6c1a5e88ca5ec08c42157
+=======
+      spriteId: e01fbbe32de7f014cbc55e6450a62ece
+>>>>>>> refs/remotes/origin/main
     - name: sickle_Frame_9
       frameIndex: 9
       cellRect:
@@ -743,7 +907,11 @@ ScriptedImporter:
         y: 33
         width: 18
         height: 13
+<<<<<<< HEAD
       spriteId: 2207fefef7dd1365f87713e454440a9a
+=======
+      spriteId: 62d8ff2209df6594bbbeda28fa77662d
+>>>>>>> refs/remotes/origin/main
     - name: sickle_Frame_10
       frameIndex: 10
       cellRect:
@@ -751,7 +919,11 @@ ScriptedImporter:
         y: 33
         width: 17
         height: 13
+<<<<<<< HEAD
       spriteId: 33f5a5d32c7a855e9af36102205df3b8
+=======
+      spriteId: db1895c636ba46e47b1bdb0668ff0ed8
+>>>>>>> refs/remotes/origin/main
     - name: sickle_Frame_12
       frameIndex: 12
       cellRect:
@@ -759,7 +931,11 @@ ScriptedImporter:
         y: 33
         width: 13
         height: 15
+<<<<<<< HEAD
       spriteId: 190a3746a6d753442bdeb45dcd5a9a0a
+=======
+      spriteId: b92cc8135ddc15a4d80ee9f4b9bbecdf
+>>>>>>> refs/remotes/origin/main
     - name: sickle_Frame_13
       frameIndex: 13
       cellRect:
@@ -767,7 +943,11 @@ ScriptedImporter:
         y: 33
         width: 18
         height: 15
+<<<<<<< HEAD
       spriteId: 07ee72953161616be9b5abc301e90d1d
+=======
+      spriteId: 9649cb96dd222a140965b5b632ae1e72
+>>>>>>> refs/remotes/origin/main
     - name: sickle_Frame_14
       frameIndex: 14
       cellRect:
@@ -775,7 +955,11 @@ ScriptedImporter:
         y: 31
         width: 21
         height: 16
+<<<<<<< HEAD
       spriteId: 43eb2e7b5508241b88f5ecf5f3a6bba0
+=======
+      spriteId: ea543122dfeb2f048b27743e985aec37
+>>>>>>> refs/remotes/origin/main
     - name: sickle_Frame_15
       frameIndex: 15
       cellRect:
@@ -783,7 +967,11 @@ ScriptedImporter:
         y: 24
         width: 17
         height: 22
+<<<<<<< HEAD
       spriteId: 2466a08ae3b1fed049532f027e949c1f
+=======
+      spriteId: 135d27e7bdd805e45a917cc5853abf64
+>>>>>>> refs/remotes/origin/main
     - name: sickle_Frame_16
       frameIndex: 16
       cellRect:
@@ -791,7 +979,11 @@ ScriptedImporter:
         y: 25
         width: 13
         height: 21
+<<<<<<< HEAD
       spriteId: ae91a0a0e75c94f769700aec419ed957
+=======
+      spriteId: d7929f96845487a46a164f5b03122c0f
+>>>>>>> refs/remotes/origin/main
     - name: sickle_Frame_17
       frameIndex: 17
       cellRect:
@@ -799,7 +991,11 @@ ScriptedImporter:
         y: 33
         width: 20
         height: 14
+<<<<<<< HEAD
       spriteId: 40b620f2fa9315e14871500d9d19a4a4
+=======
+      spriteId: 1b0f79e399d11024aa8c0f418f0bd817
+>>>>>>> refs/remotes/origin/main
     linkedCells: []
     parentIndex: -1
   platformSettings: []
