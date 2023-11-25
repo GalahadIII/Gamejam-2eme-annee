@@ -34,7 +34,7 @@ public class WallSpawnController : MonoBehaviour
     int width;
     int height;
 
-    private void Start()
+    internal void WallSpawn()
     {
         width = spawnController.width; 
         height = spawnController.height;

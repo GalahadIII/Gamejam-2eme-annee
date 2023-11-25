@@ -13,11 +13,27 @@ public class ForgeSpawnController : MonoBehaviour
     [SerializeField] int spawnSpaceRadiusNeeded;
     [SerializeField] GameObject tile;
     [SerializeField] int maxWallReload;
+    [SerializeField] Transform player;
 
 
-    void Start()
+    internal void ForgeSpawn()
     {
-        spawnForge();
+        int[] coordinate = findPlaceToSpawn(spawnController.walls_tab);
+        int reloadCount = 0;
+        while (coordinate is null && reloadCount < maxWallReload)
+        {
+            spawnController.wallSpawnController.perlinCave();
+            coordinate = findPlaceToSpawn(spawnController.walls_tab);
+            reloadCount++;
+        }
+
+        if (reloadCount >= maxWallReload)
+        {
+            throw new System.Exception("Too much map reload");
+        }
+
+        Instantiate(tile, new Vector2(coordinate[0], coordinate[1]), Quaternion.identity);
+        player.position = new Vector3(coordinate[0], coordinate[1]+2);
     }
 
     int[] findPlaceToSpawn(int[,] tabs)
@@ -36,7 +52,7 @@ public class ForgeSpawnController : MonoBehaviour
         {
             for (int y = centerY - spawnRadius; y < centerY + spawnRadius; y++)
             {
-                if (VerifierZone(new int[] {x,y}))
+                if (spawnController.checkEmptyZone.VerifierZone(new int[] {x,y}, spawnSpaceRadiusNeeded))
                 {
                     result[0] = x; result[1] = y;
                     return result;
@@ -44,31 +60,5 @@ public class ForgeSpawnController : MonoBehaviour
             }
         }
         return null;
-    }
-
-    void spawnForge()
-    {
-        int[] coordinate = findPlaceToSpawn(spawnController.walls_tab);
-        int reloadCount = 0;
-        while (coordinate is null && reloadCount < maxWallReload)
-        {
-            spawnController.wallSpawnController.perlinCave();
-            coordinate = findPlaceToSpawn(spawnController.walls_tab);
-            reloadCount++;
-        }
-
-        if (reloadCount >= maxWallReload)
-        {
-            throw new System.Exception("Too much map reload");
-        }
-
-        Instantiate(tile, new Vector2(coordinate[0], coordinate[1]), Quaternion.identity);
-    }
-
-    bool VerifierZone(int[] position)
-    {
-        Collider2D collider = Physics2D.OverlapCircle(new Vector2(position[0], position[1]), spawnSpaceRadiusNeeded);
-
-        return collider is null;
     }
 }

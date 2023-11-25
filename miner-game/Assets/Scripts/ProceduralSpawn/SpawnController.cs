@@ -21,6 +21,8 @@ public class SpawnController : MonoBehaviour
 
     [SerializeField] internal WallSpawnController wallSpawnController;
     [SerializeField] internal ForgeSpawnController forgeSpawnController;
+    [SerializeField] internal MineralsSpawnController mineralsSpawnController;
+    [SerializeField] internal CheckEmptyZone checkEmptyZone;
 
     [Header("Generation Settings")]
     [SerializeField] internal int width;
@@ -31,5 +33,9 @@ public class SpawnController : MonoBehaviour
     private void Start()
     {
         walls_tab = new int[width, height];
+
+        wallSpawnController.WallSpawn();
+        forgeSpawnController.ForgeSpawn();
+        mineralsSpawnController.MineralsSpawn();
     }
 }

@@ -14,6 +14,6 @@ public class TestVerifierZone : MonoBehaviour
         Collider2D collider = Physics2D.OverlapCircle(new Vector2(0, 0), 5);
         if (collider is not null) Debug.Log(collider);
 
-        return collider is null; ;
+        return collider is null;
     }
 }
