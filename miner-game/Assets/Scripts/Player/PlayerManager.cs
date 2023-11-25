@@ -58,6 +58,7 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
 
     private Rigidbody2D rb;
     private InputManager input;
+    private BoxCollider2D pickaxeRight;
 
     #endregion
 
@@ -65,18 +66,19 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
 
     private bool hasControl = true;
     private Vector2 facingDirection = new Vector2(1, 0).normalized;
-
+    
     #endregion
 
     private void OnEnable()
     {
         rb = GetComponent<Rigidbody2D>();
         input = GetComponent<InputManager>();
-
+        pickaxeRight = GameObject.Find("Pickaxe").GetComponent<BoxCollider2D>();
         rotationTarget = visual.localRotation;
     }
     private void Update()
     {
+        fov.setOrigin(transform.position);
         Rotate();
 
         #region IPlayerAnimatorData2D.FacingDirection
