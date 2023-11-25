@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cbb62903a5f6a547a65d9a50da6416a, type: 3}
   m_Name: Coal
   m_EditorClassIdentifier: 
-  mineralSprite: {fileID: 0}
-  mineralName: 
+  mineralSprites:
+  - {fileID: -1844459847, guid: ed7a6f611b853b389a24342b6650fefb, type: 3}
+  mineralName: Coal
   mineralHardness: 0
