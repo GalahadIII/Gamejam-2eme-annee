@@ -13,6 +13,7 @@ public class ForgeSpawnController : MonoBehaviour
     [SerializeField] int spawnSpaceRadiusNeeded;
     [SerializeField] GameObject tile;
     [SerializeField] int maxWallReload;
+    [SerializeField] Transform player;
 
 
     internal void ForgeSpawn()
@@ -32,6 +33,7 @@ public class ForgeSpawnController : MonoBehaviour
         }
 
         Instantiate(tile, new Vector2(coordinate[0], coordinate[1]), Quaternion.identity);
+        player.position = new Vector3(coordinate[0], coordinate[1]+2);
     }
 
     int[] findPlaceToSpawn(int[,] tabs)

@@ -135,6 +135,8 @@ GameObject:
   - component: {fileID: 1537570180}
   - component: {fileID: 1537570177}
   - component: {fileID: 1537570179}
+  - component: {fileID: 1537570182}
+  - component: {fileID: 1537570181}
   m_Layer: 0
   m_Name: SpawnController
   m_TagString: Untagged
@@ -156,7 +158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnController: {fileID: 1537570180}
   seed: 0
-  modifier: 0.05
+  modifier: 0.06
   tile: {fileID: 3999133352400280183, guid: 58953c7ce06b9394da171b65be45a44d, type: 3}
   spriteList:
   - {fileID: 1766384443, guid: 89cececa26db67cfc9518814103ddc70, type: 3}
@@ -221,8 +223,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wallSpawnController: {fileID: 1537570177}
   forgeSpawnController: {fileID: 1537570179}
+  mineralsSpawnController: {fileID: 1537570182}
+  checkEmptyZone: {fileID: 1537570181}
   width: 100
   height: 100
+--- !u!114 &1537570181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537570176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95280856d26db0489b9cb5296a2a675, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnController: {fileID: 1537570180}
+--- !u!114 &1537570182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537570176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a9194704b9722c4ab8fdfe557a82cc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnController: {fileID: 1537570180}
+  mineralsList:
+  - {fileID: 8385324995685041870, guid: ff07d50061f20d342b0fc69c39367d77, type: 3}
+  - {fileID: 8385324995685041870, guid: ff07d50061f20d342b0fc69c39367d77, type: 3}
+  - {fileID: 8385324995685041870, guid: ff07d50061f20d342b0fc69c39367d77, type: 3}
 --- !u!1 &1582065011
 GameObject:
   m_ObjectHideFlags: 0
