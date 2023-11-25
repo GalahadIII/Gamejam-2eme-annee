@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mineralSprites:
   - {fileID: -1844459847, guid: ed7a6f611b853b389a24342b6650fefb, type: 3}
+  - {fileID: -1104582663, guid: ed7a6f611b853b389a24342b6650fefb, type: 3}
   mineralName: Coal
   mineralHardness: 0
