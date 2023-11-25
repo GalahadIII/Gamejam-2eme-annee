@@ -10,16 +10,6 @@ public class MineralsSpawnController : MonoBehaviour
 
     internal void MineralsSpawn()
     {
-
-        Debug.Log(spawnController.width / 2 - mineralsList[0].GetComponent<MineralSpawnSetting>().GetMaxSpawnRadius() + " : " 
-            + (spawnController.width / 2 - mineralsList[0].GetComponent<MineralSpawnSetting>().GetMinSpawnRadius()) + " : " 
-            + (spawnController.width / 2 + mineralsList[0].GetComponent<MineralSpawnSetting>().GetMinSpawnRadius()) + " : " 
-            + (spawnController.width / 2 + mineralsList[0].GetComponent<MineralSpawnSetting>().GetMaxSpawnRadius()));
-        Debug.Log(spawnController.height / 2 - mineralsList[0].GetComponent<MineralSpawnSetting>().GetMaxSpawnRadius() + " : " 
-            + (spawnController.height / 2 - mineralsList[0].GetComponent<MineralSpawnSetting>().GetMinSpawnRadius()) + " : " 
-            + (spawnController.height / 2 + mineralsList[0].GetComponent<MineralSpawnSetting>().GetMinSpawnRadius()) + " : " 
-            + (spawnController.height / 2 + mineralsList[0].GetComponent<MineralSpawnSetting>().GetMaxSpawnRadius()));
-
         GameObject containerGameObject = new GameObject("MineralContainer");
         containerGameObject.transform.parent = transform;
 

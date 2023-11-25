@@ -33,9 +33,13 @@ public class WallSpawnController : MonoBehaviour
     private int[,] walls_tab;
     int width;
     int height;
+    GameObject containerGameObject;
 
     internal void WallSpawn()
     {
+        containerGameObject = new GameObject("WallContainer");
+        containerGameObject.transform.parent = transform;
+
         width = spawnController.width; 
         height = spawnController.height;
         walls_tab = spawnController.walls_tab;
@@ -61,7 +65,7 @@ public class WallSpawnController : MonoBehaviour
                 if(walls_tab[x, y] == 1)
                 {
                     tile.GetComponent<SpriteRenderer>().sprite = GetWallOrientation(x, y);
-                    Instantiate(tile, new Vector2(x, y), Quaternion.identity);
+                    Instantiate(tile, new Vector2(x, y), Quaternion.identity, containerGameObject.transform);
                 }
             }
         }
