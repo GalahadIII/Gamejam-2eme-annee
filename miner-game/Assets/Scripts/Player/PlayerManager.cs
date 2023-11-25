@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D), typeof(Rigidbody2D), typeof(InputManager))]
@@ -39,10 +40,6 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
     private float flipXRotationRate = 0;
     [SerializeField]
     private bool flipXRotationRateIsRelativeToDeltaTime = false;
-    [SerializeField]
-    private Quaternion flipXRotationDefault = Quaternion.identity;
-    [SerializeField]
-    private Quaternion flipXRotationFinal = Quaternion.identity;
 
     [Header("Settings : Rotation visual settings")]
     [SerializeField]
@@ -72,12 +69,11 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
         rb = GetComponent<Rigidbody2D>();
         input = GetComponent<InputManager>();
 
-        flipXRotationDefault *= visual.rotation;
-        flipXRotationFinal *= visual.rotation;
+        rotationTarget = visual.localRotation;
     }
     private void Update()
     {
-        Rotate();
+        // Rotate();
 
         #region IPlayerAnimatorData2D.FacingDirection
 
@@ -151,28 +147,30 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
     private void FlipX()
     {
         Vector2 inputMovement = input.PlayerInputs.Movement2d.Live;
-        facingDirection = inputMovement;
         float inputMovementX = inputMovement.x;
-        Debug.Log($"face:{facingDirection.x} move.x:{inputMovementX} move:{input.PlayerInputs.Movement2d.Live}");
 
-        // if we dont have movement, exit
+        Debug.Log($"face:{facingDirection.x} move.x:{inputMovementX}");
+
+        // EXIT IF:
+        // we dont have any movement input
         if (Mathf.Abs(inputMovementX) < 0.1f) return;
-        // if we are facing +x and movement goes +x
-        if (facingDirection.x > 0 && inputMovementX > 0) return;
-        // if we are facing -x and movement goes -x
-        if (facingDirection.x < 0 && inputMovementX < 0) return;
+        // we have same input sign and currently facing sign (+ == + || - == -)
+        if (Mathf.Sign(facingDirection.x) == Mathf.Sign(inputMovementX)) return;
 
-        if (flipXUsingRotation)
+        Debug.LogWarning($"face:{facingDirection.x} move.x:{inputMovementX}");
+
+        switch (flipXUsingRotation)
         {
-            FlipX_Rotation(inputMovementX);
-        }
-        else
-        {
-            FlipX_Scale();
+            case true:
+                FlipX_Rotation();
+                break;
+            default:
+                FlipX_Scale();
+                break;
         }
 
         // update currently known facing direction
-        facingDirection.x = inputMovementX;
+        facingDirection = inputMovement;
 
     }
     private void FlipX_Scale()
@@ -180,12 +178,16 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
         Vector3 newScale = visual.localScale;
         newScale.x *= -1;
         visual.localScale = newScale;
+        // visual.localScale *= new Vector3(1, -1, 1);
     }
-    private void FlipX_Rotation(float signInputMovementX)
+    private void FlipX_Rotation()
     {
-        Quaternion newRot = visual.localRotation;
-        newRot *= Quaternion.Euler(0, 180 * signInputMovementX, 0);
-        RotateOverTime(newRot, flipXRotationRate, flipXRotationRateIsRelativeToDeltaTime);
+        Quaternion RotationDiff = Quaternion.Euler(0, 180, 0);
+        visual.localRotation *= RotationDiff;
+        // Quaternion newRot = visual.localRotation;
+        // newRot *= RotationDiff;
+        // visual.localRotation = newRot;
+        // RotateOverTime(newRot, flipXRotationRate, flipXRotationRateIsRelativeToDeltaTime);
     }
 
     public void RotateOverTime(Quaternion newRotationTarget, float newRotationRate, bool newRotationRateIsRelativeToDeltaTime)
