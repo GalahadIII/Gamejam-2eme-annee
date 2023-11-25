@@ -48,13 +48,16 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
     private float rotationRate = 1;
     private Quaternion rotationTarget;
 
+    [Header("Settings : Field of view")] 
+    [SerializeField]
+    private FieldOfView fov;
+
     #endregion
 
     #region GetComponent'ed
 
     private Rigidbody2D rb;
     private InputManager input;
-    private FieldOfView fov;
 
     #endregion
 
@@ -69,12 +72,12 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
     {
         rb = GetComponent<Rigidbody2D>();
         input = GetComponent<InputManager>();
-        fov = GetComponentInChildren<FieldOfView>();
 
         rotationTarget = visual.localRotation;
     }
     private void Update()
     {
+        fov.setOrigin(transform.position);
         Rotate();
 
         #region IPlayerAnimatorData2D.FacingDirection

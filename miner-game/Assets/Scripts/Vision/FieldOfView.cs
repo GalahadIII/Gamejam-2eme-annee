@@ -25,7 +25,7 @@ public class FieldOfView : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        _origin = transform.position;
+        // _origin = Vector3.zero;
 
         float angle = 0f;
         float angleIncrease = fov / rayCount;
@@ -45,7 +45,7 @@ public class FieldOfView : MonoBehaviour
             if (raycastHit2D.collider == null)
             {
                 // No hit
-                vertex = GetVectorFromAngle(angle) * viewDistance;
+                vertex = _origin + GetVectorFromAngle(angle) * viewDistance;
             }
             else
             {
