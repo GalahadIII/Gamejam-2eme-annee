@@ -8,11 +8,15 @@ public class MineralsSpawnController : MonoBehaviour
 
     internal void MineralsSpawn()
     {
+        GameObject containerGameObject = new GameObject("MineralContainer");
+        containerGameObject.transform.parent = transform;
+
         foreach(GameObject mineral in mineralsList)
         {
             int[] mineralPosition = FindCoordinate(spawnController.walls_tab, mineral);
             GameObject tile = mineral.GetComponent<MineralSpawnSetting>().GetTile();
-            Instantiate(tile, new Vector2(mineralPosition[0], mineralPosition[1]), Quaternion.identity);
+            Debug.Log($"{mineralPosition[0]} {mineralPosition[1]}");
+            Instantiate(tile, new Vector2(mineralPosition[0], mineralPosition[1]), Quaternion.identity, containerGameObject.transform);
         }
     }
 
