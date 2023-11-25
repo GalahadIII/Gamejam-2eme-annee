@@ -25,7 +25,6 @@ public class FieldOfView : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        Vector3 origin = Vector3.zero;
         
         float angle = 0f;
         float angleIncrease = fov / rayCount;
@@ -36,18 +35,18 @@ public class FieldOfView : MonoBehaviour
         
         
         
-        vertices[0] = origin;
+        vertices[0] = _origin;
 
         int vertexIndex = 1;
         int triangleIndex = 0;
         for (int i = 0; i <= rayCount; i++)
         {
             Vector3 vertex;
-            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, GetVectorFromAngle(angle), viewDistance, layerMask);
+            RaycastHit2D raycastHit2D = Physics2D.Raycast(_origin, GetVectorFromAngle(angle), viewDistance, layerMask);
             if (raycastHit2D.collider == null)
             {
                 // No hit
-                vertex = origin + GetVectorFromAngle(angle) * viewDistance;
+                vertex = _origin + GetVectorFromAngle(angle) * viewDistance;
             }
             else
             {
