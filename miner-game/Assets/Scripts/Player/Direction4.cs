@@ -10,6 +10,7 @@ public enum FacingDirection4
     South = 2,
     Down = 2,
 
-    West = 3,
     Left = 3,
+    West = 3,
+
 }

@@ -48,7 +48,7 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
     private float rotationRate = 1;
     private Quaternion rotationTarget;
 
-    [Header("Settings : Field of view")] 
+    [Header("Settings : Field of view")]
     [SerializeField]
     private FieldOfView fov;
 
@@ -77,33 +77,33 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
     }
     private void Update()
     {
-        fov.setOrigin(transform.position);
         Rotate();
 
         #region IPlayerAnimatorData2D.FacingDirection
 
-        switch (facingDirection.x)
+        switch (input.PlayerInputs.Movement2d.Live.y)
         {
-            case > 0.1f:
-                FacingDirection = FacingDirection4.Right;
-                break;
-            case < 0.1f:
-                FacingDirection = FacingDirection4.Left;
-                break;
-            default:
-                break;
-        }
-        switch (facingDirection.y)
-        {
-            case > 0.1f:
+            case >  0.1f:
                 FacingDirection = FacingDirection4.Up;
                 break;
-            case < 0.1f:
+            case < -0.1f:
                 FacingDirection = FacingDirection4.Down;
                 break;
             default:
                 break;
         }
+        switch (input.PlayerInputs.Movement2d.Live.x)
+        {
+            case >  0.1f:
+                FacingDirection = FacingDirection4.Right;
+                break;
+            case < -0.1f:
+                FacingDirection = FacingDirection4.Left;
+                break;
+            default:
+                break;
+        }
+        // Debug.Log($"{input.PlayerInputs.Movement2d.Live} {FacingDirection}");
 
         #endregion
 
@@ -123,7 +123,6 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
                 break;
         }
         // FlipX(); // Unused
-        facingDirection = input.PlayerInputs.Movement2d.Live;
         Movement2d();
     }
 
