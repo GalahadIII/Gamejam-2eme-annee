@@ -15,38 +15,7 @@ public class ForgeSpawnController : MonoBehaviour
     [SerializeField] int maxWallReload;
 
 
-    void Start()
-    {
-        spawnForge();
-    }
-
-    int[] findPlaceToSpawn(int[,] tabs)
-    {
-        int[] result = new int[2];
-        int width = spawnController.width;
-        int height = spawnController.height;
-        int centerX = width / 2;
-        int centerY = height / 2;
-
-        if (2 * (spawnRadius + spawnSpaceRadiusNeeded) > width || 2 * (spawnRadius + spawnSpaceRadiusNeeded) > height)
-        {
-            throw new System.Exception("Radius and/or space needed value not correct");
-        }
-        for (int x = centerX- spawnRadius; x < centerX + spawnRadius; x++)
-        {
-            for (int y = centerY - spawnRadius; y < centerY + spawnRadius; y++)
-            {
-                if (VerifierZone(new int[] {x,y}))
-                {
-                    result[0] = x; result[1] = y;
-                    return result;
-                }
-            }
-        }
-        return null;
-    }
-
-    void spawnForge()
+    internal void ForgeSpawn()
     {
         int[] coordinate = findPlaceToSpawn(spawnController.walls_tab);
         int reloadCount = 0;
@@ -65,10 +34,29 @@ public class ForgeSpawnController : MonoBehaviour
         Instantiate(tile, new Vector2(coordinate[0], coordinate[1]), Quaternion.identity);
     }
 
-    bool VerifierZone(int[] position)
+    int[] findPlaceToSpawn(int[,] tabs)
     {
-        Collider2D collider = Physics2D.OverlapCircle(new Vector2(position[0], position[1]), spawnSpaceRadiusNeeded);
+        int[] result = new int[2];
+        int width = spawnController.width;
+        int height = spawnController.height;
+        int centerX = width / 2;
+        int centerY = height / 2;
 
-        return collider is null;
+        if (2 * (spawnRadius + spawnSpaceRadiusNeeded) > width || 2 * (spawnRadius + spawnSpaceRadiusNeeded) > height)
+        {
+            throw new System.Exception("Radius and/or space needed value not correct");
+        }
+        for (int x = centerX- spawnRadius; x < centerX + spawnRadius; x++)
+        {
+            for (int y = centerY - spawnRadius; y < centerY + spawnRadius; y++)
+            {
+                if (spawnController.checkEmptyZone.VerifierZone(new int[] {x,y}, spawnSpaceRadiusNeeded))
+                {
+                    result[0] = x; result[1] = y;
+                    return result;
+                }
+            }
+        }
+        return null;
     }
 }

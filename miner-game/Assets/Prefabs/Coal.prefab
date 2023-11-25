@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4379148210891985149}
   - component: {fileID: 1737132621777279377}
-  m_Layer: 0
+  - component: {fileID: -4245135194323154441}
+  m_Layer: 20
   m_Name: Coal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,3 +85,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-4245135194323154441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8385324995685041870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da4a8645bc7b51646ad731de1a51eecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minSpawnRadius: 0
+  maxSpawnRadius: 50
+  spawnSpaceRadiusNeeded: 0
+  distanceMinBetweenMinerals: 10
+  layer: 20
+  tile: {fileID: 8385324995685041870}

@@ -204,7 +204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnController: {fileID: 1537570180}
   spawnRadius: 30
-  spawnSpaceNeeded: 10
+  spawnSpaceRadiusNeeded: 5
   tile: {fileID: 6173952041359325242, guid: d4c0ace26070f3e4fb97a47a7b725070, type: 3}
   maxWallReload: 5
 --- !u!114 &1537570180
