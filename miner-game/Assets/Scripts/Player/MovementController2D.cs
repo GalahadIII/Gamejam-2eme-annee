@@ -66,7 +66,7 @@ public class MovementController2D : MonoBehaviour
 
         // apply the movement force
         _rb.AddForce(movement, ForceMode2D.Force);
-        Debug.Log($"{input} / {movement} / {_rb.velocity}");
+        // Debug.Log($"{input} / {movement} / {_rb.velocity}");
     }
 
     public void ResetVelocity() {

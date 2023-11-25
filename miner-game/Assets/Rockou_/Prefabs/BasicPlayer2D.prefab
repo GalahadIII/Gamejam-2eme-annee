@@ -54,6 +54,8 @@ MonoBehaviour:
   decceleration: 6
   velPower: 1.2
   visual: {fileID: 7395622077019407850}
+  flipXUsingScale: 0
+  flipXRotationRate: 1
 --- !u!114 &2330067094889886095
 MonoBehaviour:
   m_ObjectHideFlags: 0
