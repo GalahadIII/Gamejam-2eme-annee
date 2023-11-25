@@ -663,7 +663,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fov: 360
   viewDistance: 5
-  rayCount: 50
+  rayCount: 80
   layerMask:
     serializedVersion: 2
     m_Bits: 64
