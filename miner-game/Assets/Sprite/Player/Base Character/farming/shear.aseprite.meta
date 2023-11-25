@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 10a316e0b007f8657b1a20cff505ba4a
-=======
-guid: 6870947ba823c0b438d15e030686f268
->>>>>>> refs/remotes/origin/main
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -134,11 +130,7 @@ ScriptedImporter:
       y: 63
       width: 14
       height: 20
-<<<<<<< HEAD
-    spriteID: 489c6cb9e77c082169ba1419262d3eb0
-=======
-    spriteID: ee8b6e29fd27b6842b330c84c1ed0eb9
->>>>>>> refs/remotes/origin/main
+    spriteID: 5fcd327c198717006864c47b9f48d051
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -158,11 +150,7 @@ ScriptedImporter:
       y: 32
       width: 19
       height: 23
-<<<<<<< HEAD
-    spriteID: 370b4c6a2e82b62b2ac3eee2fdb8b8b3
-=======
-    spriteID: 84a94af29eb212642bed76917ae33238
->>>>>>> refs/remotes/origin/main
+    spriteID: 9d6301cca3a6e274fa867829a4c14dbe
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -182,11 +170,7 @@ ScriptedImporter:
       y: 4
       width: 23
       height: 20
-<<<<<<< HEAD
-    spriteID: 5f3ef48b620e883599dccdc0eea6e6b6
-=======
-    spriteID: 7ddc3d5dbeb39e64bb52d4042c5ae193
->>>>>>> refs/remotes/origin/main
+    spriteID: 7195f36a058847291a84f1b34c532607
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -206,11 +190,7 @@ ScriptedImporter:
       y: 4
       width: 25
       height: 13
-<<<<<<< HEAD
-    spriteID: d3c79fca4503468b4809c325739bd1a4
-=======
-    spriteID: 6056b1b22d17b7647b3872ede4d088d6
->>>>>>> refs/remotes/origin/main
+    spriteID: e3d29cc2ff619ca178f025bdcfdcffab
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -230,11 +210,7 @@ ScriptedImporter:
       y: 91
       width: 13
       height: 14
-<<<<<<< HEAD
-    spriteID: ddc326d25bf4d14b281531206748065a
-=======
-    spriteID: 3b106657812d5654f8de9ec1bea7c036
->>>>>>> refs/remotes/origin/main
+    spriteID: 047aa3fd6bc261d84a22576cb7781a28
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -254,11 +230,7 @@ ScriptedImporter:
       y: 25
       width: 13
       height: 14
-<<<<<<< HEAD
-    spriteID: 3d0c8d99ab456e7c58695ef5bbae70ef
-=======
-    spriteID: 0c74e3f9d3f36d64fa8876d6f50cdb71
->>>>>>> refs/remotes/origin/main
+    spriteID: 8c03ba887fec4e4bd8cbdebd45269f55
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -283,11 +255,7 @@ ScriptedImporter:
         y: 33
         width: 14
         height: 20
-<<<<<<< HEAD
-      spriteId: 489c6cb9e77c082169ba1419262d3eb0
-=======
-      spriteId: ee8b6e29fd27b6842b330c84c1ed0eb9
->>>>>>> refs/remotes/origin/main
+      spriteId: 5fcd327c198717006864c47b9f48d051
     - name: shear_Frame_2
       frameIndex: 2
       cellRect:
@@ -295,11 +263,7 @@ ScriptedImporter:
         y: 33
         width: 19
         height: 23
-<<<<<<< HEAD
-      spriteId: 370b4c6a2e82b62b2ac3eee2fdb8b8b3
-=======
-      spriteId: 84a94af29eb212642bed76917ae33238
->>>>>>> refs/remotes/origin/main
+      spriteId: 9d6301cca3a6e274fa867829a4c14dbe
     - name: shear_Frame_3
       frameIndex: 3
       cellRect:
@@ -307,11 +271,7 @@ ScriptedImporter:
         y: 33
         width: 23
         height: 20
-<<<<<<< HEAD
-      spriteId: 5f3ef48b620e883599dccdc0eea6e6b6
-=======
-      spriteId: 7ddc3d5dbeb39e64bb52d4042c5ae193
->>>>>>> refs/remotes/origin/main
+      spriteId: 7195f36a058847291a84f1b34c532607
     - name: shear_Frame_4
       frameIndex: 4
       cellRect:
@@ -319,11 +279,7 @@ ScriptedImporter:
         y: 33
         width: 25
         height: 13
-<<<<<<< HEAD
-      spriteId: d3c79fca4503468b4809c325739bd1a4
-=======
-      spriteId: 6056b1b22d17b7647b3872ede4d088d6
->>>>>>> refs/remotes/origin/main
+      spriteId: e3d29cc2ff619ca178f025bdcfdcffab
     - name: shear_Frame_0
       frameIndex: 0
       cellRect:
@@ -331,11 +287,7 @@ ScriptedImporter:
         y: 33
         width: 13
         height: 14
-<<<<<<< HEAD
-      spriteId: ddc326d25bf4d14b281531206748065a
-=======
-      spriteId: 3b106657812d5654f8de9ec1bea7c036
->>>>>>> refs/remotes/origin/main
+      spriteId: 047aa3fd6bc261d84a22576cb7781a28
     - name: shear_Frame_5
       frameIndex: 5
       cellRect:
@@ -343,11 +295,7 @@ ScriptedImporter:
         y: 33
         width: 13
         height: 14
-<<<<<<< HEAD
-      spriteId: 3d0c8d99ab456e7c58695ef5bbae70ef
-=======
-      spriteId: 0c74e3f9d3f36d64fa8876d6f50cdb71
->>>>>>> refs/remotes/origin/main
+      spriteId: 8c03ba887fec4e4bd8cbdebd45269f55
     linkedCells: []
     parentIndex: -1
   platformSettings: []
