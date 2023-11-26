@@ -1,15 +1,19 @@
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class WallSpawnController : MonoBehaviour
 {
     [Header("Controller")]
     [SerializeField] internal SpawnController spawnController;
 
+    [Header("Object")]
+    [SerializeField] internal Tilemap tilemap;
+
     [Header("Generation Settings")]
     [SerializeField] float seed;
     [Range(0, 1)]
     [SerializeField] float modifier;
-    [SerializeField] GameObject tile;
+    [SerializeField] GameObject tileGameObject;
 
     [Header("Sprite list")]
     [SerializeField] Sprite[] spriteList;
@@ -64,8 +68,11 @@ public class WallSpawnController : MonoBehaviour
             {
                 if(walls_tab[x, y] == 1)
                 {
-                    tile.GetComponent<SpriteRenderer>().sprite = GetWallOrientation(x, y);
-                    Instantiate(tile, new Vector2(x, y), Quaternion.identity, containerGameObject.transform);
+                    //tileGameObject.GetComponent<SpriteRenderer>().sprite = GetWallOrientation(x, y);
+                    //Instantiate(tileGameObject, new Vector2(x, y), Quaternion.identity, containerGameObject.transform);
+                    Tile tile = ScriptableObject.CreateInstance<Tile>();
+                    tile.sprite = GetWallOrientation(x, y);
+                    tilemap.SetTile(new Vector3Int(x, y, 0), tile);
                 }
             }
         }
