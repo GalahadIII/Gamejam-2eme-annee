@@ -10,6 +10,8 @@ public class Pickaxe : MonoBehaviour
     [SerializeField] private float cooldown = 1f;
     [SerializeField] int level = 1;
 
+    public int Level { get { return level; } set { level = value; } }
+
     [Header("Data")]
     private float lastUse = 0;
     private ObjectColliderDetector2D detector;

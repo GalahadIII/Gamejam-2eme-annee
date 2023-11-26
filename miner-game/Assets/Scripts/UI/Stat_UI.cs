@@ -38,8 +38,7 @@ public class Stat_UI : MonoBehaviour
 
     internal void UpdateInventoryDisplay()
     {
-        int pickaxeLvl = player.GetComponent<PlayerManager2D>().pickaxeRight.level;
-        //int pickaxeLvl = 2;
+        int pickaxeLvl = player.GetComponent<PlayerManager2D>().pickaxeRight.Level;
         pickaxe.sprite = pickaxeSpriteList[pickaxeLvl-1];
         tmpCoal.text = inventoryController.inventory.GetAmountItem(inventoryController.inventory.listItem[0]).ToString();
         tmpIron.text = inventoryController.inventory.GetAmountItem(inventoryController.inventory.listItem[1]).ToString();
