@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 [RequireComponent(typeof(Collider2D), typeof(Rigidbody2D), typeof(InputManager))]
 public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
@@ -31,6 +33,8 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
     [Header("Settings : Visual")]
     [SerializeField]
     private Transform visual;
+    [SerializeField]
+    private bool debugFindRay = true;
 
     [Header("Settings : Rotation")]
     [SerializeField]
@@ -76,6 +80,7 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
     }
     private void Update()
     {
+
         #region IPlayerAnimatorData2D.FacingDirection
 
         switch (input.PlayerInputs.Movement2d.Live.y)
@@ -114,7 +119,7 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
             {
                 Pause();
             }
-            
+
         }
     }
     private void FixedUpdate()
@@ -165,6 +170,7 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
         switch (input.PlayerInputs.Action1.Live)
         {
             case true:
+                DebugTraceMineralVein();
                 pickaxeRight.Use();
                 break;
             default:
@@ -234,4 +240,40 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
         settingUI.SetActive(false);
         statBarUI.SetActive(true);
     }
+
+    private void DebugTraceMineralVein()
+    {
+
+        // Debug.Log($"DebugTraceMineralVein 0 {debugFindRay}");
+        switch (debugFindRay)
+        {
+            case false:
+                return;
+            default:
+                break;
+        }
+        // Debug.Log($"DebugTraceMineralVein 1");
+
+        MineralVein[] mineralVeins = (MineralVein[]) FindObjectsOfType(typeof(MineralVein));
+        float maxDistance = float.NegativeInfinity;
+        foreach (MineralVein mineralVein in mineralVeins)
+        {
+            Vector3 start   = transform.position;
+            Vector3 end     = mineralVein.transform.position;
+            float distance = Vector3.Distance(start, end);
+            maxDistance = distance > maxDistance ? distance : maxDistance;
+        }
+        foreach (MineralVein mineralVein in mineralVeins)
+        {
+            Vector3 start   = transform.position;
+            Vector3 end     = mineralVein.transform.position;
+            float distance = Vector3.Distance(start, end);
+            float colorGrey = distance / maxDistance;
+            // Debug.Log($"{start} {end} {maxDistance} {distance} {colorGrey}");
+
+            Debug.DrawLine(start, end, new Color(colorGrey, colorGrey, colorGrey, 1f));
+
+        }
+    }
+
 }

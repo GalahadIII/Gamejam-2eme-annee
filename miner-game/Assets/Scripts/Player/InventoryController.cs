@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class InventoryController : MonoBehaviour
 {
-    [SerializeField] internal GameObject player;
+    [SerializeField] internal PlayerManager2D player;
     [SerializeField] internal Forge_UI forge_UI;
     [SerializeField] internal Stat_UI stat_UI;
 
