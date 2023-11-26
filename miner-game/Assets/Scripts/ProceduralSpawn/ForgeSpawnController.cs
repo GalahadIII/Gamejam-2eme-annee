@@ -34,7 +34,7 @@ public class ForgeSpawnController : MonoBehaviour
 
         Instantiate(tile, new Vector2(coordinate[0], coordinate[1]), Quaternion.identity);
         spawnController.walls_tab[coordinate[0], coordinate[1]] = 2;
-        //player.position = new Vector3(coordinate[0], coordinate[1]+2);
+        player.position = new Vector3(coordinate[0], coordinate[1]+2);
     }
 
     int[] findPlaceToSpawn(int[,] tabs)
