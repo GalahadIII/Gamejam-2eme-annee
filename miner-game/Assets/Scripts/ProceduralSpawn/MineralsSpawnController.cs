@@ -17,7 +17,6 @@ public class MineralsSpawnController : MonoBehaviour
         {
             int[] mineralPosition = FindCoordinate(mineral);
             GameObject tile = mineral.GetComponent<MineralSpawnSetting>().GetTile();
-            Debug.Log(mineralPosition is null);
             Instantiate(tile, new Vector2(mineralPosition[0], mineralPosition[1]), Quaternion.identity, containerGameObject.transform);
             spawnController.walls_tab[mineralPosition[0], mineralPosition[1]] = 3;
         }

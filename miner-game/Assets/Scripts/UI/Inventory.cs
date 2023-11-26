@@ -3,10 +3,21 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    [SerializeField] InventoryController inventoryController;
+    [SerializeField] internal InventoryController inventoryController;
 
-    private Dictionary<Item, int> itemInventory = new Dictionary<Item, int>();
+    [SerializeField] Item coalMineralItem;
+    [SerializeField] Item ironMineralItem;
+    [SerializeField] Item goldMineralItem;
+    [SerializeField] Item diamondMineralItem;
+    [SerializeField] Item torchItem;
 
+    internal Item[] listItem;
+    internal Dictionary<Item, int> itemInventory = new Dictionary<Item, int>();
+
+    private void Start()
+    {
+        listItem = new Item[] {coalMineralItem, ironMineralItem, goldMineralItem, diamondMineralItem, torchItem };
+    }
     public void AddItem(Item item)
     {
         if (itemInventory.ContainsKey(item))
@@ -17,6 +28,7 @@ public class Inventory : MonoBehaviour
         {
             itemInventory.Add(item, 1);
         }
+        inventoryController.UpdateDisplay();
     }
 
     public void AddItem(Item item, int amount)
@@ -35,6 +47,7 @@ public class Inventory : MonoBehaviour
                 itemInventory.Remove(item);
             }
         }
+        inventoryController.UpdateDisplay();
     }
 
     public void RemoveItem(Item item, int amount)
@@ -42,9 +55,15 @@ public class Inventory : MonoBehaviour
         for (int i = 0; i < amount; i++) RemoveItem(item);
     }
 
-    public bool ContainAmountMineral(Item item, int amount)
+    public bool ContainAmountItem(Item item, int amount)
     {
         return itemInventory[item] >= amount;
+    }
+
+    public int GetAmountItem(Item item)
+    {
+        if (!itemInventory.ContainsKey(item))return 0;
+        return itemInventory[item];
     }
 
 }

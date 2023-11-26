@@ -8,40 +8,41 @@ using UnityEngine.UI;
 public class Stat_UI : MonoBehaviour
 {
     [SerializeField] GameObject player;
+    [SerializeField] InventoryController inventoryController;
 
     [Header("HitPoint")]
     [SerializeField] Image hitPointImage;
-    [SerializeField] Sprite[] hitPointSpriteTab;
 
     [Header("Score")]
     [SerializeField] TextMeshProUGUI tmpScore;
 
     [Header("Inventory")]
     [SerializeField] Image pickaxe;
-    [SerializeField] Sprite[] pickaxeSpriteTab;
     [SerializeField] TextMeshProUGUI tmpTorch;
     [SerializeField] TextMeshProUGUI tmpCoal;
     [SerializeField] TextMeshProUGUI tmpIron;
     [SerializeField] TextMeshProUGUI tmpGold;
     [SerializeField] TextMeshProUGUI tmpDiamond;
 
-    void UpdateHitPointDisplay(int hitPoints)
+    internal void UpdateHitPointDisplay(int hitPoints)
     {
-        //hitPointImage.sprite = hitPointSpriteTab[player.GetComponent<PlayerStat>().hitPoints];
+        hitPointImage.sprite = Resources.Load<Sprite>("Assets/Sprites/Ui/"+hitPoints+"-hitpoint-48x16.png");
     }
 
-    void UpdateScoreDisplay(int score)
+    internal void UpdateScoreDisplay(int score)
     {
         tmpScore.text = score.ToString();
     }
 
-    void UpdateInventoryDisplay()
+    internal void UpdateInventoryDisplay()
     {
-        //pickaxe.sprite = pickaxeSpriteTab[player.GetComponent<PlayerStat>().pickaxeLevel];
-        //tmpTorch.text = player.GetComponent<PlayerStat>().torchCount;
-        //tmpCoal.text = player.GetComponent<PlayerStat>().coalCount;
-        //tmpIron.text = player.GetComponent<PlayerStat>().ironCount;
-        //tmpGold.text = player.GetComponent<PlayerStat>().goldCount;
-        //tmpDiamond.text = player.GetComponent<PlayerStat>().diamondCount;
+        //int pickaxeLvl = player.GetComponent<PlayerStat>().pickaxeLevel;
+        int pickaxeLvl = 2;
+        pickaxe.sprite = Resources.Load<Sprite>("Assets/Sprites/Ui/pickaxe_lvl" + pickaxeLvl + "-13x13.png");
+        tmpCoal.text = inventoryController.inventory.GetAmountItem(inventoryController.inventory.listItem[0]).ToString();
+        tmpIron.text = inventoryController.inventory.GetAmountItem(inventoryController.inventory.listItem[1]).ToString();
+        tmpGold.text = inventoryController.inventory.GetAmountItem(inventoryController.inventory.listItem[2]).ToString();
+        tmpDiamond.text = inventoryController.inventory.GetAmountItem(inventoryController.inventory.listItem[3]).ToString();
+        tmpTorch.text = inventoryController.inventory.GetAmountItem(inventoryController.inventory.listItem[4]).ToString();
     }
 }
