@@ -488,6 +488,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1932051936}
     m_Modifications:
+    - target: {fileID: 841329578964121049, guid: 24729eb90f1da274892196ca4bbf09e4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 3192539472665284154, guid: 24729eb90f1da274892196ca4bbf09e4, type: 3}
       propertyPath: m_Name
       value: StatBarUI
@@ -495,6 +499,10 @@ PrefabInstance:
     - target: {fileID: 3192539472665284154, guid: 24729eb90f1da274892196ca4bbf09e4, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248253899852026409, guid: 24729eb90f1da274892196ca4bbf09e4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 6260975928847587147, guid: 24729eb90f1da274892196ca4bbf09e4, type: 3}
       propertyPath: m_Pivot.x
@@ -575,6 +583,18 @@ PrefabInstance:
     - target: {fileID: 6260975928847587147, guid: 24729eb90f1da274892196ca4bbf09e4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7053852642088584625, guid: 24729eb90f1da274892196ca4bbf09e4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 7053852642088584625, guid: 24729eb90f1da274892196ca4bbf09e4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 56
+      objectReference: {fileID: 0}
+    - target: {fileID: 7231455098812719359, guid: 24729eb90f1da274892196ca4bbf09e4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 400
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -664,8 +684,20 @@ MonoBehaviour:
   player: {fileID: 1716066456}
   inventoryController: {fileID: 1716066457}
   hitPointImage: {fileID: 1525797405}
+  hitPointspriteList:
+  - {fileID: 21300000, guid: f2c3a0c902f981a05b5853435cec6b1e, type: 3}
+  - {fileID: 21300000, guid: 89d709c25b60fb2eabf2f3a7e1608ad2, type: 3}
+  - {fileID: 21300000, guid: e82cb728ad6fbe8928e5c2b1fc339d67, type: 3}
+  - {fileID: 21300000, guid: 820eaea298e907deba317d4953d0f2b2, type: 3}
+  - {fileID: 21300000, guid: 8d349b6505b145f3a9916331c28f3204, type: 3}
+  - {fileID: 21300000, guid: 374d81cdb3ad9034983e250e7f58fefb, type: 3}
+  - {fileID: 21300000, guid: 5356e45a5abab98a49d54afda6bb7ac1, type: 3}
   tmpScore: {fileID: 755223548}
   pickaxe: {fileID: 425378063}
+  pickaxeSpriteList:
+  - {fileID: 21300000, guid: e9b6766e768b808ccb527918369edf31, type: 3}
+  - {fileID: 21300000, guid: 1bdd7b91bb654fc88821649794c6a914, type: 3}
+  - {fileID: 21300000, guid: 602161ac26e45afbfbae6124cf57b436, type: 3}
   tmpTorch: {fileID: 616570471}
   tmpCoal: {fileID: 1536970500}
   tmpIron: {fileID: 1455772245}
@@ -842,6 +874,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3318599177539913407, guid: b41ce9e4c21f2b085aad23953000e4e8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1716066457}
+    - targetCorrespondingSourceObject: {fileID: 3318599177539913407, guid: b41ce9e4c21f2b085aad23953000e4e8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1716066463}
   m_SourcePrefab: {fileID: 100100000, guid: b41ce9e4c21f2b085aad23953000e4e8, type: 3}
 --- !u!4 &1716066455 stripped
 Transform:
@@ -868,6 +903,25 @@ MonoBehaviour:
   Player: {fileID: 1716066456}
   forge_UI: {fileID: 2077142059}
   stat_UI: {fileID: 1288656694}
+  inventory: {fileID: 1716066463}
+--- !u!114 &1716066463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716066456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac71e054ed46f148841671cae29b92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryController: {fileID: 1716066457}
+  coalMineralItem: {fileID: 11400000, guid: c9cea3b6bf106d64a8a84cbbcd6f8342, type: 2}
+  ironMineralItem: {fileID: 11400000, guid: 610ef0bfaf531dc49824ed9901602fda, type: 2}
+  goldMineralItem: {fileID: 11400000, guid: dd1d00c381dd7f642b71702b2b596cd0, type: 2}
+  diamondMineralItem: {fileID: 11400000, guid: e3ea093860d2ab249a051bab9b6d06c6, type: 2}
+  torchItem: {fileID: 11400000, guid: d6b4bf053d9a6ef4dafef23c70d7260d, type: 2}
 --- !u!1 &1932051932
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,7 +15,6 @@ public class Forge_UI : MonoBehaviour
 
     internal void UpdateStorage()
     {
-        Debug.Log(inventoryController.inventory);
         tmpCoal.text = inventoryController.inventory.GetAmountItem(inventoryController.inventory.listItem[0]).ToString();
         tmpIron.text = inventoryController.inventory.GetAmountItem(inventoryController.inventory.listItem[1]).ToString();
         tmpGold.text = inventoryController.inventory.GetAmountItem(inventoryController.inventory.listItem[2]).ToString();
