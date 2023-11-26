@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8769908434627449949}
   - component: {fileID: 759845549388344700}
   - component: {fileID: 708375906613038201}
+  - component: {fileID: 3903313712812424965}
   - component: {fileID: 2295869725402808339}
   m_Layer: 0
   m_Name: SpawnController
@@ -51,9 +52,11 @@ MonoBehaviour:
   wallSpawnController: {fileID: 8769908434627449949}
   forgeSpawnController: {fileID: 759845549388344700}
   mineralsSpawnController: {fileID: 708375906613038201}
+  monstersSpawnController: {fileID: 3903313712812424965}
   checkEmptyZone: {fileID: 2295869725402808339}
-  width: 100
-  height: 100
+  meshSurface: {fileID: 0}
+  width: 200
+  height: 200
 --- !u!114 &8769908434627449949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,9 +70,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnController: {fileID: 951157788649655712}
+  tilemap: {fileID: 0}
   seed: 0
   modifier: 0.05
-  tile: {fileID: 3999133352400280183, guid: 58953c7ce06b9394da171b65be45a44d, type: 3}
+  tileGameObject: {fileID: 3999133352400280183, guid: 58953c7ce06b9394da171b65be45a44d, type: 3}
   spriteList:
   - {fileID: 1766384443, guid: 89cececa26db67cfc9518814103ddc70, type: 3}
   - {fileID: 2039891519, guid: 89cececa26db67cfc9518814103ddc70, type: 3}
@@ -123,6 +127,28 @@ MonoBehaviour:
   - {fileID: 8385324995685041870, guid: ff07d50061f20d342b0fc69c39367d77, type: 3}
   - {fileID: 8385324995685041870, guid: ff07d50061f20d342b0fc69c39367d77, type: 3}
   - {fileID: 8385324995685041870, guid: ff07d50061f20d342b0fc69c39367d77, type: 3}
+  - {fileID: 8385324995685041870, guid: ff07d50061f20d342b0fc69c39367d77, type: 3}
+  - {fileID: 8385324995685041870, guid: ff07d50061f20d342b0fc69c39367d77, type: 3}
+  - {fileID: 8385324995685041870, guid: ff07d50061f20d342b0fc69c39367d77, type: 3}
+  - {fileID: 8385324995685041870, guid: ff07d50061f20d342b0fc69c39367d77, type: 3}
+  - {fileID: 8385324995685041870, guid: ff07d50061f20d342b0fc69c39367d77, type: 3}
+  - {fileID: 8385324995685041870, guid: ff07d50061f20d342b0fc69c39367d77, type: 3}
+  Attempts: 50
+--- !u!114 &3903313712812424965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2388655306756610070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef4400f7e9657e64c9b8ac3d3c47988f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnController: {fileID: 951157788649655712}
+  monstersList:
+  - {fileID: 8560302141344462444, guid: 4c74c50e67562084c9e942f61e14187e, type: 3}
   Attempts: 50
 --- !u!114 &2295869725402808339
 MonoBehaviour:

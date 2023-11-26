@@ -43,5 +43,11 @@ public class SpawnController : MonoBehaviour
         mineralsSpawnController.MineralsSpawn();
         monstersSpawnController.MonstersSpawn();
         meshSurface.BuildNavMesh();
+<<<<<<< Updated upstream
+=======
+        forgeSpawnController.ForgeSpawn();
+        mineralsSpawnController.MineralsSpawn();
+        monstersSpawnController.MonstersSpawn();
+>>>>>>> Stashed changes
     }
 }
