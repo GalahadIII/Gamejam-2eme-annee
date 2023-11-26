@@ -106,7 +106,7 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 1048576
-  tile: {fileID: 6469400506959996729, guid: 05d2f42da05612eff9cc5a782aa2e0b5, type: 3}
+  tile: {fileID: 8385324995685041870}
 --- !u!61 &5138360517467293120
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    [SerializeField] InventoryController inventoryController;
+
     private Dictionary<Item, int> itemInventory = new Dictionary<Item, int>();
 
     public void AddItem(Item item)
