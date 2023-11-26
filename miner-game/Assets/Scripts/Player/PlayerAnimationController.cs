@@ -36,6 +36,7 @@ public class PlayerAnimationController : MonoBehaviour
         string direction = _playerAnimatorData.FacingDirection.ToString();
         // if (_playerAnimatorData.isDead) _state = "Death"; return
         string movement = Mathf.Abs(_playerAnimatorData.Move_Live.x) > 0.1 || Mathf.Abs(_playerAnimatorData.Move_Live.y) > 0.1 ? "Run" : "Idle";
+        if (_playerAnimatorData.Action1_Down) movement = "Pickaxe";
         
         return movement + direction;
     }
