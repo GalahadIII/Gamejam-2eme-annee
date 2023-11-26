@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: CoalMineralItem
   m_EditorClassIdentifier: 
   itemName: CoalMineralItem
+  scoreGiven: 10
   mineralHardness: 0

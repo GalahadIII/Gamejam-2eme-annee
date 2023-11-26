@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: IronMineralItem
   m_EditorClassIdentifier: 
   itemName: IronMineralItem
+  scoreGiven: 25
   mineralHardness: 1

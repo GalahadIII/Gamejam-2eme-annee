@@ -27,6 +27,7 @@ public class Use_Recipe : MonoBehaviour
             result_levelPickaxe> inventoryController.player.GetComponent<PlayerManager2D>().pickaxeRight.Level)
         {
             inventoryController.player.GetComponent<PlayerManager2D>().pickaxeRight.Level = result_levelPickaxe;
+            inventoryController.player.GetComponent<PlayerManager2D>().score += result.scoreGiven;
             inventoryController.inventory.RemoveItem(itemTab[0], amountTab[0]);
             inventoryController.inventory.RemoveItem(itemTab[1], amountTab[1]);
         }

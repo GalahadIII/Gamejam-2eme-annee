@@ -33,6 +33,20 @@ public class Inventory : MonoBehaviour
         {
             AddItem(goldMineralItem);
         }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            AddItem(diamondMineralItem);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            GetHit(1);
+        }
+    }
+
+    public void GetHit(int dmg)
+    {
+        inventoryController.player.GetComponent<PlayerManager2D>().hitPoint-=dmg;
+        inventoryController.UpdateDisplay();
     }
 
     public void AddItem(Item item)
@@ -45,6 +59,7 @@ public class Inventory : MonoBehaviour
         {
             itemInventory.Add(item, 1);
         }
+        inventoryController.player.GetComponent<PlayerManager2D>().score += item.scoreGiven;
         inventoryController.UpdateDisplay();
     }
 

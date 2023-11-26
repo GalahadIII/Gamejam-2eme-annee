@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Pickaxe_lvl2
   m_EditorClassIdentifier: 
   itemName: Pickaxe_lvl2
+  scoreGiven: 750
   level: 2

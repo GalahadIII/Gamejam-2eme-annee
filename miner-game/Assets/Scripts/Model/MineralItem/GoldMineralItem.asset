@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: GoldMineralItem
   m_EditorClassIdentifier: 
   itemName: GoldMineralItem
+  scoreGiven: 75
   mineralHardness: 2

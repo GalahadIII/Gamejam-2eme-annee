@@ -16,6 +16,7 @@ public class Stat_UI : MonoBehaviour
 
     [Header("Score")]
     [SerializeField] TextMeshProUGUI tmpScore;
+    [SerializeField] TextMeshProUGUI tmpScoreGameOver;
 
     [Header("Inventory")]
     [SerializeField] Image pickaxe;
@@ -26,14 +27,14 @@ public class Stat_UI : MonoBehaviour
     [SerializeField] TextMeshProUGUI tmpGold;
     [SerializeField] TextMeshProUGUI tmpDiamond;
 
-    internal void UpdateHitPointDisplay(int hitPoints)
+    internal void UpdateHitPointDisplay()
     {
-        hitPointImage.sprite = hitPointspriteList[hitPoints];
+        hitPointImage.sprite = hitPointspriteList[player.GetComponent<PlayerManager2D>().hitPoint];
     }
 
-    internal void UpdateScoreDisplay(int score)
+    internal void UpdateScoreDisplay()
     {
-        tmpScore.text = score.ToString();
+        tmpScore.text = player.GetComponent<PlayerManager2D>().score.ToString();
     }
 
     internal void UpdateInventoryDisplay()

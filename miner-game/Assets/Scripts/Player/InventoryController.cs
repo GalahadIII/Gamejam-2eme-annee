@@ -15,8 +15,8 @@ public class InventoryController : MonoBehaviour
     internal void UpdateDisplay()
     {
         forge_UI.UpdateStorage();
-        stat_UI.UpdateHitPointDisplay(5);
-        stat_UI.UpdateScoreDisplay(2800);
+        stat_UI.UpdateHitPointDisplay();
+        stat_UI.UpdateScoreDisplay();
         stat_UI.UpdateInventoryDisplay();
     }
 }

@@ -41,9 +41,12 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
 
     #region GetComponent'ed
 
+    [SerializeField] InventoryController inventoryController;
     private Rigidbody2D rb;
     private InputManager input;
     public Pickaxe pickaxeRight;
+    public int score = 0;
+    public int hitPoint = 6;
 
     #endregion
 
@@ -173,6 +176,12 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
         pickaxePosition = FacingDirection;
         pickaxeRight.transform.localPosition = position;
 
+    }
+
+    public void GetHit(int dmg)
+    {
+        hitPoint -= dmg;
+        inventoryController.UpdateDisplay();
     }
 
 }

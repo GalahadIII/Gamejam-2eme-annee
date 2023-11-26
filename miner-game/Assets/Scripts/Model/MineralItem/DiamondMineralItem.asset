@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: DiamondMineralItem
   m_EditorClassIdentifier: 
   itemName: DiamondMineralItem
+  scoreGiven: 200
   mineralHardness: 3

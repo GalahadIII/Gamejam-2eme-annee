@@ -174,12 +174,11 @@ MonoBehaviour:
   decceleration: 6
   velPower: 1.2
   visual: {fileID: 7973395574028069343}
-  flipXUsingRotation: 1
-  flipXRotationRate: 1
-  flipXRotationRateIsRelativeToDeltaTime: 0
-  rotationRateIsRelativeToDeltaTime: 0
   rotationRate: 1
-  fov: {fileID: 4463111156225691153, guid: 97255f911fa033ff789a959b5935299f, type: 3}
+  inventoryController: {fileID: 0}
+  pickaxeRight: {fileID: 0}
+  score: 0
+  hitPoint: 6
 --- !u!114 &5485917400048151523
 MonoBehaviour:
   m_ObjectHideFlags: 0
