@@ -46,6 +46,7 @@ public class WallSpawnController : MonoBehaviour
 
         width = spawnController.width;
         height = spawnController.height;
+
         perlinCave();
     }
 
@@ -61,25 +62,35 @@ public class WallSpawnController : MonoBehaviour
         }
         spawnController.wallTable = wallTable;
 
-        // return;
+        Tile[] tiles = new Tile[spriteList.Length];
+        for (int i = 0; i < spriteList.Length; i++)
+        {
+            Tile tile = ScriptableObject.CreateInstance<Tile>();
+            tile.sprite = spriteList[i];
+            tiles[i] = tile;
+        }
+
         for (int x = 0; x < width; x++)
         {
             for (int y = 0; y < height; y++)
             {
                 if(wallTable[x, y] == 1)
                 {
-                    tileGameObject.GetComponent<SpriteRenderer>().sprite = GetWallOrientation(x, y);
+                    int indexSprite = GetWallOrientation(x, y);
+                    Sprite sprite = spriteList[indexSprite];
+                    Tile tile = tiles[indexSprite];
+
+                    tileGameObject.GetComponent<SpriteRenderer>().sprite = sprite;
                     Instantiate(tileGameObject, new Vector2(x, y), Quaternion.identity, containerGameObject.transform);
-                    // Tile tile = ScriptableObject.CreateInstance<Tile>();
-                    // tile.sprite = GetWallOrientation(x, y);
-                    // tilemap.SetTile(new Vector3Int(x, y, 0), tile);
+
+                    tilemap.SetTile(new Vector3Int(x, y, 0), tile);
                 }
             }
         }
 
     }
 
-    private Sprite GetWallOrientation(int x, int y)
+    private int GetWallOrientation(int x, int y)
     {
         int binaryCloseWalls = 0;
         binaryCloseWalls += (x == 0 || wallTable[x - 1, y] == 1) ?          0b1000 : 0; // presence a gauche
@@ -87,6 +98,6 @@ public class WallSpawnController : MonoBehaviour
         binaryCloseWalls += (x == (width-1) || wallTable[x + 1, y] == 1) ?  0b0010 : 0; // presence a droite
         binaryCloseWalls += (y == 0 || wallTable[x, y-1] == 1) ?            0b0100 : 0; // presence en haut
 
-        return spriteList[binaryCloseWalls];
+        return binaryCloseWalls;
     }
 }

@@ -9,27 +9,28 @@ public class Use_Recipe : MonoBehaviour
     [SerializeField] Item result;
     [SerializeField] int result_levelPickaxe;
 
-    [SerializeField] internal InventoryController inventoryController;
+    [SerializeField] internal Forge_UI forge_UI;
+    [SerializeField] internal InventoryController InventoryController => forge_UI.InventoryController;
 
     public void UseRecipe()
     {
-        if (inventoryController.inventory.ContainAmountItem(itemTab[0], amountTab[0]))
+        if (InventoryController.inventory.ContainAmountItem(itemTab[0], amountTab[0]))
         {
-            inventoryController.inventory.AddItem(result);
-            inventoryController.inventory.RemoveItem(itemTab[0], amountTab[0]);
+            InventoryController.inventory.AddItem(result);
+            InventoryController.inventory.RemoveItem(itemTab[0], amountTab[0]);
         }
     }
 
     public void UpgradePickaxe()
     {
-        if (inventoryController.inventory.ContainAmountItem(itemTab[0], amountTab[0]) &&
-            inventoryController.inventory.ContainAmountItem(itemTab[1], amountTab[1]) &&
-            result_levelPickaxe> inventoryController.player.GetComponent<PlayerManager2D>().pickaxeRight.Level)
+        if (InventoryController.inventory.ContainAmountItem(itemTab[0], amountTab[0]) &&
+            InventoryController.inventory.ContainAmountItem(itemTab[1], amountTab[1]) &&
+            result_levelPickaxe> InventoryController.player.GetComponent<PlayerManager2D>().pickaxeRight.Level)
         {
-            inventoryController.player.GetComponent<PlayerManager2D>().pickaxeRight.Level = result_levelPickaxe;
-            inventoryController.player.GetComponent<PlayerManager2D>().score += result.scoreGiven;
-            inventoryController.inventory.RemoveItem(itemTab[0], amountTab[0]);
-            inventoryController.inventory.RemoveItem(itemTab[1], amountTab[1]);
+            InventoryController.player.GetComponent<PlayerManager2D>().pickaxeRight.Level = result_levelPickaxe;
+            InventoryController.player.GetComponent<PlayerManager2D>().score += result.scoreGiven;
+            InventoryController.inventory.RemoveItem(itemTab[0], amountTab[0]);
+            InventoryController.inventory.RemoveItem(itemTab[1], amountTab[1]);
         }
     }
 }

@@ -55,6 +55,7 @@ public class MineralVein : MonoBehaviour
     {
         Debug.Log($"MineralVein Break");
         SpawnChunk();
+        Destroy(gameObject);
     }
 
     private void SpawnChunk()

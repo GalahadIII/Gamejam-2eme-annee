@@ -13,12 +13,12 @@ public class Pickaxe : MonoBehaviour, ITool, IWeapon
     [SerializeField] private float damageHeld = 1f;
     [SerializeField] private float damageThrown = 1f;
 
-    [SerializeField] private float efficiency = 1f;
+    [SerializeField] private int efficiency = 1;
     [SerializeField] private float cooldown = 1f;
-    [SerializeField] int level = 1;
+    // [SerializeField] int level = 1;
 
     // public
-    public int Level { get { return level; } set { level = value; } }
+    public int Level { get { return efficiency; } set { efficiency = value; } }
 
     private bool held = true;
 

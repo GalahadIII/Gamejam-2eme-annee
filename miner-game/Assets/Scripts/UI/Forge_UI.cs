@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Forge_UI : MonoBehaviour
 {
-    [SerializeField] InventoryController inventoryController;
+    [SerializeField] public InventoryController InventoryController;
 
     [Header("Inventory storage")]
     [SerializeField] TextMeshProUGUI tmpCoal;
@@ -15,10 +15,10 @@ public class Forge_UI : MonoBehaviour
 
     internal void UpdateStorage()
     {
-        tmpCoal.text = inventoryController.inventory.GetAmountItem(inventoryController.inventory.listItem[0]).ToString();
-        tmpIron.text = inventoryController.inventory.GetAmountItem(inventoryController.inventory.listItem[1]).ToString();
-        tmpGold.text = inventoryController.inventory.GetAmountItem(inventoryController.inventory.listItem[2]).ToString();
-        tmpDiamond.text = inventoryController.inventory.GetAmountItem(inventoryController.inventory.listItem[3]).ToString();
+        tmpCoal.text = InventoryController.inventory.GetAmountItem(InventoryController.inventory.listItem[0]).ToString();
+        tmpIron.text = InventoryController.inventory.GetAmountItem(InventoryController.inventory.listItem[1]).ToString();
+        tmpGold.text = InventoryController.inventory.GetAmountItem(InventoryController.inventory.listItem[2]).ToString();
+        tmpDiamond.text = InventoryController.inventory.GetAmountItem(InventoryController.inventory.listItem[3]).ToString();
     }
 
 }

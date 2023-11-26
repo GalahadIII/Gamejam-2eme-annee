@@ -76,6 +76,10 @@ PrefabInstance:
       propertyPath: integrity
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8734982751758992738, guid: 8bac2d02874c50777927e67b78169f5a, type: 3}
+      propertyPath: dropedChunk
+      value: 
+      objectReference: {fileID: 551517377150708832, guid: 5e27a1181307f1aefb69232999e1027c, type: 3}
     - target: {fileID: 9184433552834531318, guid: 8bac2d02874c50777927e67b78169f5a, type: 3}
       propertyPath: m_Sprite
       value: 

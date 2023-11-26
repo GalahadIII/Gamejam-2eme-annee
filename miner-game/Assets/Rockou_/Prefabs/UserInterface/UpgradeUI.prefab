@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e95f465626192e438ac7bef90e87bee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryController: {fileID: 0}
+  InventoryController: {fileID: 0}
   tmpCoal: {fileID: 2103158921539698455}
   tmpIron: {fileID: 7258792001239314020}
   tmpGold: {fileID: 8184601692906169127}
@@ -1676,7 +1676,7 @@ MonoBehaviour:
   amountTab: 0500000005000000
   result: {fileID: 11400000, guid: 6e699e08361208449bf7d0f709d30389, type: 2}
   result_levelPickaxe: 3
-  inventoryController: {fileID: 0}
+  forge_UI: {fileID: 4434143805263155869}
 --- !u!1 &4748619048596358494
 GameObject:
   m_ObjectHideFlags: 0
@@ -2400,7 +2400,7 @@ MonoBehaviour:
   amountTab: 0300000005000000
   result: {fileID: 11400000, guid: 1fa3c95afd5387a4f9674f09df83c0f0, type: 2}
   result_levelPickaxe: 2
-  inventoryController: {fileID: 0}
+  forge_UI: {fileID: 4434143805263155869}
 --- !u!1 &6527866642482942207
 GameObject:
   m_ObjectHideFlags: 0
@@ -2729,7 +2729,7 @@ MonoBehaviour:
   amountTab: 02000000
   result: {fileID: 11400000, guid: d6b4bf053d9a6ef4dafef23c70d7260d, type: 2}
   result_levelPickaxe: 0
-  inventoryController: {fileID: 0}
+  forge_UI: {fileID: 4434143805263155869}
 --- !u!1 &7072601068585359229
 GameObject:
   m_ObjectHideFlags: 0

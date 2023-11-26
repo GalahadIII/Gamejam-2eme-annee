@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 [RequireComponent(typeof(Collider2D), typeof(Rigidbody2D), typeof(InputManager))]
 public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
@@ -46,6 +47,7 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
     [Header("Serialize")]
     [SerializeField] private InputManager inputManager;
     [SerializeField] private InventoryController inventoryController;
+    [SerializeField] private Inventory inventory;
     [SerializeField] private MusicController musicController;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] public Pickaxe pickaxeRight;
@@ -139,6 +141,9 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
                 Pause();
             }
 
+        }
+        if (inputManager.PlayerInputs.Inventory.OnDown){
+            forgeUI.SetActive(!forgeUI.activeSelf);
         }
 
     }
