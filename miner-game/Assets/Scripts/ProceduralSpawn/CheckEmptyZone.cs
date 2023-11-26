@@ -1,21 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CheckEmptyZone : MonoBehaviour
 {
     [SerializeField] internal SpawnController spawnController;
 
-    internal bool VerifierZone(int[] position, int spawnSpaceRadiusNeeded)
+    internal bool VerifierZone(Vector2Int position, int spawnSpaceRadiusNeeded)
     {
-        Collider2D collider = Physics2D.OverlapCircle(new Vector2(position[0], position[1]), spawnSpaceRadiusNeeded);
+        Collider2D collider = Physics2D.OverlapCircle(position, spawnSpaceRadiusNeeded);
 
         return collider is null;
     }
 
-    internal bool VerifierZone(int[] position, int spawnSpaceRadiusNeeded, LayerMask layer)
+    internal bool VerifierZone(Vector2Int position, int spawnSpaceRadiusNeeded, LayerMask layer)
     {
-        Collider2D collider = Physics2D.OverlapCircle(new Vector2(position[0], position[1]), spawnSpaceRadiusNeeded, layer);
+        Collider2D collider = Physics2D.OverlapCircle(position, spawnSpaceRadiusNeeded, layer);
 
         return collider is null;
     }

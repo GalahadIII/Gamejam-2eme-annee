@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8979056623914130327}
   - component: {fileID: 6443444604696122184}
   - component: {fileID: 8734982751758992738}
+  - component: {fileID: -6323582338214553822}
   m_Layer: 0
   m_Name: MineralVein
   m_TagString: Untagged
@@ -119,6 +120,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64d28b0978d2c03e2a42dd4aa6a0ad20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-6323582338214553822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7534722918884577090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da4a8645bc7b51646ad731de1a51eecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minSpawnRadius: 0
+  maxSpawnRadius: 0
+  spawnSpaceRadiusNeeded: 0
+  distanceMinBetweenMinerals: 0
+  layer:
+    serializedVersion: 2
+    m_Bits: 256
+  tile: {fileID: 7534722918884577090}
 --- !u!1 &7632740405629813198
 GameObject:
   m_ObjectHideFlags: 0

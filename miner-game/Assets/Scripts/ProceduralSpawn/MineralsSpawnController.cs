@@ -1,6 +1,5 @@
-using Unity.VisualScripting;
+using System;
 using UnityEngine;
-using static UnityEngine.EventSystems.EventTrigger;
 
 public class MineralsSpawnController : MonoBehaviour
 {
@@ -10,50 +9,59 @@ public class MineralsSpawnController : MonoBehaviour
 
     internal void MineralsSpawn()
     {
-        GameObject containerGameObject = new GameObject("MineralContainer");
-        containerGameObject.transform.parent = transform;
+        GameObject mineralContainer = new("MineralContainer");
+        mineralContainer.transform.parent = transform;
 
-        foreach(GameObject mineral in mineralsList)
+        foreach (GameObject mineral in mineralsList)
         {
-            int[] mineralPosition = FindCoordinate(mineral);
-            GameObject tile = mineral.GetComponent<MineralSpawnSetting>().GetTile();
-            Instantiate(tile, new Vector2(mineralPosition[0], mineralPosition[1]), Quaternion.identity, containerGameObject.transform);
-            spawnController.walls_tab[mineralPosition[0], mineralPosition[1]] = 3;
+
+            Vector2Int mineralPosition = FindCoordinate(mineral);
+            // GameObject tile = mineral.GetComponent<MineralSpawnSetting>().GetTile();
+            // Debug.Log($"{mineralPosition == null}");
+            // Debug.Log($"{mineral} {mineralPosition} {mineralPosition?[0]} {mineralPosition?[1]}");
+            Instantiate(mineral, (Vector3)(Vector2)mineralPosition, Quaternion.identity, mineralContainer.transform);
+            spawnController.walls_tab[mineralPosition.x, mineralPosition.y] = 3;
         }
     }
 
-    int[] FindCoordinate(GameObject mineral)
+    Vector2Int FindCoordinate(GameObject mineral)
     {
-        int[] result = new int[2];
+        Vector2Int result = Vector2Int.zero;
         int width = spawnController.width;
         int height = spawnController.height;
         int centerX = width / 2;
         int centerY = height / 2;
 
-        int minSpawnRadius = mineral.GetComponent<MineralSpawnSetting>().GetMinSpawnRadius();
-        int maxSpawnRadius = mineral.GetComponent<MineralSpawnSetting>().GetMaxSpawnRadius();
-        int spawnSpaceRadiusNeeded = mineral.GetComponent<MineralSpawnSetting>().GetSpawnSpaceRadiusNeeded();
-        int distanceMinBetweenMinerals = mineral.GetComponent<MineralSpawnSetting>().GetDistanceMinBetweenMinerals();
-        LayerMask layer = mineral.GetComponent<MineralSpawnSetting>().GetLayer();
+        MineralSpawnSetting mineralSettings = mineral.GetComponent<MineralSpawnSetting>();
+        int minSpawnRadius = mineralSettings.GetMinSpawnRadius();
+        int maxSpawnRadius = mineralSettings.GetMaxSpawnRadius();
+        int spawnSpaceRadiusNeeded = mineralSettings.GetSpawnSpaceRadiusNeeded();
+        int distanceMinBetweenMinerals = mineralSettings.GetDistanceMinBetweenMinerals();
+        LayerMask layer = mineralSettings.GetLayer();
+
+        // Debug.Log($"{minSpawnRadius} {maxSpawnRadius} {spawnSpaceRadiusNeeded} {distanceMinBetweenMinerals}");
 
         for (int x = centerX - maxSpawnRadius; x < centerX + maxSpawnRadius; x++)
         {
             for (int y = centerY - maxSpawnRadius; y < centerY + maxSpawnRadius; y++)
             {
-                if( (x> centerX - minSpawnRadius && x < centerX + minSpawnRadius) ||
+                if ((x > centerX - minSpawnRadius && x < centerX + minSpawnRadius) ||
                     (y > centerY - minSpawnRadius && y < centerY + minSpawnRadius))
                 {
                     continue;
                 }
 
-                if (spawnController.checkEmptyZone.VerifierZone(new int[] { x, y }, spawnSpaceRadiusNeeded) &&
-                    spawnController.checkEmptyZone.VerifierZone(new int[] { x, y }, distanceMinBetweenMinerals, layer))
+                result = new(x, y);
+
+                if (spawnController.checkEmptyZone.VerifierZone(result, spawnSpaceRadiusNeeded) &&
+                    spawnController.checkEmptyZone.VerifierZone(result, distanceMinBetweenMinerals, layer))
                 {
-                    result[0] = x; result[1] = y;
+                    // result[0] = x; result[1] = y;
                     return result;
                 }
             }
         }
-        return null;
+        Debug.LogWarning($"Couldn't find a free spot for {mineralSettings}");
+        return result;
     }
 }

@@ -8,6 +8,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6323582338214553822, guid: 8bac2d02874c50777927e67b78169f5a, type: 3}
+      propertyPath: maxSpawnRadius
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: -6323582338214553822, guid: 8bac2d02874c50777927e67b78169f5a, type: 3}
+      propertyPath: minSpawnRadius
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -6323582338214553822, guid: 8bac2d02874c50777927e67b78169f5a, type: 3}
+      propertyPath: spawnSpaceRadiusNeeded
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -6323582338214553822, guid: 8bac2d02874c50777927e67b78169f5a, type: 3}
+      propertyPath: distanceMinBetweenMinerals
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7534722918884577090, guid: 8bac2d02874c50777927e67b78169f5a, type: 3}
       propertyPath: m_Name
       value: MineralVein Iron
