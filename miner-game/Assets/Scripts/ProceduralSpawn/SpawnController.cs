@@ -27,6 +27,7 @@ public class SpawnController : MonoBehaviour
     [SerializeField] internal CheckEmptyZone checkEmptyZone;
 
     [SerializeField] internal NavMeshSurface meshSurface;
+    [SerializeField] internal GameObject player;
 
     [Header("Generation Settings")]
     [SerializeField] internal int width;

@@ -49,8 +49,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c231c90ceccf364a88375c97f4a469f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   wallSpawnController: {fileID: 8769908434627449949}
   forgeSpawnController: {fileID: 759845549388344700}
   mineralsSpawnController: {fileID: 708375906613038201}
@@ -69,13 +69,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9e74e4ab177e7c4991789f9a4edf576, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   spawnController: {fileID: 951157788649655712}
+<<<<<<< HEAD
   tilemap: {fileID: 2946766818984521453}
   wallTileData: {fileID: 0}
   tileGameObject: {fileID: 3999133352400280183, guid: 9916998d22de6ef22aca135fb785f3b6, type: 3}
   seed: 69
+=======
+  tilemap: {fileID: 0}
+  tileGameObject: {fileID: 3999133352400280183, guid: 58953c7ce06b9394da171b65be45a44d, type: 3}
+  seed: 0
+>>>>>>> refs/remotes/origin/main
   modifier: 0.05
   spriteList:
   - {fileID: 1766384443, guid: 89cececa26db67cfc9518814103ddc70, type: 3}
@@ -104,8 +110,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85a17308c4c8a9d4dbc14671cc679abf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   spawnController: {fileID: 951157788649655712}
   spawnRadius: 30
   spawnSpaceRadiusNeeded: 5
@@ -122,8 +128,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a9194704b9722c4ab8fdfe557a82cc7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   spawnController: {fileID: 951157788649655712}
   mineralsList:
   - {fileID: 4888558993663351840, guid: c2e95dbd004d5759b809c6d09ef3ed89, type: 3}
@@ -177,8 +183,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef4400f7e9657e64c9b8ac3d3c47988f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   spawnController: {fileID: 951157788649655712}
   monstersList:
   - {fileID: 8560302141344462444, guid: 4c74c50e67562084c9e942f61e14187e, type: 3}
@@ -193,10 +199,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f95280856d26db0489b9cb5296a2a675, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   spawnController: {fileID: 951157788649655712}
+<<<<<<< HEAD
 --- !u!114 &567046921852473552
+=======
+--- !u!114 &8936171119300796380
+>>>>>>> refs/remotes/origin/main
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -206,9 +216,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef4400f7e9657e64c9b8ac3d3c47988f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   spawnController: {fileID: 951157788649655712}
+<<<<<<< HEAD
   monstersList:
   - {fileID: 8560302141344462444, guid: 4c74c50e67562084c9e942f61e14187e, type: 3}
   Attempts: 50
@@ -257,8 +268,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e04976799df50f54ba128eff723155a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_AgentTypeID: 0
   m_CollectObjects: 0
   m_Size: {x: 10, y: 10, z: 10}
@@ -287,8 +298,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70bd44a44cd62c64fbfc1eea95b24880, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_OverrideByGrid: 0
   m_UseMeshPrefab: {fileID: 0}
   m_CompressBounds: 0
@@ -343,3 +354,7 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+=======
+  monstersList: []
+  Attempts: 50
+>>>>>>> refs/remotes/origin/main
