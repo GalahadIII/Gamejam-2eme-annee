@@ -8,7 +8,6 @@ public class WallSpawnController : MonoBehaviour
 
     [Header("Object")]
     [SerializeField] internal Tilemap tilemap;
-    [SerializeField] internal Tile wallTileData;
     [SerializeField] internal GameObject tileGameObject;
 
     [Header("Generation Settings")]
@@ -70,9 +69,9 @@ public class WallSpawnController : MonoBehaviour
                 {
                     tileGameObject.GetComponent<SpriteRenderer>().sprite = GetWallOrientation(x, y);
                     Instantiate(tileGameObject, new Vector2(x, y), Quaternion.identity, containerGameObject.transform);
-                    // Tile tile = ScriptableObject.CreateInstance<Tile>();
-                    // tile.sprite = GetWallOrientation(x, y);
-                    // tilemap.SetTile(new Vector3Int(x, y, 0), tile);
+                    Tile tile = ScriptableObject.CreateInstance<Tile>();
+                    tile.sprite = GetWallOrientation(x, y);
+                    tilemap.SetTile(new Vector3Int(x, y, 0), tile);
                 }
             }
         }

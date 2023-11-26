@@ -27,6 +27,7 @@ public class SpawnController : MonoBehaviour
     [SerializeField] internal CheckEmptyZone checkEmptyZone;
 
     [SerializeField] internal NavMeshSurface meshSurface;
+    [SerializeField] internal GameObject player;
 
     [Header("Generation Settings")]
     [SerializeField] internal int width;
@@ -43,11 +44,5 @@ public class SpawnController : MonoBehaviour
         mineralsSpawnController.MineralsSpawn();
         monstersSpawnController.MonstersSpawn();
         meshSurface.BuildNavMesh();
-<<<<<<< Updated upstream
-=======
-        forgeSpawnController.ForgeSpawn();
-        mineralsSpawnController.MineralsSpawn();
-        monstersSpawnController.MonstersSpawn();
->>>>>>> Stashed changes
     }
 }
