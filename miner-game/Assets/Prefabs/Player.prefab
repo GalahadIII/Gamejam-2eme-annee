@@ -179,7 +179,7 @@ MonoBehaviour:
   flipXRotationRateIsRelativeToDeltaTime: 0
   rotationRateIsRelativeToDeltaTime: 0
   rotationRate: 1
-  fov: {fileID: 0}
+  fov: {fileID: 4463111156225691153, guid: 97255f911fa033ff789a959b5935299f, type: 3}
 --- !u!114 &5485917400048151523
 MonoBehaviour:
   m_ObjectHideFlags: 0
