@@ -25,14 +25,14 @@ public class Stat_UI : MonoBehaviour
     [SerializeField] TextMeshProUGUI tmpGold;
     [SerializeField] TextMeshProUGUI tmpDiamond;
 
-    void UpdateHitPointDisplay()
+    void UpdateHitPointDisplay(int hitPoints)
     {
         //hitPointImage.sprite = hitPointSpriteTab[player.GetComponent<PlayerStat>().hitPoints];
     }
 
-    void UpdateScoreDisplay()
+    void UpdateScoreDisplay(int score)
     {
-        //tmpScore.text = player.GetComponent<PlayerStat>().score;
+        tmpScore.text = score.ToString();
     }
 
     void UpdateInventoryDisplay()
