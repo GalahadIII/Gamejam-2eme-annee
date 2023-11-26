@@ -1,16 +1,14 @@
 using UnityEngine;
 
-public class InteractionModule : ColliderDetector, IPosition
+public class InteractionModule : ObjectColliderDetector, IPosition
 {
     public Vector3 WorldPosition => transform.position + new Vector3(0, 1, 0);
 
     public IInteractable ClosestInteractable = null;
     private bool _canInteract = false;
 
-    private new void FixedUpdate()
+    private void FixedUpdate()
     {
-        base.FixedUpdate();
-
         Vector3 position = transform.position;
         float lastClosestDistance = -1;
         ClosestInteractable = null;

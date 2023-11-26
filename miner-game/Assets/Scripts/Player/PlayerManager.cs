@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using Unity.Mathematics;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D), typeof(Rigidbody2D), typeof(InputManager))]
@@ -10,7 +7,7 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
     #region IPlayerAnimatorData2D
 
     public Vector2 Move_Live => input.PlayerInputs.Movement2d.Live;
-    public bool Action1_FixedOnDown => input.PlayerInputs.Action1.FixedOnDown;
+    public bool Action1_Down => input.PlayerInputs.Action1.Live;
     public Rigidbody2D Rigidbody2D => rb;
     public FacingDirection4 FacingDirection { get; private set; }
 
@@ -31,26 +28,14 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
     [SerializeField]
     private float velPower = 1.2f;
 
-    [Header("Settings : Visual facing flip")]
+    [Header("Settings : Visual")]
     [SerializeField]
     private Transform visual;
-    [SerializeField]
-    private bool flipXUsingRotation = true;
-    [SerializeField]
-    private float flipXRotationRate = 0;
-    [SerializeField]
-    private bool flipXRotationRateIsRelativeToDeltaTime = false;
 
-    [Header("Settings : Rotation visual settings")]
-    [SerializeField]
-    private bool rotationRateIsRelativeToDeltaTime = false;
+    [Header("Settings : Rotation")]
     [SerializeField]
     private float rotationRate = 1;
     private Quaternion rotationTarget;
-
-    [Header("Settings : Field of view")]
-    [SerializeField]
-    private FieldOfView fov;
 
     #endregion
 
@@ -58,14 +43,14 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
 
     private Rigidbody2D rb;
     private InputManager input;
-    private BoxCollider2D pickaxeRight;
+    private Pickaxe pickaxeRight;
 
     #endregion
 
     #region DATA
 
     private bool hasControl = true;
-    private Vector2 facingDirection = new Vector2(1, 0).normalized;
+    private Vector2 facingDirection = new Vector2(1, 0);
 
     #endregion
 
@@ -73,18 +58,16 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
     {
         rb = GetComponent<Rigidbody2D>();
         input = GetComponent<InputManager>();
-        pickaxeRight = GameObject.Find("Pickaxe").GetComponent<BoxCollider2D>();
+        pickaxeRight = GetComponentInChildren<Pickaxe>();
         rotationTarget = visual.localRotation;
     }
     private void Update()
     {
-        Rotate();
-
         #region IPlayerAnimatorData2D.FacingDirection
 
         switch (input.PlayerInputs.Movement2d.Live.y)
         {
-            case >  0.1f:
+            case > 0.1f:
                 FacingDirection = FacingDirection4.Up;
                 break;
             case < -0.1f:
@@ -95,7 +78,7 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
         }
         switch (input.PlayerInputs.Movement2d.Live.x)
         {
-            case >  0.1f:
+            case > 0.1f:
                 FacingDirection = FacingDirection4.Right;
                 break;
             case < -0.1f:
@@ -125,6 +108,7 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
         }
         // FlipX(); // Unused
         Movement2d();
+        HandlePickaxe();
     }
 
     private void Movement2d()
@@ -150,74 +134,45 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
         // Debug.Log($"{input} / {movement} / {_rb.velocity}");
     }
 
-    private void FlipX()
+    private void HandlePickaxe()
     {
-        Vector2 inputMovement = input.PlayerInputs.Movement2d.Live;
-        float inputMovementX = inputMovement.x;
-
-        // Debug.Log($"face:{facingDirection.x} move.x:{inputMovementX}");
-
-        // EXIT IF:
-        // we dont have any movement input
-        if (Mathf.Abs(inputMovementX) < 0.1f) return;
-        // we have same input sign and currently facing sign (+ == + || - == -)
-        if (Mathf.Sign(facingDirection.x) == Mathf.Sign(inputMovementX)) return;
-
-        Debug.LogWarning($"face:{facingDirection.x} move.x:{inputMovementX}");
-
-        switch (flipXUsingRotation)
+        MovePickaxe();
+        switch (input.PlayerInputs.Action1.Live)
         {
             case true:
-                FlipX_Rotation();
-                break;
-            default:
-                FlipX_Scale();
-                break;
-        }
-
-        // update currently known facing direction
-        facingDirection = inputMovement;
-
-    }
-    private void FlipX_Scale()
-    {
-        Vector3 newScale = visual.localScale;
-        newScale.x *= -1;
-        visual.localScale = newScale;
-        // visual.localScale *= new Vector3(1, -1, 1);
-    }
-    private void FlipX_Rotation()
-    {
-        Quaternion RotationDiff = Quaternion.Euler(0, 180, 0);
-        visual.localRotation *= RotationDiff;
-        // Quaternion newRot = visual.localRotation;
-        // newRot *= RotationDiff;
-        // visual.localRotation = newRot;
-        // RotateOverTime(newRot, flipXRotationRate, flipXRotationRateIsRelativeToDeltaTime);
-    }
-
-    public void RotateOverTime(Quaternion newRotationTarget, float newRotationRate, bool newRotationRateIsRelativeToDeltaTime)
-    {
-        rotationTarget = newRotationTarget;
-        rotationRate = newRotationRate;
-        rotationRateIsRelativeToDeltaTime = newRotationRateIsRelativeToDeltaTime;
-    }
-    private void Rotate()
-    {
-        if (visual.localRotation == rotationTarget) return;
-
-        // Debug.Log($"{visual.localRotation.eulerAngles} {rotationTarget.eulerAngles}");
-
-        float finalRotationRate = rotationRate;
-        switch (rotationRateIsRelativeToDeltaTime)
-        {
-            case true:
-                finalRotationRate *= Time.deltaTime;
+                pickaxeRight.Use();
                 break;
             default:
                 break;
         }
-        visual.localRotation = Quaternion.Slerp(visual.localRotation, rotationTarget, finalRotationRate);
+    }
+    private FacingDirection4 pickaxePosition = FacingDirection4.Right;
+    private void MovePickaxe()
+    {
+        if (pickaxePosition == FacingDirection) return;
+        // Debug.Log("UpdatePickaxePosition");
+
+        Vector3 position = pickaxeRight.transform.localPosition;
+        switch (FacingDirection)
+        {
+            case FacingDirection4.Up:
+                position = new Vector3(0, 1, 0);
+                break;
+            case FacingDirection4.Down:
+                position = new Vector3(0, -1, 0);
+                break;
+            case FacingDirection4.Right:
+                position = new Vector3(1, 0, 0);
+                break;
+            case FacingDirection4.Left:
+                position = new Vector3(-1, 0, 0);
+                break;
+            default:
+                break;
+        }
+        pickaxePosition = FacingDirection;
+        pickaxeRight.transform.localPosition = position;
+
     }
 
 }

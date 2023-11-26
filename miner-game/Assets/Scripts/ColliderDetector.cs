@@ -1,48 +1,74 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ColliderDetector : MonoBehaviour
+public class ObjectColliderDetector : MonoBehaviour
 {
-    [SerializeField] public List<GameObject> Objects = new();
-    [SerializeField] public GameObject Closest = null;
 
-    protected void FixedUpdate()
+    [SerializeField]
+    protected float timeLastSort = 0;
+    protected List<GameObject> objectList = new();
+    public List<GameObject> Objects
     {
-        SetClosest();
-    }
-
-    protected void SetClosest()
-    {
-        Vector3 position = transform.position;
-        float lastClosestDistance = -1;
-        Closest = null;
-
-        foreach (GameObject o in Objects)
+        get
         {
-            float distance = (position - o.transform.position).magnitude;
-
-            if (distance < lastClosestDistance || lastClosestDistance < 0)
+            switch (Time.time - timeLastSort)
             {
-                Closest = o;
-                lastClosestDistance = distance;
+                case > 0.2f:
+                    SortListByDistance();
+                    break;
+                default:
+                    break;
             }
+            return objectList;
         }
     }
 
     private void OnCollisionEnter(Collision col)
     {
-        Objects.Add(col.gameObject);
+        // Debug.Log($"ColliderDetector OnCollisionEnter {col.gameObject.name}");
+        AddObject(col.gameObject);
     }
     private void OnCollisionExit(Collision col)
     {
-        Objects.Remove(col.gameObject);
+        // Debug.Log($"ColliderDetector OnCollisionExit {col.gameObject.name}");
+        Remove(col.gameObject);
     }
     private void OnTriggerEnter(Collider col)
     {
-        Objects.Add(col.gameObject);
+        // Debug.Log($"ColliderDetector OnTriggerEnter {col.gameObject.name}");
+        AddObject(col.gameObject);
     }
     private void OnTriggerExit(Collider col)
     {
-        Objects.Remove(col.gameObject);
+        // Debug.Log($"ColliderDetector OnTriggerExit {col.gameObject.name}");
+        Remove(col.gameObject);
     }
+
+    protected void AddObject(GameObject gameObject)
+    {
+        objectList.Add(gameObject);
+        SortListByDistance();
+    }
+    protected void Remove(GameObject gameObject)
+    {
+        objectList.Remove(gameObject);
+    }
+
+    protected void SortListByDistance()
+    {
+        objectList.Sort(SortGameObjectsByDistance);
+
+        timeLastSort = Time.time;
+    }
+    protected int SortGameObjectsByDistance(GameObject comp1, GameObject comp2)
+    {
+        float distanceComp1 = Vector3.Distance(transform.position, comp1.transform.position);
+        float distanceComp2 = Vector3.Distance(transform.position, comp2.transform.position);
+        float distanceDiff = distanceComp1 - distanceComp2;
+
+        // Debug.Log($"{comp1.name} {distanceComp1} / {comp2.name} {distanceComp2} / {distanceDiff} {Mathf.CeilToInt(distanceDiff)}");
+
+        return Mathf.CeilToInt(distanceDiff);
+    }
+
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5138360517467293120}
   - component: {fileID: 5860248951792558383}
   m_Layer: 20
-  m_Name: Coal
+  m_Name: CoalSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 8385324995685041870}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.34, y: 2.4, z: 9.969855}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 7, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -106,7 +106,7 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 1048576
-  tile: {fileID: 8385324995685041870}
+  tile: {fileID: 6469400506959996729, guid: 05d2f42da05612eff9cc5a782aa2e0b5, type: 3}
 --- !u!61 &5138360517467293120
 BoxCollider2D:
   m_ObjectHideFlags: 0

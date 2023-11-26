@@ -105,7 +105,7 @@ MonoBehaviour:
   distanceMinBetweenMinerals: 25
   layer:
     serializedVersion: 2
-    m_Bits: 2097152
+    m_Bits: 0
   tile: {fileID: 8385324995685041870}
 --- !u!61 &5138360517467293120
 BoxCollider2D:
