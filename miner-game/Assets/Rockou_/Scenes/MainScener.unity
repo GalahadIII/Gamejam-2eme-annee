@@ -175,6 +175,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7923955118605548038, guid: dd1b2bd5da60a4764a99603e636b91b8, type: 3}
+      propertyPath: m_Size.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7923955118605548038, guid: dd1b2bd5da60a4764a99603e636b91b8, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8639394845592674400, guid: dd1b2bd5da60a4764a99603e636b91b8, type: 3}
+      propertyPath: orthographic size
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -235,6 +247,16 @@ MonoBehaviour:
   mineralsList:
   - {fileID: 4888558993663351840, guid: c2e95dbd004d5759b809c6d09ef3ed89, type: 3}
   - {fileID: 4888558993663351840, guid: c2e95dbd004d5759b809c6d09ef3ed89, type: 3}
+  - {fileID: 4888558993663351840, guid: c2e95dbd004d5759b809c6d09ef3ed89, type: 3}
+  - {fileID: 4888558993663351840, guid: c2e95dbd004d5759b809c6d09ef3ed89, type: 3}
+  - {fileID: 4888558993663351840, guid: c2e95dbd004d5759b809c6d09ef3ed89, type: 3}
+  - {fileID: 4888558993663351840, guid: c2e95dbd004d5759b809c6d09ef3ed89, type: 3}
+  - {fileID: 4888558993663351840, guid: c2e95dbd004d5759b809c6d09ef3ed89, type: 3}
+  - {fileID: 4888558993663351840, guid: c2e95dbd004d5759b809c6d09ef3ed89, type: 3}
+  - {fileID: 4888558993663351840, guid: c2e95dbd004d5759b809c6d09ef3ed89, type: 3}
+  - {fileID: 4888558993663351840, guid: c2e95dbd004d5759b809c6d09ef3ed89, type: 3}
+  - {fileID: 4888558993663351840, guid: e0547a85016c1d822a24af1d24cfb49c, type: 3}
+  - {fileID: 4888558993663351840, guid: e0547a85016c1d822a24af1d24cfb49c, type: 3}
   - {fileID: 4888558993663351840, guid: e0547a85016c1d822a24af1d24cfb49c, type: 3}
   - {fileID: 4888558993663351840, guid: e0547a85016c1d822a24af1d24cfb49c, type: 3}
 --- !u!114 &578369157

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6443444604696122184}
   - component: {fileID: 8734982751758992738}
   - component: {fileID: -6323582338214553822}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MineralVein
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,7 +79,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.12, y: 0.12}
+  m_Size: {x: 0.84, y: 0.84}
   m_EdgeRadius: 0
 --- !u!50 &6443444604696122184
 Rigidbody2D:
@@ -120,6 +120,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64d28b0978d2c03e2a42dd4aa6a0ad20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  visual: {fileID: 262795785741042744}
+  shakeTime: 0.3
+  shakePower: 0.03
+  integrity: 3
+  hardness: 1
 --- !u!114 &-6323582338214553822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,7 +144,6 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 256
-  tile: {fileID: 7534722918884577090}
 --- !u!1 &7632740405629813198
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,7 +154,7 @@ GameObject:
   m_Component:
   - component: {fileID: 262795785741042744}
   - component: {fileID: 9184433552834531318}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
