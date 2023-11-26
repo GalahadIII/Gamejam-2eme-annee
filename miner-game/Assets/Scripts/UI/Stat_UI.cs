@@ -12,12 +12,14 @@ public class Stat_UI : MonoBehaviour
 
     [Header("HitPoint")]
     [SerializeField] Image hitPointImage;
+    [SerializeField] Sprite[] hitPointspriteList;
 
     [Header("Score")]
     [SerializeField] TextMeshProUGUI tmpScore;
 
     [Header("Inventory")]
     [SerializeField] Image pickaxe;
+    [SerializeField] Sprite[] pickaxeSpriteList;
     [SerializeField] TextMeshProUGUI tmpTorch;
     [SerializeField] TextMeshProUGUI tmpCoal;
     [SerializeField] TextMeshProUGUI tmpIron;
@@ -26,7 +28,7 @@ public class Stat_UI : MonoBehaviour
 
     internal void UpdateHitPointDisplay(int hitPoints)
     {
-        hitPointImage.sprite = Resources.Load<Sprite>("Assets/Sprites/Ui/"+hitPoints+"-hitpoint-48x16.png");
+        hitPointImage.sprite = hitPointspriteList[hitPoints];
     }
 
     internal void UpdateScoreDisplay(int score)
@@ -36,9 +38,9 @@ public class Stat_UI : MonoBehaviour
 
     internal void UpdateInventoryDisplay()
     {
-        //int pickaxeLvl = player.GetComponent<PlayerStat>().pickaxeLevel;
-        int pickaxeLvl = 2;
-        pickaxe.sprite = Resources.Load<Sprite>("Assets/Sprites/Ui/pickaxe_lvl" + pickaxeLvl + "-13x13.png");
+        int pickaxeLvl = player.GetComponent<PlayerManager2D>().pickaxeRight.level;
+        //int pickaxeLvl = 2;
+        pickaxe.sprite = pickaxeSpriteList[pickaxeLvl-1];
         tmpCoal.text = inventoryController.inventory.GetAmountItem(inventoryController.inventory.listItem[0]).ToString();
         tmpIron.text = inventoryController.inventory.GetAmountItem(inventoryController.inventory.listItem[1]).ToString();
         tmpGold.text = inventoryController.inventory.GetAmountItem(inventoryController.inventory.listItem[2]).ToString();

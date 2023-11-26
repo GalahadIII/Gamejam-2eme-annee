@@ -43,7 +43,7 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
 
     private Rigidbody2D rb;
     private InputManager input;
-    private Pickaxe pickaxeRight;
+    public Pickaxe pickaxeRight;
 
     #endregion
 

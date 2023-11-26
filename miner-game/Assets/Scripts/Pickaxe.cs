@@ -8,6 +8,7 @@ public class Pickaxe : ObjectColliderDetector2D
     [Header("Pickaxe properties")]
     [SerializeField] private float efficiency = 1f;
     [SerializeField] private float cooldown = 1f;
+    [SerializeField] int level = 1;
 
     [Header("Data")]
     private float lastUse = 0;
