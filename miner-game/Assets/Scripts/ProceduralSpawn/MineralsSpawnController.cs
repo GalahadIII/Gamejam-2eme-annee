@@ -11,7 +11,6 @@ public class MineralsSpawnController : MonoBehaviour
     internal void MineralsSpawn()
     {
         GameObject mineralContainer = new("MineralContainer");
-        mineralContainer.transform.parent = transform;
 
         foreach (GameObject mineral in mineralsList)
         {
@@ -25,7 +24,7 @@ public class MineralsSpawnController : MonoBehaviour
             // Debug.Log($"{mineralPosition == null}");
             // Debug.Log($"{mineral} {mineralPosition} {mineralPosition?[0]} {mineralPosition?[1]}");
             Instantiate(mineral, (Vector3)(Vector2)mineralPosition, Quaternion.identity, mineralContainer.transform);
-            spawnController.walls_tab[mineralPosition.x, mineralPosition.y] = 3;
+            spawnController.wallTable[mineralPosition.x, mineralPosition.y] = 3;
         }
     }
 

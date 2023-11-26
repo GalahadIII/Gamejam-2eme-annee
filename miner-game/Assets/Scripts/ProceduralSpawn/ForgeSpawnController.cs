@@ -18,12 +18,12 @@ public class ForgeSpawnController : MonoBehaviour
 
     internal void ForgeSpawn()
     {
-        Vector2Int coordinate = FindPlaceToSpawn(spawnController.walls_tab);
+        Vector2Int coordinate = FindPlaceToSpawn(spawnController.wallTable);
         int reloadCount = 0;
         while (coordinate == Vector2Int.zero && reloadCount < maxWallReload)
         {
             spawnController.wallSpawnController.perlinCave();
-            coordinate = FindPlaceToSpawn(spawnController.walls_tab);
+            coordinate = FindPlaceToSpawn(spawnController.wallTable);
             reloadCount++;
         }
 
@@ -33,7 +33,7 @@ public class ForgeSpawnController : MonoBehaviour
         }
 
         Instantiate(tile, (Vector2)coordinate, Quaternion.identity);
-        spawnController.walls_tab[coordinate.x, coordinate.y] = 2;
+        spawnController.wallTable[coordinate.x, coordinate.y] = 2;
         player.position = new Vector3(coordinate.x, coordinate.y + 2);
     }
 

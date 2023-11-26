@@ -6,8 +6,8 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
 
     #region IPlayerAnimatorData2D
 
-    public Vector2 Move_Live => input.PlayerInputs.Movement2d.Live;
-    public bool Action1_Down => input.PlayerInputs.Action1.Live;
+    public Vector2 Move_Live => inputManager.PlayerInputs.Movement2d.Live;
+    public bool Action1_Down => inputManager.PlayerInputs.Action1.Live;
     public Rigidbody2D Rigidbody2D => rb;
     public FacingDirection4 FacingDirection { get; private set; }
 
@@ -41,20 +41,22 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
 
     #endregion
 
-    #region GetComponent'ed
+    #region Serialize
 
-    [SerializeField] InventoryController inventoryController;
-    [SerializeField] MusicController musicController;
-    private Rigidbody2D rb;
-    private InputManager input;
-    public Pickaxe pickaxeRight;
-    public int score = 0;
-    public int hitPoint = 6;
+    [Header("Serialize")]
+    [SerializeField] private InputManager inputManager;
+    [SerializeField] private InventoryController inventoryController;
+    [SerializeField] private MusicController musicController;
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] public Pickaxe pickaxeRight;
+    [SerializeField] private new Camera camera;
 
     #endregion
 
     #region DATA
 
+    public int score = 0;
+    public int hitPoint = 6;
     private bool hasControl = true;
     private Vector2 facingDirection = new Vector2(1, 0);
 
@@ -71,17 +73,19 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
 
     private void OnEnable()
     {
-        rb = GetComponent<Rigidbody2D>();
-        input = GetComponent<InputManager>();
-        pickaxeRight = GetComponentInChildren<Pickaxe>();
         rotationTarget = visual.localRotation;
     }
     private void Update()
     {
 
-        #region IPlayerAnimatorData2D.FacingDirection
+        DebugTraceMineralVein();
 
-        switch (input.PlayerInputs.Movement2d.Live.y)
+        #region IPlayerAnimatorData2D.FacingDirection
+        Vector2 newFacingDirection = inputManager.PlayerInputs.Movement2d.Live;
+        if (newFacingDirection.magnitude > 0) {
+            facingDirection=newFacingDirection;
+        }
+        switch (facingDirection.y)
         {
             case > 0.1f:
                 FacingDirection = FacingDirection4.Up;
@@ -92,7 +96,7 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
             default:
                 break;
         }
-        switch (input.PlayerInputs.Movement2d.Live.x)
+        switch (facingDirection.x)
         {
             case > 0.1f:
                 FacingDirection = FacingDirection4.Right;
@@ -103,11 +107,28 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
             default:
                 break;
         }
-        // Debug.Log($"{input.PlayerInputs.Movement2d.Live} {FacingDirection}");
+        switch (FacingDirection)
+        {
+            case FacingDirection4.Up:
+                facingDirection = new Vector3(0, 1, 0);
+                break;
+            case FacingDirection4.Down:
+                facingDirection = new Vector3(0, -1, 0);
+                break;
+            case FacingDirection4.Right:
+                facingDirection = new Vector3(1, 0, 0);
+                break;
+            case FacingDirection4.Left:
+                facingDirection = new Vector3(-1, 0, 0);
+                break;
+            default:
+                break;
+        }
+        // Debug.Log($"{inputManager.PlayerInputs.Movement2d.Live} {FacingDirection}");
 
         #endregion
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (inputManager.PlayerInputs.Escape.OnDown)
         {
             if (pauseUI.activeSelf || settingUI.activeSelf || forgeUI.activeSelf)
             {
@@ -119,6 +140,7 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
             }
 
         }
+
     }
     private void FixedUpdate()
     {
@@ -141,7 +163,7 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
 
     private void Movement2d()
     {
-        Vector2 movementInputLive = input.PlayerInputs.Movement2d.Live;
+        Vector2 movementInputLive = inputManager.PlayerInputs.Movement2d.Live;
         Vector2 vel = rb.velocity;
 
         // calculate wanted direction and desired velocity
@@ -165,49 +187,34 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
     private void HandlePickaxe()
     {
         MovePickaxe();
-        switch (input.PlayerInputs.Action1.Live)
-        {
-            case true:
-                DebugTraceMineralVein();
-                pickaxeRight.Use();
-                break;
-            default:
-                break;
+        UsePickaxe();
+    }
+    private void UsePickaxe(){
+        if (inputManager.PlayerInputs.Action1.Live) {
+            pickaxeRight.Use();
+        };
+        if (inputManager.PlayerInputs.Interact.Live) {
+            Vector3 worldCursorPosition = camera.ScreenToWorldPoint(inputManager.PlayerInputs.CursorPosition);
+            pickaxeRight.Throw(worldCursorPosition);
         }
     }
-    private FacingDirection4 pickaxePosition = FacingDirection4.Right;
+    private Vector3 lastPickaxePosition = Vector3.zero;
     private void MovePickaxe()
     {
-        if (pickaxePosition == FacingDirection) return;
+        Debug.Log($"{lastPickaxePosition} {facingDirection}");
+        if ((Vector2)lastPickaxePosition == facingDirection) return;
+        lastPickaxePosition = facingDirection;
+        pickaxeRight.MoveHeldTargetDetector(facingDirection);
         // Debug.Log("UpdatePickaxePosition");
 
-        Vector3 position = pickaxeRight.transform.localPosition;
-        switch (FacingDirection)
-        {
-            case FacingDirection4.Up:
-                position = new Vector3(0, 1, 0);
-                break;
-            case FacingDirection4.Down:
-                position = new Vector3(0, -1, 0);
-                break;
-            case FacingDirection4.Right:
-                position = new Vector3(1, 0, 0);
-                break;
-            case FacingDirection4.Left:
-                position = new Vector3(-1, 0, 0);
-                break;
-            default:
-                break;
-        }
-        pickaxePosition = FacingDirection;
-        pickaxeRight.transform.localPosition = position;
+        // Vector3 position;
 
     }
 
     public void GetHit(int dmg)
     {
         hitPoint -= dmg;
-        if(hitPoint <= 0)
+        if (hitPoint <= 0)
         {
             Death();
         }
@@ -242,29 +249,25 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
     private void DebugTraceMineralVein()
     {
 
-        // Debug.Log($"DebugTraceMineralVein 0 {debugFindRay}");
-        switch (debugFindRay)
-        {
-            case false:
-                return;
-            default:
-                break;
-        }
+        // Debug.Log($"DebugTraceMineralVein 0 {debugFindRay} {inputManager.PlayerInputs.Action1.Live} {!debugFindRay || !inputManager.PlayerInputs.Action1.Live}");
+        if (!debugFindRay || !inputManager.PlayerInputs.Action1.Live) { return; }
+
         // Debug.Log($"DebugTraceMineralVein 1");
 
-        MineralVein[] mineralVeins = (MineralVein[]) FindObjectsOfType(typeof(MineralVein));
+        MineralVein[] mineralVeins = (MineralVein[])FindObjectsOfType(typeof(MineralVein));
+        // Debug.Log(mineralVeins.Length);
         float maxDistance = float.NegativeInfinity;
         foreach (MineralVein mineralVein in mineralVeins)
         {
-            Vector3 start   = transform.position;
-            Vector3 end     = mineralVein.transform.position;
+            Vector3 start = transform.position;
+            Vector3 end = mineralVein.transform.position;
             float distance = Vector3.Distance(start, end);
             maxDistance = distance > maxDistance ? distance : maxDistance;
         }
         foreach (MineralVein mineralVein in mineralVeins)
         {
-            Vector3 start   = transform.position;
-            Vector3 end     = mineralVein.transform.position;
+            Vector3 start = transform.position;
+            Vector3 end = mineralVein.transform.position;
             float distance = Vector3.Distance(start, end);
             float colorGrey = distance / maxDistance;
             // Debug.Log($"{start} {end} {maxDistance} {distance} {colorGrey}");

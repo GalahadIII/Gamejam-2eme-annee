@@ -29,11 +29,11 @@ public class SpawnController : MonoBehaviour
     [SerializeField] internal int width;
     [SerializeField] internal int height;
 
-    [SerializeField] internal int[,] walls_tab;
+    [SerializeField] internal int[,] wallTable;
 
     private void Start()
     {
-        walls_tab = new int[width, height];
+        wallTable = new int[width, height];
 
         wallSpawnController.WallSpawn();
         forgeSpawnController.ForgeSpawn();

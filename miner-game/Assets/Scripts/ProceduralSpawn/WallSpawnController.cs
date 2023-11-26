@@ -8,12 +8,13 @@ public class WallSpawnController : MonoBehaviour
 
     [Header("Object")]
     [SerializeField] internal Tilemap tilemap;
+    [SerializeField] internal Tile wallTileData;
+    [SerializeField] internal GameObject tileGameObject;
 
     [Header("Generation Settings")]
-    [SerializeField] float seed;
+    [SerializeField] float seed = 0;
     [Range(0, 1)]
     [SerializeField] float modifier;
-    [SerializeField] GameObject tileGameObject;
 
     [Header("Sprite list")]
     [SerializeField] Sprite[] spriteList;
@@ -34,7 +35,7 @@ public class WallSpawnController : MonoBehaviour
     // 14 = haut
     // 15 = centre
 
-    private int[,] walls_tab;
+    private int[,] wallTable;
     int width;
     int height;
     GameObject containerGameObject;
@@ -42,51 +43,49 @@ public class WallSpawnController : MonoBehaviour
     internal void WallSpawn()
     {
         containerGameObject = new GameObject("WallContainer");
-        containerGameObject.transform.parent = transform;
 
-        width = spawnController.width; 
+        width = spawnController.width;
         height = spawnController.height;
-        walls_tab = spawnController.walls_tab;
-        seed = Random.Range(-100000,100000);
         perlinCave();
     }
 
     internal void perlinCave()
     {
-        walls_tab = new int[width,height];
+        wallTable = new int[width,height];
         for (int x = 0; x < width; x++)
         {
             for (int y = 0; y < height; y++)
             {
-                walls_tab[x,y] = Mathf.RoundToInt(Mathf.PerlinNoise((x * modifier) + seed, (y * modifier) + seed));
+                wallTable[x,y] = Mathf.RoundToInt(Mathf.PerlinNoise((x * modifier) + seed, (y * modifier) + seed));
             }
         }
+        spawnController.wallTable = wallTable;
 
+        // return;
         for (int x = 0; x < width; x++)
         {
             for (int y = 0; y < height; y++)
             {
-                if(walls_tab[x, y] == 1)
+                if(wallTable[x, y] == 1)
                 {
-                    //tileGameObject.GetComponent<SpriteRenderer>().sprite = GetWallOrientation(x, y);
-                    //Instantiate(tileGameObject, new Vector2(x, y), Quaternion.identity, containerGameObject.transform);
-                    Tile tile = ScriptableObject.CreateInstance<Tile>();
-                    tile.sprite = GetWallOrientation(x, y);
-                    tilemap.SetTile(new Vector3Int(x, y, 0), tile);
+                    tileGameObject.GetComponent<SpriteRenderer>().sprite = GetWallOrientation(x, y);
+                    Instantiate(tileGameObject, new Vector2(x, y), Quaternion.identity, containerGameObject.transform);
+                    // Tile wallTileData = ScriptableObject.CreateInstance<Tile>();
+                    // wallTileData.sprite = GetWallOrientation(x, y);
+                    // tilemap.SetTile(new Vector3Int(x, y, 0), wallTileData);
                 }
             }
         }
 
-        spawnController.walls_tab = walls_tab;
     }
 
     private Sprite GetWallOrientation(int x, int y)
     {
         int binaryCloseWalls = 0;
-        binaryCloseWalls += (x == 0 || walls_tab[x - 1, y] == 1) ?          0b1000 : 0; // presence a gauche
-        binaryCloseWalls += (y == (height-1) || walls_tab[x, y+1] == 1) ?   0b0001 : 0; // presence en bas
-        binaryCloseWalls += (x == (width-1) || walls_tab[x + 1, y] == 1) ?  0b0010 : 0; // presence a droite
-        binaryCloseWalls += (y == 0 || walls_tab[x, y-1] == 1) ?            0b0100 : 0; // presence en haut
+        binaryCloseWalls += (x == 0 || wallTable[x - 1, y] == 1) ?          0b1000 : 0; // presence a gauche
+        binaryCloseWalls += (y == (height-1) || wallTable[x, y+1] == 1) ?   0b0001 : 0; // presence en bas
+        binaryCloseWalls += (x == (width-1) || wallTable[x + 1, y] == 1) ?  0b0010 : 0; // presence a droite
+        binaryCloseWalls += (y == 0 || wallTable[x, y-1] == 1) ?            0b0100 : 0; // presence en haut
 
         return spriteList[binaryCloseWalls];
     }

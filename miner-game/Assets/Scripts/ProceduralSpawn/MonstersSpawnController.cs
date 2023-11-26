@@ -12,7 +12,6 @@ public class MonstersSpawnController : MonoBehaviour
     internal void MonstersSpawn()
     {
         GameObject monsterContainer = new("MonsterContainer");
-        monsterContainer.transform.parent = transform;
 
         foreach (GameObject monster in monstersList)
         {
@@ -23,7 +22,7 @@ public class MonstersSpawnController : MonoBehaviour
                 continue;
             }
             Instantiate(monster, (Vector3)(Vector2)monsterPosition, Quaternion.identity, monsterContainer.transform);
-            spawnController.walls_tab[monsterPosition.x, monsterPosition.y] = 3;
+            spawnController.wallTable[monsterPosition.x, monsterPosition.y] = 3;
         }
     }
 
