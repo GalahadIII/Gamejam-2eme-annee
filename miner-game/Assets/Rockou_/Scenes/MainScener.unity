@@ -259,6 +259,7 @@ MonoBehaviour:
   - {fileID: 4888558993663351840, guid: e0547a85016c1d822a24af1d24cfb49c, type: 3}
   - {fileID: 4888558993663351840, guid: e0547a85016c1d822a24af1d24cfb49c, type: 3}
   - {fileID: 4888558993663351840, guid: e0547a85016c1d822a24af1d24cfb49c, type: 3}
+  Attempts: 50
 --- !u!114 &578369157
 MonoBehaviour:
   m_ObjectHideFlags: 0
