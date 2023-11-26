@@ -70,9 +70,9 @@ public class WallSpawnController : MonoBehaviour
                 {
                     tileGameObject.GetComponent<SpriteRenderer>().sprite = GetWallOrientation(x, y);
                     Instantiate(tileGameObject, new Vector2(x, y), Quaternion.identity, containerGameObject.transform);
-                    // Tile wallTileData = ScriptableObject.CreateInstance<Tile>();
-                    // wallTileData.sprite = GetWallOrientation(x, y);
-                    // tilemap.SetTile(new Vector3Int(x, y, 0), wallTileData);
+                    // Tile tile = ScriptableObject.CreateInstance<Tile>();
+                    // tile.sprite = GetWallOrientation(x, y);
+                    // tilemap.SetTile(new Vector3Int(x, y, 0), tile);
                 }
             }
         }

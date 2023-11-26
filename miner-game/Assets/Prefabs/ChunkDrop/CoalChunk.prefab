@@ -11,10 +11,11 @@ GameObject:
   - component: {fileID: 1400188178106651948}
   - component: {fileID: 2339888020998485290}
   - component: {fileID: 7024772153998962424}
+  - component: {fileID: 8695636534571817004}
   - component: {fileID: 4947467782317778214}
   m_Layer: 0
   m_Name: CoalChunk
-  m_TagString: Untagged
+  m_TagString: Chunk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,6 +114,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8695636534571817004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8637095468678813026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae224358b0d91929995e2bc858ddf7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &4947467782317778214
 BoxCollider2D:
   m_ObjectHideFlags: 0
