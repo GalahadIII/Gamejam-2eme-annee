@@ -22,6 +22,7 @@ public class SpawnController : MonoBehaviour
     [SerializeField] internal WallSpawnController wallSpawnController;
     [SerializeField] internal ForgeSpawnController forgeSpawnController;
     [SerializeField] internal MineralsSpawnController mineralsSpawnController;
+    [SerializeField] internal MonstersSpawnController monstersSpawnController;
     [SerializeField] internal CheckEmptyZone checkEmptyZone;
 
     [Header("Generation Settings")]
@@ -37,5 +38,6 @@ public class SpawnController : MonoBehaviour
         wallSpawnController.WallSpawn();
         forgeSpawnController.ForgeSpawn();
         mineralsSpawnController.MineralsSpawn();
+        monstersSpawnController.MonstersSpawn();
     }
 }
