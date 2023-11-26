@@ -39,9 +39,9 @@ public class SpawnController : MonoBehaviour
         wallTable = new int[width, height];
 
         wallSpawnController.WallSpawn();
+        forgeSpawnController.ForgeSpawn();
+        mineralsSpawnController.MineralsSpawn();
+        monstersSpawnController.MonstersSpawn();
         meshSurface.BuildNavMesh();
-        //forgeSpawnController.ForgeSpawn();
-        //mineralsSpawnController.MineralsSpawn();
-        //monstersSpawnController.MonstersSpawn();
     }
 }

@@ -201,8 +201,9 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
     private Vector3 lastPickaxePosition = Vector3.zero;
     private void MovePickaxe()
     {
-        Debug.Log($"{lastPickaxePosition} {facingDirection}");
+        // Debug.Log($"{lastPickaxePosition} {facingDirection}");
         if ((Vector2)lastPickaxePosition == facingDirection) return;
+        // Debug.Log($"{lastPickaxePosition} != {facingDirection}");
         lastPickaxePosition = facingDirection;
         pickaxeRight.MoveHeldTargetDetector(facingDirection);
         // Debug.Log("UpdatePickaxePosition");

@@ -1,14 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using JetBrains.Annotations;
 using UnityEngine;
-using Debug = UnityEngine.Debug;
 
 [RequireComponent(typeof(Collider2D))]
-public class PlayerPickup : ObjectColliderDetector2D
+public class PlayerPickup : ObjectColliderDetector
 {
     private Inventory _inventory;
     private Collider2D col;
@@ -31,7 +26,7 @@ public class PlayerPickup : ObjectColliderDetector2D
             {
                 // ReSharper disable once Unity.PerformanceCriticalCodeInvocation
                 IChunk chunk = o.GetComponent<IChunk>();
-                
+
                 switch(chunk.GetType().ToString())
                 {
                     case "CoalChunk":
