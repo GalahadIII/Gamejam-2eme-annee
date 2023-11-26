@@ -2,7 +2,7 @@ using System.Linq;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
-public class Pickaxe : MonoBehaviour
+public class Pickaxe : ObjectColliderDetector2D
 {
 
     [Header("Pickaxe properties")]
@@ -14,19 +14,13 @@ public class Pickaxe : MonoBehaviour
 
     [Header("Data")]
     private float lastUse = 0;
-    private ObjectColliderDetector2D detector;
-
-    private void OnEnable()
-    {
-        detector = GetComponent<ObjectColliderDetector2D>();
-    }
 
     public void Use()
     {
         if (Time.time - lastUse < cooldown) return;
         // Debug.Log($"Pickaxe Use 0");
 
-        GameObject o = detector.Objects.FirstOrDefault(o =>
+        GameObject o = Objects.FirstOrDefault(o =>
         {
             o.TryGetComponent(out MineralVein mineralVein);
             return mineralVein != null;

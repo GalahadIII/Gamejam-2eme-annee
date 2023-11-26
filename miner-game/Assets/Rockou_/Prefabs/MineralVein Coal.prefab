@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6323582338214553822, guid: 8bac2d02874c50777927e67b78169f5a, type: 3}
       propertyPath: maxSpawnRadius
-      value: 5
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: -6323582338214553822, guid: 8bac2d02874c50777927e67b78169f5a, type: 3}
       propertyPath: minSpawnRadius
@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6323582338214553822, guid: 8bac2d02874c50777927e67b78169f5a, type: 3}
       propertyPath: distanceMinBetweenMinerals
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7534722918884577090, guid: 8bac2d02874c50777927e67b78169f5a, type: 3}
       propertyPath: m_Name
@@ -67,6 +67,14 @@ PrefabInstance:
     - target: {fileID: 7943374761723855674, guid: 8bac2d02874c50777927e67b78169f5a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8734982751758992738, guid: 8bac2d02874c50777927e67b78169f5a, type: 3}
+      propertyPath: hardness
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8734982751758992738, guid: 8bac2d02874c50777927e67b78169f5a, type: 3}
+      propertyPath: integrity
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

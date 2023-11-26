@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6323582338214553822, guid: 8bac2d02874c50777927e67b78169f5a, type: 3}
       propertyPath: maxSpawnRadius
-      value: 32
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: -6323582338214553822, guid: 8bac2d02874c50777927e67b78169f5a, type: 3}
       propertyPath: minSpawnRadius
-      value: 9
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: -6323582338214553822, guid: 8bac2d02874c50777927e67b78169f5a, type: 3}
       propertyPath: spawnSpaceRadiusNeeded
@@ -67,6 +67,14 @@ PrefabInstance:
     - target: {fileID: 7943374761723855674, guid: 8bac2d02874c50777927e67b78169f5a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8734982751758992738, guid: 8bac2d02874c50777927e67b78169f5a, type: 3}
+      propertyPath: hardness
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8734982751758992738, guid: 8bac2d02874c50777927e67b78169f5a, type: 3}
+      propertyPath: integrity
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9184433552834531318, guid: 8bac2d02874c50777927e67b78169f5a, type: 3}
       propertyPath: m_Sprite

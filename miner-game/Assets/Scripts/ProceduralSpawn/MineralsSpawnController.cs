@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class MineralsSpawnController : MonoBehaviour
@@ -14,8 +13,12 @@ public class MineralsSpawnController : MonoBehaviour
 
         foreach (GameObject mineral in mineralsList)
         {
-
             Vector2Int mineralPosition = FindCoordinate(mineral);
+            if (mineralPosition == Vector2Int.zero)
+            {
+                Debug.LogWarning($"Skipped placing {mineral}");
+                continue;
+            }
             // GameObject tile = mineral.GetComponent<MineralSpawnSetting>().GetTile();
             // Debug.Log($"{mineralPosition == null}");
             // Debug.Log($"{mineral} {mineralPosition} {mineralPosition?[0]} {mineralPosition?[1]}");
@@ -50,6 +53,8 @@ public class MineralsSpawnController : MonoBehaviour
                 {
                     continue;
                 }
+
+                if (Random.Range(0,1) > 0.5f)
 
                 result = new(x, y);
 

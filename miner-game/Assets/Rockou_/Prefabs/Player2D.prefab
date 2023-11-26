@@ -44,8 +44,8 @@ Camera:
   m_GameObject: {fileID: 597484959341371060}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.47058824, g: 0.38431373, b: 0.41568628, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -370,7 +370,6 @@ GameObject:
   - component: {fileID: 5066319731204537163}
   - component: {fileID: 2804916776421713134}
   - component: {fileID: 5485917400048151523}
-  - component: {fileID: 551067195311181247}
   - component: {fileID: 333352206352659284}
   - component: {fileID: 7923955118605548038}
   m_Layer: 0
@@ -430,25 +429,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DelayConsecutive: 25
---- !u!114 &551067195311181247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3318599177539913407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59aed89bfc3dc066caf8f3fa83fa7661, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 20
-  acceleration: 6
-  decceleration: 6
-  velPower: 1.2
-  inputManager: {fileID: 5485917400048151523}
-  _rb: {fileID: 0}
-  DisabledControls: 0
 --- !u!50 &333352206352659284
 Rigidbody2D:
   serializedVersion: 4
@@ -508,7 +488,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.15}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -519,7 +499,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.8, y: 0.5}
   m_EdgeRadius: 0
 --- !u!1 &4934801576593463197
 GameObject:
@@ -531,7 +511,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8462798942341352520}
   - component: {fileID: 4670554032069712733}
-  - component: {fileID: 8932126998847059348}
   - component: {fileID: 6287335868357938745}
   m_Layer: 0
   m_Name: Pickaxe
@@ -600,19 +579,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2, y: 1.2}
   m_EdgeRadius: 0
---- !u!114 &8932126998847059348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4934801576593463197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32cd2324f2cbacbe9bf2902ca14649bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeLastSort: 0
 --- !u!114 &6287335868357938745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -625,6 +591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 390bc9d6a4f1a8e1d858865c987c0d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeLastSort: 0
   efficiency: 1
   cooldown: 1
 --- !u!1 &7513642168312431091
