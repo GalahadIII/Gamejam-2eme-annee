@@ -23,6 +23,7 @@ public class ObjectColliderDetector : MonoBehaviour
         }
     }
 
+    // implicit 3d
     private void OnCollisionEnter(Collision col)
     {
         // Debug.Log($"ColliderDetector OnCollisionEnter {col.gameObject.name}");
@@ -44,6 +45,29 @@ public class ObjectColliderDetector : MonoBehaviour
         Remove(col.gameObject);
     }
 
+    // 2d
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        // Debug.Log($"ColliderDetector2D OnCollisionEnter2D {col.gameObject.name}");
+        AddObject(col.gameObject);
+    }
+    private void OnCollisionExit2D(Collision2D col)
+    {
+        // Debug.Log($"ColliderDetector2D OnCollisionExit2D {col.gameObject.name}");
+        Remove(col.gameObject);
+    }
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        // Debug.Log($"ColliderDetector2D OnTriggerEnter2D {col.gameObject.name}");
+        AddObject(col.gameObject);
+    }
+    private void OnTriggerExit2D(Collider2D col)
+    {
+        // Debug.Log($"ColliderDetector2D OnTriggerExit2D {col.gameObject.name}");
+        Remove(col.gameObject);
+    }
+
+    // list manage
     protected void AddObject(GameObject gameObject)
     {
         objectList.Add(gameObject);
@@ -54,6 +78,7 @@ public class ObjectColliderDetector : MonoBehaviour
         objectList.Remove(gameObject);
     }
 
+    // list sort
     protected void SortListByDistance()
     {
         objectList.Sort(SortGameObjectsByDistance);

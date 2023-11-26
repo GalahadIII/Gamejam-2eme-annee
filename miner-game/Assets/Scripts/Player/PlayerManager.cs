@@ -1,6 +1,4 @@
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 [RequireComponent(typeof(Collider2D), typeof(Rigidbody2D), typeof(InputManager))]
 public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D

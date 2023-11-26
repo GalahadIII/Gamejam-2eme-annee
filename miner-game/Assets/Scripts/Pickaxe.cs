@@ -2,7 +2,7 @@ using System.Linq;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
-public class Pickaxe : ObjectColliderDetector2D
+public class Pickaxe : ObjectColliderDetector
 {
 
     [Header("Pickaxe properties")]
