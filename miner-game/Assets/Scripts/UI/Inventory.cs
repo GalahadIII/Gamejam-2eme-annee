@@ -29,6 +29,10 @@ public class Inventory : MonoBehaviour
         {
             AddItem(ironMineralItem);
         }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            AddItem(goldMineralItem);
+        }
     }
 
     public void AddItem(Item item)
