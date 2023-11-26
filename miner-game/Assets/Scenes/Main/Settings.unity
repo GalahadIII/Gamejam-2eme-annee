@@ -278,7 +278,7 @@ GameObject:
   - component: {fileID: 300392080}
   - component: {fileID: 300392079}
   - component: {fileID: 300392078}
-  - component: {fileID: 300392077}
+  - component: {fileID: 300392082}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -286,20 +286,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &300392077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 300392076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e17039da18563c44795616ba67fca70c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundSlider: {fileID: 1464338140}
-  masterMixer: {fileID: 24100000, guid: 572f3f7ed39d9d647971b42eac673ae5, type: 2}
 --- !u!114 &300392078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -385,6 +371,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &300392082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300392076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b731883bd0c1d7c43b8ed86ab14d2d6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundSlider: {fileID: 1464338140}
+  masterMixer: {fileID: 24100000, guid: 572f3f7ed39d9d647971b42eac673ae5, type: 2}
 --- !u!1 &331618166
 GameObject:
   m_ObjectHideFlags: 0
@@ -1072,8 +1072,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 300392077}
-        m_TargetAssemblyTypeName: VolumeSlider, Assembly-CSharp
+      - m_Target: {fileID: 300392082}
+        m_TargetAssemblyTypeName: SoundSlider, Assembly-CSharp
         m_MethodName: SetVolumeFromSlider
         m_Mode: 1
         m_Arguments:
@@ -1344,7 +1344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9d5e28c30f08f543aaacf7b9b70ea06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: MainMenu
+  sceneToLoad: 1
 --- !u!1 &1659283533
 GameObject:
   m_ObjectHideFlags: 0

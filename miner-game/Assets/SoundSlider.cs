@@ -1,22 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
-public class VolumeSlider : MonoBehaviour
+public class SoundSlider : MonoBehaviour
 {
     [SerializeField] Slider soundSlider;
     [SerializeField] AudioMixer masterMixer;
-
-    void Start()
-    {
-        
-    }
-
     public void SetVolume(float _value)
     {
-        if(_value < 1)
+        if (_value < 1)
         {
             _value = .001f;
         }
