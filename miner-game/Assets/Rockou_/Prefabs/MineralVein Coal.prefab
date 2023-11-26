@@ -10,19 +10,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6323582338214553822, guid: 8bac2d02874c50777927e67b78169f5a, type: 3}
       propertyPath: maxSpawnRadius
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: -6323582338214553822, guid: 8bac2d02874c50777927e67b78169f5a, type: 3}
       propertyPath: minSpawnRadius
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -6323582338214553822, guid: 8bac2d02874c50777927e67b78169f5a, type: 3}
       propertyPath: spawnSpaceRadiusNeeded
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -6323582338214553822, guid: 8bac2d02874c50777927e67b78169f5a, type: 3}
       propertyPath: distanceMinBetweenMinerals
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7534722918884577090, guid: 8bac2d02874c50777927e67b78169f5a, type: 3}
       propertyPath: m_Name

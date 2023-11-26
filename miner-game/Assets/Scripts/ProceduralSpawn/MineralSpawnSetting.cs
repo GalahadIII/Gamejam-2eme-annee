@@ -3,11 +3,11 @@ using UnityEngine;
 public class MineralSpawnSetting : MonoBehaviour
 {
     [Header("Mineral Spawn Settings")]
-    [Range(2, 25)]
+    [Range(4, 200)]
     [SerializeField] int minSpawnRadius;
-    [Range(5, 50)]
+    [Range(10, 200)]
     [SerializeField] int maxSpawnRadius;
-    [Range(2, 15)]
+    [Range(1, 20)]
     [SerializeField] int spawnSpaceRadiusNeeded;
     [Range(1, 50)]
     [SerializeField] int distanceMinBetweenMinerals;

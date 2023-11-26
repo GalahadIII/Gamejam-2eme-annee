@@ -6,6 +6,8 @@ public class MineralsSpawnController : MonoBehaviour
 
     [SerializeField] GameObject[] mineralsList;
 
+    [SerializeField] int Attempts = 50;
+
     internal void MineralsSpawn()
     {
         GameObject mineralContainer = new("MineralContainer");
@@ -29,44 +31,60 @@ public class MineralsSpawnController : MonoBehaviour
 
     Vector2Int FindCoordinate(GameObject mineral)
     {
-        Vector2Int result = Vector2Int.zero;
         int width = spawnController.width;
         int height = spawnController.height;
-        int centerX = width / 2;
-        int centerY = height / 2;
+        int halfWidth = width / 2;
+        int halfHeight = height / 2;
 
         MineralSpawnSetting mineralSettings = mineral.GetComponent<MineralSpawnSetting>();
-        int minSpawnRadius = mineralSettings.GetMinSpawnRadius();
-        int maxSpawnRadius = mineralSettings.GetMaxSpawnRadius();
+        int minSpawnRadius = Mathf.Clamp(mineralSettings.GetMinSpawnRadius(), 0, Mathf.Min(halfWidth, halfHeight));
+        int maxSpawnRadius = Mathf.Clamp(mineralSettings.GetMaxSpawnRadius(), 0, Mathf.Min(halfWidth, halfHeight));
         int spawnSpaceRadiusNeeded = mineralSettings.GetSpawnSpaceRadiusNeeded();
         int distanceMinBetweenMinerals = mineralSettings.GetDistanceMinBetweenMinerals();
         LayerMask layer = mineralSettings.GetLayer();
 
         // Debug.Log($"{minSpawnRadius} {maxSpawnRadius} {spawnSpaceRadiusNeeded} {distanceMinBetweenMinerals}");
 
-        for (int x = centerX - maxSpawnRadius; x < centerX + maxSpawnRadius; x++)
+        // generate a direction +-x +-y, then normalize
+        for (int i = 0; i < Attempts; i++)
         {
-            for (int y = centerY - maxSpawnRadius; y < centerY + maxSpawnRadius; y++)
+            float randomX = Random.Range(-1000,1000);
+            float randomY = Random.Range(-1000,1000);
+            float randomL = Random.Range(minSpawnRadius, maxSpawnRadius);
+            Vector2 position = new Vector2(randomX, randomY).normalized * randomL;
+            Vector2Int result = new (Mathf.RoundToInt(position.x) + halfWidth, Mathf.RoundToInt(position.y) + halfHeight);
+            // Debug.Log($"{randomX} {randomY} {randomL} {position} {result}");
+
+            if (spawnController.checkEmptyZone.VerifierZone(result, spawnSpaceRadiusNeeded) &&
+                spawnController.checkEmptyZone.VerifierZone(result, distanceMinBetweenMinerals, layer))
             {
-                if ((x > centerX - minSpawnRadius && x < centerX + minSpawnRadius) ||
-                    (y > centerY - minSpawnRadius && y < centerY + minSpawnRadius))
-                {
-                    continue;
-                }
-
-                if (Random.Range(0,1) > 0.5f)
-
-                result = new(x, y);
-
-                if (spawnController.checkEmptyZone.VerifierZone(result, spawnSpaceRadiusNeeded) &&
-                    spawnController.checkEmptyZone.VerifierZone(result, distanceMinBetweenMinerals, layer))
-                {
-                    // result[0] = x; result[1] = y;
-                    return result;
-                }
+                // result[0] = x; result[1] = y;
+                return result;
             }
         }
-        Debug.LogWarning($"Couldn't find a free spot for {mineralSettings}");
-        return result;
+        Debug.LogWarning($"Max attempts reached for {mineralSettings}");
+        return Vector2Int.zero;
+
+        // for (int x = halfWidth - maxSpawnRadius; x < halfWidth + maxSpawnRadius; x++)
+        // {
+        //     for (int y = halfHeight - maxSpawnRadius; y < halfHeight + maxSpawnRadius; y++)
+        //     {
+        //         if ((x > halfWidth - minSpawnRadius && x < halfWidth + minSpawnRadius) ||
+        //             (y > halfHeight - minSpawnRadius && y < halfHeight + minSpawnRadius))
+        //         {
+        //             continue;
+        //         }
+
+        //         if (Random.Range(0,100) < 99f)
+        //         {
+        //             continue;
+        //         }
+
+        //         Vector2Int result = new(x, y);
+
+        //     }
+        // }
+        // Debug.LogWarning($"Couldn't find a free spot for {mineralSettings}");
+        // return Vector2Int.zero;
     }
 }
