@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MineralSpawnSetting : MonoBehaviour
@@ -14,7 +12,7 @@ public class MineralSpawnSetting : MonoBehaviour
     [Range(1, 50)]
     [SerializeField] int distanceMinBetweenMinerals;
     [SerializeField] LayerMask layer;
-    [SerializeField] GameObject tile;
+    // [SerializeField] GameObject tile;
 
     internal int GetMinSpawnRadius()
     {
@@ -41,8 +39,8 @@ public class MineralSpawnSetting : MonoBehaviour
         return layer;
     }
 
-    internal GameObject GetTile()
-    {
-        return tile;
-    }
+    // internal GameObject GetTile()
+    // {
+    //     return tile;
+    // }
 }

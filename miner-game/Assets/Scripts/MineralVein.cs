@@ -9,8 +9,8 @@ public class MineralVein : MonoBehaviour
 
     #endregion
 
-    private void OnEnable(){}
-    private void FixedUpdate(){}
+    private void OnEnable() { }
+    private void FixedUpdate() { }
 
     public void Mine(float efficiency = 0)
     {

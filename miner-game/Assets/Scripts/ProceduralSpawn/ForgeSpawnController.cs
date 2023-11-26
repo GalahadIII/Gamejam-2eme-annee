@@ -18,12 +18,12 @@ public class ForgeSpawnController : MonoBehaviour
 
     internal void ForgeSpawn()
     {
-        int[] coordinate = findPlaceToSpawn(spawnController.walls_tab);
+        Vector2Int coordinate = FindPlaceToSpawn(spawnController.walls_tab);
         int reloadCount = 0;
-        while (coordinate is null && reloadCount < maxWallReload)
+        while (coordinate == Vector2Int.zero && reloadCount < maxWallReload)
         {
             spawnController.wallSpawnController.perlinCave();
-            coordinate = findPlaceToSpawn(spawnController.walls_tab);
+            coordinate = FindPlaceToSpawn(spawnController.walls_tab);
             reloadCount++;
         }
 
@@ -32,14 +32,14 @@ public class ForgeSpawnController : MonoBehaviour
             throw new System.Exception("Too much map reload");
         }
 
-        Instantiate(tile, new Vector2(coordinate[0], coordinate[1]), Quaternion.identity);
-        spawnController.walls_tab[coordinate[0], coordinate[1]] = 2;
-        player.position = new Vector3(coordinate[0], coordinate[1]+2);
+        Instantiate(tile, (Vector2)coordinate, Quaternion.identity);
+        spawnController.walls_tab[coordinate.x, coordinate.y] = 2;
+        player.position = new Vector3(coordinate.x, coordinate.y + 2);
     }
 
-    int[] findPlaceToSpawn(int[,] tabs)
+    Vector2Int FindPlaceToSpawn(int[,] tabs)
     {
-        int[] result = new int[2];
+        Vector2Int result = Vector2Int.zero;
         int width = spawnController.width;
         int height = spawnController.height;
         int centerX = width / 2;
@@ -49,17 +49,18 @@ public class ForgeSpawnController : MonoBehaviour
         {
             throw new System.Exception("Radius and/or space needed value not correct");
         }
-        for (int x = centerX- spawnRadius; x < centerX + spawnRadius; x++)
+        for (int x = centerX - spawnRadius; x < centerX + spawnRadius; x++)
         {
             for (int y = centerY - spawnRadius; y < centerY + spawnRadius; y++)
             {
-                if (spawnController.checkEmptyZone.VerifierZone(new int[] {x,y}, spawnSpaceRadiusNeeded))
+                result = new(x, y);
+                if (spawnController.checkEmptyZone.VerifierZone(result, spawnSpaceRadiusNeeded))
                 {
-                    result[0] = x; result[1] = y;
                     return result;
                 }
             }
         }
-        return null;
+        Debug.LogWarning($"Couldn't find a free spot for forge");
+        return result;
     }
 }
