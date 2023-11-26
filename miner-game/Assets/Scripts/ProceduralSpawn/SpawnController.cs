@@ -1,3 +1,4 @@
+using NavMeshPlus.Components;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,6 +26,8 @@ public class SpawnController : MonoBehaviour
     [SerializeField] internal MonstersSpawnController monstersSpawnController;
     [SerializeField] internal CheckEmptyZone checkEmptyZone;
 
+    [SerializeField] internal NavMeshSurface meshSurface;
+
     [Header("Generation Settings")]
     [SerializeField] internal int width;
     [SerializeField] internal int height;
@@ -36,8 +39,9 @@ public class SpawnController : MonoBehaviour
         walls_tab = new int[width, height];
 
         wallSpawnController.WallSpawn();
-        forgeSpawnController.ForgeSpawn();
-        mineralsSpawnController.MineralsSpawn();
-        monstersSpawnController.MonstersSpawn();
+        meshSurface.BuildNavMesh();
+        //forgeSpawnController.ForgeSpawn();
+        //mineralsSpawnController.MineralsSpawn();
+        //monstersSpawnController.MonstersSpawn();
     }
 }
