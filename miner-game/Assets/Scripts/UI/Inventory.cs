@@ -18,6 +18,19 @@ public class Inventory : MonoBehaviour
     {
         listItem = new Item[] {coalMineralItem, ironMineralItem, goldMineralItem, diamondMineralItem, torchItem };
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            AddItem(coalMineralItem);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            AddItem(ironMineralItem);
+        }
+    }
+
     public void AddItem(Item item)
     {
         if (itemInventory.ContainsKey(item))
