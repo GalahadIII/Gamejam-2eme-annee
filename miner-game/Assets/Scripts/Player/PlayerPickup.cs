@@ -12,6 +12,8 @@ public class PlayerPickup : ObjectColliderDetector2D
 {
     private Inventory _inventory;
     private Collider2D col;
+
+    [SerializeField] private List<Item> listItem;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,16 +35,16 @@ public class PlayerPickup : ObjectColliderDetector2D
                 switch(chunk.GetType().ToString())
                 {
                     case "CoalChunk":
-                        _inventory.AddItem();
+                        _inventory.AddItem(listItem[0]);
                         break;
                     case "IronChunk":
-                        _inventory.AddItem();
+                        _inventory.AddItem(listItem[1]);
                         break;
                     case "GoldChunk":
-                        _inventory.AddItem();
+                        _inventory.AddItem(listItem[2]);
                         break;
                     case "DiamondChunk":
-                        _inventory.AddItem();
+                        _inventory.AddItem(listItem[3]);
                         break;
                 }
                 Destroy(o);
