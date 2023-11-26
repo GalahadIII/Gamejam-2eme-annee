@@ -10,6 +10,8 @@ public class MineralVein : MonoBehaviour
     [SerializeField]
     protected float shakePower = 0.03f;
 
+    [SerializeField] GameObject dropedChunk;
+
     protected float lastMine = 0;
     protected Vector3 originalPosition;
 
@@ -52,6 +54,19 @@ public class MineralVein : MonoBehaviour
     private void Break()
     {
         Debug.Log($"MineralVein Break");
+        SpawnChunk();
+    }
+
+    private void SpawnChunk()
+    {
+        Vector3 spawnLocation = transform.position;
+
+        float randX = Random.Range(-1f, 1f);
+        float randY = Random.Range(-1f, 1f);
+
+        Vector3 spawnOffset = new Vector3(randX, randY, 0f).normalized;
+
+        Instantiate(dropedChunk, spawnLocation + spawnOffset, Quaternion.identity);
     }
 
 }

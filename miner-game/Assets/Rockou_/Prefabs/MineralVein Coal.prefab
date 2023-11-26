@@ -76,6 +76,10 @@ PrefabInstance:
       propertyPath: integrity
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8734982751758992738, guid: 8bac2d02874c50777927e67b78169f5a, type: 3}
+      propertyPath: dropedChunk
+      value: 
+      objectReference: {fileID: 8637095468678813026, guid: beae52b9accb01444b01bfe9340e5f46, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

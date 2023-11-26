@@ -42,6 +42,7 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
     #region GetComponent'ed
 
     [SerializeField] InventoryController inventoryController;
+    [SerializeField] MusicController musicController;
     private Rigidbody2D rb;
     private InputManager input;
     public Pickaxe pickaxeRight;
@@ -55,6 +56,15 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
     private bool hasControl = true;
     private Vector2 facingDirection = new Vector2(1, 0);
 
+    #endregion
+
+    #region PanelUI
+    [Header("PannelUI")]
+    [SerializeField] GameObject forgeUI;
+    [SerializeField] GameObject statBarUI;
+    [SerializeField] GameObject gameOverUI;
+    [SerializeField] GameObject pauseUI;
+    [SerializeField] GameObject settingUI;
     #endregion
 
     private void OnEnable()
@@ -94,6 +104,18 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
 
         #endregion
 
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (pauseUI.activeSelf || settingUI.activeSelf || forgeUI.activeSelf)
+            {
+                Play();
+            }
+            else
+            {
+                Pause();
+            }
+            
+        }
     }
     private void FixedUpdate()
     {
@@ -181,7 +203,35 @@ public class PlayerManager2D : MonoBehaviour, IPlayerAnimatorData2D
     public void GetHit(int dmg)
     {
         hitPoint -= dmg;
+        if(hitPoint <= 0)
+        {
+            Death();
+        }
         inventoryController.UpdateDisplay();
     }
 
+    private void Death()
+    {
+        Time.timeScale = 0;
+        forgeUI.SetActive(false);
+        statBarUI.SetActive(false);
+        gameOverUI.SetActive(true);
+        musicController.PutGameOverMusic();
+    }
+
+    private void Pause()
+    {
+        Time.timeScale = 0;
+        forgeUI.SetActive(false);
+        pauseUI.SetActive(true);
+    }
+
+    private void Play()
+    {
+        Time.timeScale = 1;
+        forgeUI.SetActive(false);
+        pauseUI.SetActive(false);
+        settingUI.SetActive(false);
+        statBarUI.SetActive(true);
+    }
 }

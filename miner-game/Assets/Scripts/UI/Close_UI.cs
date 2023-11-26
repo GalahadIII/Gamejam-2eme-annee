@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Close_UI : MonoBehaviour
 {
-    [SerializeField] GameObject forgeUI_transform;
+    [SerializeField] GameObject gameObject;
 
     public void Close_GameObject()
     {
-        forgeUI_transform.SetActive(false);
+        gameObject.SetActive(false);
+        Time.timeScale = 1;
     }
 }

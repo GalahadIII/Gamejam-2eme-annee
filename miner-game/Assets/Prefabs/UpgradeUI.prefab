@@ -1375,6 +1375,7 @@ GameObject:
   - component: {fileID: 4356973491190849859}
   - component: {fileID: 8278933842008430835}
   - component: {fileID: 3967371803686380409}
+  - component: {fileID: 8294984083137154484}
   m_Layer: 5
   m_Name: RecipePickaxe2_Button
   m_TagString: Untagged
@@ -1484,6 +1485,25 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8294984083137154484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3924111092201483845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d055da48a8e3629488341af46a00e10c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemTab:
+  - {fileID: 11400000, guid: c9cea3b6bf106d64a8a84cbbcd6f8342, type: 2}
+  - {fileID: 11400000, guid: dd1d00c381dd7f642b71702b2b596cd0, type: 2}
+  amountTab: 0500000005000000
+  result: {fileID: 11400000, guid: 6e699e08361208449bf7d0f709d30389, type: 2}
+  result_levelPickaxe: 3
+  inventoryController: {fileID: 0}
 --- !u!1 &3960163908491866374
 GameObject:
   m_ObjectHideFlags: 0
@@ -2006,6 +2026,7 @@ GameObject:
   - component: {fileID: 1562052067671560695}
   - component: {fileID: 9023593718451220475}
   - component: {fileID: 8133366782131886075}
+  - component: {fileID: 6963718582778658634}
   m_Layer: 5
   m_Name: RecipePickaxe1_Button
   m_TagString: Untagged
@@ -2115,6 +2136,25 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6963718582778658634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5465376022316362183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d055da48a8e3629488341af46a00e10c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemTab:
+  - {fileID: 11400000, guid: c9cea3b6bf106d64a8a84cbbcd6f8342, type: 2}
+  - {fileID: 11400000, guid: 610ef0bfaf531dc49824ed9901602fda, type: 2}
+  amountTab: 0300000005000000
+  result: {fileID: 11400000, guid: 1fa3c95afd5387a4f9674f09df83c0f0, type: 2}
+  result_levelPickaxe: 2
+  inventoryController: {fileID: 0}
 --- !u!1 &5544747662182687357
 GameObject:
   m_ObjectHideFlags: 0
@@ -2373,6 +2413,7 @@ GameObject:
   - component: {fileID: 8232993580956780345}
   - component: {fileID: 7636613713030219417}
   - component: {fileID: 6769942934665909874}
+  - component: {fileID: 7801787267984163394}
   m_Layer: 5
   m_Name: Exit_Button
   m_TagString: Untagged
@@ -2482,6 +2523,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7801787267984163394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6102895103426696606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac41caa736435e5468ad9426119cf3d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forgeUI_transform: {fileID: 7799823416083918958}
 --- !u!1 &6344816087566743696
 GameObject:
   m_ObjectHideFlags: 0
@@ -2757,6 +2811,7 @@ GameObject:
   - component: {fileID: 1798665797181390543}
   - component: {fileID: 2996388975377933015}
   - component: {fileID: 8015168324689100878}
+  - component: {fileID: 8551203448518215049}
   m_Layer: 5
   m_Name: RecipeTorch_Button
   m_TagString: Untagged
@@ -2866,6 +2921,24 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8551203448518215049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7030163570275525830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d055da48a8e3629488341af46a00e10c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemTab:
+  - {fileID: 11400000, guid: c9cea3b6bf106d64a8a84cbbcd6f8342, type: 2}
+  amountTab: 02000000
+  result: {fileID: 11400000, guid: d6b4bf053d9a6ef4dafef23c70d7260d, type: 2}
+  result_levelPickaxe: 0
+  inventoryController: {fileID: 0}
 --- !u!1 &7203916290712003521
 GameObject:
   m_ObjectHideFlags: 0
@@ -3292,6 +3365,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1095539650648376629}
+  - component: {fileID: 6506220291331633747}
   m_Layer: 5
   m_Name: UpgradeUI
   m_TagString: Untagged
@@ -3322,6 +3396,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1400, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6506220291331633747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7799823416083918958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e95f465626192e438ac7bef90e87bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryController: {fileID: 0}
+  tmpCoal: {fileID: 4108599668286497441}
+  tmpIron: {fileID: 3094389158490286849}
+  tmpGold: {fileID: 6842310312278542411}
+  tmpDiamond: {fileID: 426476829361530920}
 --- !u!1 &7872299763405465731
 GameObject:
   m_ObjectHideFlags: 0

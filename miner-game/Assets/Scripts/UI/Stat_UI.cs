@@ -35,6 +35,7 @@ public class Stat_UI : MonoBehaviour
     internal void UpdateScoreDisplay()
     {
         tmpScore.text = player.GetComponent<PlayerManager2D>().score.ToString();
+        tmpScoreGameOver.text = player.GetComponent<PlayerManager2D>().score.ToString();
     }
 
     internal void UpdateInventoryDisplay()

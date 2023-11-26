@@ -857,6 +857,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6260975928847587147}
+  - component: {fileID: 97704236805643683}
   m_Layer: 5
   m_Name: StatBarUI
   m_TagString: Untagged
@@ -888,6 +889,41 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -125}
   m_SizeDelta: {x: 0, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &97704236805643683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3192539472665284154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91b2cddae302b4042a2eff074a301a5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  inventoryController: {fileID: 0}
+  hitPointImage: {fileID: 7845709046264731503}
+  hitPointspriteList:
+  - {fileID: 21300000, guid: f2c3a0c902f981a05b5853435cec6b1e, type: 3}
+  - {fileID: 21300000, guid: 89d709c25b60fb2eabf2f3a7e1608ad2, type: 3}
+  - {fileID: 21300000, guid: e82cb728ad6fbe8928e5c2b1fc339d67, type: 3}
+  - {fileID: 21300000, guid: 820eaea298e907deba317d4953d0f2b2, type: 3}
+  - {fileID: 21300000, guid: 8d349b6505b145f3a9916331c28f3204, type: 3}
+  - {fileID: 21300000, guid: 374d81cdb3ad9034983e250e7f58fefb, type: 3}
+  - {fileID: 21300000, guid: 5356e45a5abab98a49d54afda6bb7ac1, type: 3}
+  tmpScore: {fileID: 8576241028122318762}
+  tmpScoreGameOver: {fileID: 0}
+  pickaxe: {fileID: 1080960769545518622}
+  pickaxeSpriteList:
+  - {fileID: 21300000, guid: e9b6766e768b808ccb527918369edf31, type: 3}
+  - {fileID: 21300000, guid: 1bdd7b91bb654fc88821649794c6a914, type: 3}
+  - {fileID: 21300000, guid: 602161ac26e45afbfbae6124cf57b436, type: 3}
+  tmpTorch: {fileID: 7274900662860883841}
+  tmpCoal: {fileID: 4345636401326278698}
+  tmpIron: {fileID: 6703886571435409931}
+  tmpGold: {fileID: 7783733067223841148}
+  tmpDiamond: {fileID: 2981567102594702112}
 --- !u!1 &3922636460781285160
 GameObject:
   m_ObjectHideFlags: 0

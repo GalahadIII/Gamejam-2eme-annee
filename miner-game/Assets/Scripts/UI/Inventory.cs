@@ -14,7 +14,7 @@ public class Inventory : MonoBehaviour
     internal Item[] listItem;
     internal Dictionary<Item, int> itemInventory = new Dictionary<Item, int>();
 
-    private void Start()
+    private void Awake()
     {
         listItem = new Item[] {coalMineralItem, ironMineralItem, goldMineralItem, diamondMineralItem, torchItem };
     }
@@ -39,7 +39,7 @@ public class Inventory : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Alpha5))
         {
-            GetHit(1);
+            inventoryController.player.GetComponent<PlayerManager2D>().GetHit(1);
         }
     }
 

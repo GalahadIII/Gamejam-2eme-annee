@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2388655306756610070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 97864848270908144}
+  - component: {fileID: 951157788649655712}
+  - component: {fileID: 8769908434627449949}
+  - component: {fileID: 759845549388344700}
+  - component: {fileID: 708375906613038201}
+  - component: {fileID: 2295869725402808339}
+  m_Layer: 0
+  m_Name: SpawnController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &97864848270908144
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2388655306756610070}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.06907591, y: -0.7498052, z: 0.03392602}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &951157788649655712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2388655306756610070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c231c90ceccf364a88375c97f4a469f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wallSpawnController: {fileID: 8769908434627449949}
+  forgeSpawnController: {fileID: 759845549388344700}
+  mineralsSpawnController: {fileID: 708375906613038201}
+  checkEmptyZone: {fileID: 2295869725402808339}
+  width: 100
+  height: 100
+--- !u!114 &8769908434627449949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2388655306756610070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e74e4ab177e7c4991789f9a4edf576, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnController: {fileID: 951157788649655712}
+  seed: 0
+  modifier: 0.05
+  tile: {fileID: 3999133352400280183, guid: 58953c7ce06b9394da171b65be45a44d, type: 3}
+  spriteList:
+  - {fileID: 1766384443, guid: 89cececa26db67cfc9518814103ddc70, type: 3}
+  - {fileID: 2039891519, guid: 89cececa26db67cfc9518814103ddc70, type: 3}
+  - {fileID: -1552076830, guid: 89cececa26db67cfc9518814103ddc70, type: 3}
+  - {fileID: 1022532919, guid: 89cececa26db67cfc9518814103ddc70, type: 3}
+  - {fileID: 1507706333, guid: 89cececa26db67cfc9518814103ddc70, type: 3}
+  - {fileID: 2042066025, guid: 89cececa26db67cfc9518814103ddc70, type: 3}
+  - {fileID: 1281443729, guid: 89cececa26db67cfc9518814103ddc70, type: 3}
+  - {fileID: 824957790, guid: 89cececa26db67cfc9518814103ddc70, type: 3}
+  - {fileID: 1433219510, guid: 89cececa26db67cfc9518814103ddc70, type: 3}
+  - {fileID: -1901130936, guid: 89cececa26db67cfc9518814103ddc70, type: 3}
+  - {fileID: 690595433, guid: 89cececa26db67cfc9518814103ddc70, type: 3}
+  - {fileID: -831076472, guid: 89cececa26db67cfc9518814103ddc70, type: 3}
+  - {fileID: 1174981260, guid: 89cececa26db67cfc9518814103ddc70, type: 3}
+  - {fileID: 1397523662, guid: 89cececa26db67cfc9518814103ddc70, type: 3}
+  - {fileID: 97305964, guid: 89cececa26db67cfc9518814103ddc70, type: 3}
+  - {fileID: 1997156571, guid: 89cececa26db67cfc9518814103ddc70, type: 3}
+--- !u!114 &759845549388344700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2388655306756610070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85a17308c4c8a9d4dbc14671cc679abf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnController: {fileID: 951157788649655712}
+  spawnRadius: 30
+  spawnSpaceRadiusNeeded: 5
+  tile: {fileID: 6173952041359325242, guid: d4c0ace26070f3e4fb97a47a7b725070, type: 3}
+  maxWallReload: 5
+  player: {fileID: 0}
+--- !u!114 &708375906613038201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2388655306756610070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a9194704b9722c4ab8fdfe557a82cc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnController: {fileID: 951157788649655712}
+  mineralsList:
+  - {fileID: 8385324995685041870, guid: ff07d50061f20d342b0fc69c39367d77, type: 3}
+  - {fileID: 8385324995685041870, guid: ff07d50061f20d342b0fc69c39367d77, type: 3}
+  - {fileID: 8385324995685041870, guid: ff07d50061f20d342b0fc69c39367d77, type: 3}
+  - {fileID: 8385324995685041870, guid: ff07d50061f20d342b0fc69c39367d77, type: 3}
+  Attempts: 50
+--- !u!114 &2295869725402808339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2388655306756610070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95280856d26db0489b9cb5296a2a675, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnController: {fileID: 951157788649655712}
