@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -12,9 +13,10 @@ public class WallSpawnController : MonoBehaviour
     [SerializeField] internal GameObject tileGameObject;
 
     [Header("Generation Settings")]
-    [SerializeField] float seed = 0;
+    [SerializeField] private float seed = 0;
+    [SerializeField] private bool generateRandomSeed = true;
     [Range(0, 1)]
-    [SerializeField] float modifier;
+    [SerializeField] private float modifier;
 
     [Header("Sprite list")]
     [SerializeField] Sprite[] spriteList;
@@ -42,6 +44,11 @@ public class WallSpawnController : MonoBehaviour
 
     internal void WallSpawn()
     {
+        if (generateRandomSeed)
+        {
+            seed = Random.Range(1, 1_000_000);
+        }
+
         containerGameObject = new GameObject("WallContainer");
 
         width = spawnController.width;
