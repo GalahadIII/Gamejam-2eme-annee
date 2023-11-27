@@ -21,8 +21,8 @@ public class MonstersSpawnController : MonoBehaviour
                 Debug.LogWarning($"Skipped placing {monster}");
                 continue;
             }
-            GameObject monsterINstantiate = Instantiate(monster, (Vector3)(Vector2)monsterPosition, Quaternion.identity, monsterContainer.transform);
-            monsterINstantiate.GetComponent<Enemy>().transform = spawnController.player.transform;
+            GameObject monsterInstantiate = Instantiate(monster, (Vector3)(Vector2)monsterPosition, Quaternion.identity, monsterContainer.transform);
+            monsterInstantiate.GetComponent<Enemy>().transform = spawnController.player.transform;
             spawnController.wallTable[monsterPosition.x, monsterPosition.y] = 3;
         }
     }

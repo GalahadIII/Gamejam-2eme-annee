@@ -1,6 +1,4 @@
 using NavMeshPlus.Components;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnController : MonoBehaviour
@@ -28,6 +26,7 @@ public class SpawnController : MonoBehaviour
 
     [SerializeField] internal NavMeshSurface meshSurface;
     [SerializeField] internal GameObject player;
+    [SerializeField] internal GameObject area;
 
     [Header("Generation Settings")]
     [SerializeField] internal int width;
@@ -38,6 +37,9 @@ public class SpawnController : MonoBehaviour
     private void Start()
     {
         wallTable = new int[width, height];
+
+        area.transform.position = new Vector3(width/2, height/2);
+        area.transform.localScale = new Vector3(width, height, 1);
 
         wallSpawnController.WallSpawn();
         forgeSpawnController.ForgeSpawn();

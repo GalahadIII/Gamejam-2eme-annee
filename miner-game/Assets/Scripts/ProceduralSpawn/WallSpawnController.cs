@@ -81,6 +81,7 @@ public class WallSpawnController : MonoBehaviour
 
                     tileGameObject.GetComponent<SpriteRenderer>().sprite = sprite;
                     Instantiate(tileGameObject, new Vector2(x, y), Quaternion.identity, containerGameObject.transform);
+
                     tilemap.SetTile(new Vector3Int(x, y, 0), tile);
                 }
             }
