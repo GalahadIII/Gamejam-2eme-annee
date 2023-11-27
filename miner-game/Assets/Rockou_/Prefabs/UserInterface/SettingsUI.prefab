@@ -32,8 +32,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 5217228025496795822}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -461,7 +461,7 @@ RectTransform:
   m_Father: {fileID: 2493731327602670886}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -588,6 +588,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8382058642924793327}
   - component: {fileID: 2087707196897511530}
+  - component: {fileID: 289885985549097721}
   m_Layer: 5
   m_Name: Volume_Slider
   m_TagString: Untagged
@@ -668,7 +669,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 289885985549097721}
         m_TargetAssemblyTypeName: SoundSlider, Assembly-CSharp
         m_MethodName: SetVolumeFromSlider
         m_Mode: 1
@@ -680,6 +681,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &289885985549097721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2772841440116592094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b731883bd0c1d7c43b8ed86ab14d2d6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundSlider: {fileID: 2087707196897511530}
+  masterMixer: {fileID: 24100000, guid: 572f3f7ed39d9d647971b42eac673ae5, type: 2}
 --- !u!1 &3748214681902746619
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,7 +710,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6414759336731544595
 RectTransform:
   m_ObjectHideFlags: 0

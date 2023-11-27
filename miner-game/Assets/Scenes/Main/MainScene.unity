@@ -168,8 +168,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_RenderShadows: 1
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
@@ -267,7 +267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1208541604335066935, guid: dd1b2bd5da60a4764a99603e636b91b8, type: 3}
       propertyPath: m_Cameras.Array.data[1]
-      value:
+      value: 
       objectReference: {fileID: 314993875}
     - target: {fileID: 3318599177539913407, guid: dd1b2bd5da60a4764a99603e636b91b8, type: 3}
       propertyPath: m_Name
@@ -313,23 +313,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7923955118605548038, guid: dd1b2bd5da60a4764a99603e636b91b8, type: 3}
-      propertyPath: m_Size.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7923955118605548038, guid: dd1b2bd5da60a4764a99603e636b91b8, type: 3}
-      propertyPath: m_Size.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7923955118605548038, guid: dd1b2bd5da60a4764a99603e636b91b8, type: 3}
-      propertyPath: m_EdgeRadius
-      value: 0.1
-      objectReference: {fileID: 0}
+    - target: {fileID: 5490678940415428576, guid: dd1b2bd5da60a4764a99603e636b91b8, type: 3}
+      propertyPath: settingUI
+      value: 
+      objectReference: {fileID: 897502123}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd1b2bd5da60a4764a99603e636b91b8, type: 3}
+--- !u!1 &897502123 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1425426903084938089, guid: dd1b2bd5da60a4764a99603e636b91b8, type: 3}
+  m_PrefabInstance: {fileID: 465933793}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1158618478 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5066319731204537163, guid: dd1b2bd5da60a4764a99603e636b91b8, type: 3}
@@ -494,8 +491,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
@@ -524,8 +521,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_SendPointerHoverToParent: 1
   m_MoveRepeatDelay: 0.5
   m_MoveRepeatRate: 0.1
@@ -573,8 +570,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
   m_BlockingObjects: 0
   m_BlockingMask:
@@ -590,8 +587,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
@@ -696,11 +693,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 759845549388344700, guid: 3e2188808503e01908cb05ab10e4f3f0, type: 3}
       propertyPath: player
-      value:
+      value: 
       objectReference: {fileID: 1158618478}
     - target: {fileID: 951157788649655712, guid: 3e2188808503e01908cb05ab10e4f3f0, type: 3}
       propertyPath: player
-      value:
+      value: 
       objectReference: {fileID: 1249258699}
     - target: {fileID: 2388655306756610070, guid: 3e2188808503e01908cb05ab10e4f3f0, type: 3}
       propertyPath: m_Name
@@ -716,7 +713,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6760910636070087626, guid: 3e2188808503e01908cb05ab10e4f3f0, type: 3}
       propertyPath: m_NavMeshData
-      value:
+      value: 
       objectReference: {fileID: 23800000, guid: e75c888dab744e0ffb0de30d83a94f87, type: 2}
     - target: {fileID: 6760910636070087626, guid: 3e2188808503e01908cb05ab10e4f3f0, type: 3}
       propertyPath: m_LayerMask.m_Bits

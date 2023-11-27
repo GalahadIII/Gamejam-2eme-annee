@@ -53,7 +53,7 @@ MonoBehaviour:
   damageHeld: 1
   damageThrown: 1
   efficiency: 1
-  cooldown: 1
+  cooldown: 0.6
 --- !u!1 &3733034918492362848
 GameObject:
   m_ObjectHideFlags: 0

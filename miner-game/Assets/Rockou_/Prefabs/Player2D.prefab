@@ -535,7 +535,7 @@ MonoBehaviour:
   statBarUI: {fileID: 6118423482021348334}
   gameOverUI: {fileID: 1176885401048357030}
   pauseUI: {fileID: 6776969009463120943}
-  settingUI: {fileID: 4201523346058250609}
+  settingUI: {fileID: 1425426903084938089}
 --- !u!114 &5485917400048151523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -619,8 +619,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8, y: 0.8}
-  m_EdgeRadius: 0
+  m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0.1
 --- !u!114 &1074530869348584832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -949,6 +949,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c89093fe0d3de824dbb2c93f230efb8a, type: 3}
+--- !u!1 &1425426903084938089 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4325753145758303979, guid: c89093fe0d3de824dbb2c93f230efb8a, type: 3}
+  m_PrefabInstance: {fileID: 3440762924603962754}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &2532302397319493819 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 929008416138153273, guid: c89093fe0d3de824dbb2c93f230efb8a, type: 3}
@@ -1432,11 +1437,6 @@ RectTransform:
 --- !u!20 &3192804417908379302 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 7029188343408706030, guid: 1f3c75fb80bcc5a7cb816c30c7a2eb4c, type: 3}
-  m_PrefabInstance: {fileID: 5603515041976110920}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &4201523346058250609 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8614647237086758457, guid: 1f3c75fb80bcc5a7cb816c30c7a2eb4c, type: 3}
   m_PrefabInstance: {fileID: 5603515041976110920}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &4498828091166370247 stripped

@@ -8,6 +8,7 @@ public class WallSpawnController : MonoBehaviour
 
     [Header("Object")]
     [SerializeField] internal Tilemap tilemap;
+    [SerializeField] internal bool useTileMap = false;
     [SerializeField] internal GameObject tileGameObject;
 
     [Header("Generation Settings")]
@@ -62,11 +63,13 @@ public class WallSpawnController : MonoBehaviour
         spawnController.wallTable = wallTable;
 
         Tile[] tiles = new Tile[spriteList.Length];
-        for (int i = 0; i < spriteList.Length; i++)
-        {
-            Tile tile = ScriptableObject.CreateInstance<Tile>();
-            tile.sprite = spriteList[i];
-            tiles[i] = tile;
+        if (useTileMap) {
+            for (int i = 0; i < spriteList.Length; i++)
+            {
+                Tile tile = ScriptableObject.CreateInstance<Tile>();
+                tile.sprite = spriteList[i];
+                tiles[i] = tile;
+            }
         }
 
         for (int x = 0; x < width; x++)
@@ -77,12 +80,14 @@ public class WallSpawnController : MonoBehaviour
                 {
                     int indexSprite = GetWallOrientation(x, y);
                     Sprite sprite = spriteList[indexSprite];
-                    Tile tile = tiles[indexSprite];
 
                     tileGameObject.GetComponent<SpriteRenderer>().sprite = sprite;
                     Instantiate(tileGameObject, new Vector2(x, y), Quaternion.identity, containerGameObject.transform);
 
-                    tilemap.SetTile(new Vector3Int(x, y, 0), tile);
+                    if (useTileMap) {
+                        Tile tile = tiles[indexSprite];
+                        tilemap.SetTile(new Vector3Int(x, y, 0), tile);
+                    }
                 }
             }
         }

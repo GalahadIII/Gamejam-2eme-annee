@@ -76,6 +76,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnController: {fileID: 951157788649655712}
   tilemap: {fileID: 1464677748733289481}
+  useTileMap: 1
   tileGameObject: {fileID: 3999133352400280183, guid: b75801b27b31908d99a13c87abf79e61, type: 3}
   seed: 69
   modifier: 0.05

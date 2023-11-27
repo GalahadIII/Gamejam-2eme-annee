@@ -577,10 +577,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SettingsUI
       objectReference: {fileID: 0}
-    - target: {fileID: 3748214681902746619, guid: e02d4689aa06c2215ba717bcc2c2dca0, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4562618906841233602, guid: e02d4689aa06c2215ba717bcc2c2dca0, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -632,18 +628,6 @@ PrefabInstance:
     - target: {fileID: 6414759336731544595, guid: e02d4689aa06c2215ba717bcc2c2dca0, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6414759336731544595, guid: e02d4689aa06c2215ba717bcc2c2dca0, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6414759336731544595, guid: e02d4689aa06c2215ba717bcc2c2dca0, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6414759336731544595, guid: e02d4689aa06c2215ba717bcc2c2dca0, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6414759336731544595, guid: e02d4689aa06c2215ba717bcc2c2dca0, type: 3}
       propertyPath: m_LocalPosition.x

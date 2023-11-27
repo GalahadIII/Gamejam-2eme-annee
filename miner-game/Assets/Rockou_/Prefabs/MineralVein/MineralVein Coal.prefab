@@ -70,7 +70,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8734982751758992738, guid: 8bac2d02874c50777927e67b78169f5a, type: 3}
       propertyPath: hardness
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8734982751758992738, guid: 8bac2d02874c50777927e67b78169f5a, type: 3}
       propertyPath: integrity
